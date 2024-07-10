@@ -47,35 +47,46 @@ main {
 }
 
 section {
+    background: 
+        radial-gradient(
+            rgba(255, 255, 255, 0.95), 
+            rgba(255, 255, 255, 0.90), 
+            rgba(255, 255, 255, 0.85), 
+            rgba(255, 255, 255, 0.80),
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0.70),
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0.03), 
+            rgba(255, 255, 255, 0.02), 
+            rgba(255, 255, 255, 0.01)
+        );
     /* background-color: rgba(255, 255, 255, 0.75); */
-    background: radial-gradient(
-        rgba(255, 255, 255, 0.95), 
-        rgba(255, 255, 255, 0.9), 
-        rgba(255, 255, 255, 0.85), 
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0.75),
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.04),
-        rgba(255, 255, 255, 0.03), 
-        rgba(255, 255, 255, 0.02), 
-        rgba(255, 255, 255, 0.01)
-    );
     /* backdrop-filter: blur(0px); */
     /* -webkit-backdrop-filter: blur(15px); */
     /* border-radius: 0%; */
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     padding-top: 2.5rem;
-    padding-bottom: 3.75rem;
+    padding-bottom: 3.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    text-align: center;
 }
 
 /* Increase gap when hero text wraps */
 @media (max-width: 633px) {
     section {
         gap: 1.25rem;
+        text-align: left;
+        background:
+            linear-gradient(
+                rgba(255, 255, 255, 0.01),
+                rgba(255, 255, 255, 0.90),
+                rgba(255, 255, 255, 0.90),
+                rgba(255, 255, 255, 0.90),
+                rgba(255, 255, 255, 0.01)
+            );
     }
 }
 
@@ -85,8 +96,10 @@ h1 {
     font-weight: 600;
     margin-bottom: 0;
     margin-top: 0;
+    margin-left: -4px;
     line-height: 120%;
-    text-align: center;
+    /* text-indent: 0; */
+    /* letter-spacing: normal; */
 }
 
 .gradient {
@@ -101,7 +114,6 @@ h2 {
     color: #999999;
     font-size: calc(1.5rem + 0.75vw);
     font-weight: 200;
-    text-align: center;
     margin: 0;
     /* line-height: 120%; */
     /* padding: 0.5rem; */

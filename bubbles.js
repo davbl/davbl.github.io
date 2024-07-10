@@ -5,7 +5,16 @@ const bubblesData = [
     { color: '#4DA6FF', letter: 'C' }, // Blue for 'C'
     { color: '#FF8F40', letter: 'G' }  // Orange for 'G'
 ];
-const numBubbles = 20;
+
+// Adjust the number of bubbles based on screen width
+let numBubbles;
+if (window.innerWidth < 600) {
+    numBubbles = 12; // Smaller screens
+} else if (window.innerWidth < 900) {
+    numBubbles = 16; // Medium screens
+} else {
+    numBubbles = 20; // Larger screens
+}
 
 function getRandomPosition() {
     const exclusionZone = {

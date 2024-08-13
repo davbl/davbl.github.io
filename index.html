@@ -10,7 +10,8 @@
 
     <title>Acid Nucleique</title>
     <meta name="description" content="This is Dave's WWW.">
-    <meta name="keywords" content="DNA, RNA">
+    <!-- Use no more than 10 keywords -->
+    <meta name="keywords" content="DNA, RNA, biology, healthcare, medicine, bioinformatics, software, UX, UI, design">
     <meta name="author" content="Dave">
 
     <!-- Favicon -->
@@ -20,13 +21,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- TODO: 100 to 900 seems like a lot. though who knows whether fewer would make a difference. TEST IT. -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- js -->
     <script src="bubbles.js" defer></script>
 </head>
 
 <body>
-
+    <!-- HEADER -->
     <header>
         <nav>
             <!-- Logo -->
@@ -46,15 +48,120 @@
     </header>
 
     <main>
-        <section>
-            <!-- Hero text -->
-            <h1 class="gradient">
-                Hi, I'm Dave
-            </h1>
+        <!-- HERO -->
+        <section class="hero">
+            <h1 class="gradient">Hi, I'm Dave</h1>
+            <h2>And this is my www page</h2>
+        </section>
 
-            <h2>And this is my WWW</h2>
+        <!-- PORTFOLIO PIECES -->
+        <section class="portfolio">
+            <!-- DEV -->
+            <div class="grid-wrapper">
+                <!-- Header -->
+                <div>
+                    <h3>Development</h3>
+                    <p class="subtitle">AND UX/UI</p>
+                </div>
+
+                <div class="grid">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </div>
+
+            <!-- DESIGN -->
+            <div class="design">
+                <div>
+                    <h3>Visual Design</h3>
+                    <p>Pics or it didn’t happen</p>
+                </div>
+                <span class="arrow">➔</span>
+            </div>
+
+            <!-- BIO -->
+            <div class="grid-wrapper">
+                <!-- Header -->
+                <div>
+                    <h3>The Other Side</h3>
+                    <p class="subtitle">OF THE COIN</p>
+                </div>
+
+                <div class="grid">
+
+                    <div class="card-bio">
+                        <div class="card-header">
+                            <h4>Labs</h4>
+                            <span class="emoji">🔬</span>
+                        </div>
+                        <ol>
+                            <li>Timmons Lab at the University of Kansas</li>
+                            <li>Open Science Network in Vancouver</li>
+                        </ol>
+                    </div>
+
+                    <div class="card-bio">
+                        <div class="card-header">
+                            <h4>Organisms</h4>
+                            <span class="emoji">🧫</span>
+                        </div>
+                        <p>E. coli, S. cerevisiae, C. elegans, M. musculus, HEK293</p>
+                    </div>
+
+                    <div class="card-bio">
+                        <div class="card-header">
+                            <h4>Techniques</h4>
+                            <span class="emoji">🧬</span>
+                        </div>
+                        <p>Gel electrophoresis, PCR, primer design, restriction digestion, restriction mapping,
+                            miniprep,
+                            bacterial
+                            transformation,
+                            electroporation,
+                            mammalian cell culture.</p>
+                    </div>
+
+                    <div class="card-bio">
+                        <div class="card-header">
+                            <h4>American Red Cross Volunteer</h4>
+                            <span class="emoji">⛑️</span>
+                        </div>
+                        <p>Blood drive. Home fire preparedness campaign.</p>
+                    </div>
+
+                    <div class="card-bio">
+                        <div class="card-header">
+                            <h4>Mark L. Morris, Jr. New Venture Business Plan Award</h4>
+                            <span class="emoji">🫀</span>
+                        </div>
+                        <!-- <p>After completing a university course in Entrepreneurship in 2015, my final class project
+                            received an award. The project was a business plan for a made-up company that would provide
+                            automatic interpretation of EKG using machine learning.</p> -->
+                        <p>My award-winning final project for an Entrepreneurship class (2015) was a business plan for a
+                            fictional company offering automated EKG interpretation using machine learning.</p>
+                    </div>
+
+                    <div class="card-bio">
+                        <div class="card-header">
+                            <h4>Learn Neuroscience</h4>
+                            <span class="emoji">🧠</span>
+                        </div>
+                        <p>Resources.</p>
+                    </div>
+
+                </div> <!-- grid -->
+            </div> <!-- grid-wrapper -->
         </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© This year. Dave.</p>
+        <p>☉ Fine print: Some client projects are non-public, or unrelated to biology or healthcare.</p>
+    </footer>
 
 </body>
 

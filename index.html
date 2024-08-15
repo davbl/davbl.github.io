@@ -4,25 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Security -->
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' https://fonts.googleapis.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com;">
+    <!-- Security TODO: i removed google fonts -->
+    <!-- <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://fonts.googleapis.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com;"> -->
 
     <title>Acid Nucleique</title>
-    <meta name="description" content="This is Dave's WWW.">
+    <meta name="description" content="This is Dave's www page.">
     <!-- Use no more than 10 keywords -->
     <meta name="keywords" content="DNA, RNA, biology, healthcare, medicine, bioinformatics, software, UX, UI, design">
     <meta name="author" content="Dave">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- TODO: 100 to 900 seems like a lot. though who knows whether fewer would make a difference. TEST IT. -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <!-- js -->
     <script src="bubbles.js" defer></script>
 </head>
@@ -50,14 +48,15 @@
     <main>
         <!-- HERO -->
         <section class="hero">
-            <h1 class="gradient">Hi, I'm Dave</h1>
+            <h1 class="gradient">Hi, I’m Dave</h1>
             <h2>And this is my www page</h2>
         </section>
 
         <!-- PORTFOLIO PIECES -->
         <section class="portfolio">
+
             <!-- DEV -->
-            <div class="grid-wrapper">
+            <section class="flex-wrapper">
                 <!-- Header -->
                 <div>
                     <h3>Development</h3>
@@ -65,25 +64,104 @@
                 </div>
 
                 <div class="grid">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+
+                    <!-- Card -->
+                    <div class="card">
+                        <!-- Cover image -->
+                        <a href="https://www.dnarna.co/grapes-of-staph" target="_blank">
+                            <div class="screenshot-container">
+                                <img src="img/staph.png" alt="">
+                            </div>
+                        </a>
+                        <!-- Description -->
+                        <div class="description">
+                            <h4>AlphaMissense Browser</h4>
+                            <p>Webtool to search the AlphaMissense dataset without a Jupyter notebook. Stack: Flask,
+                                SQLite, Unpoly, Tailwind.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card">
+                        <!-- Cover image -->
+                        <a href="https://www.dnarna.co/grapes-of-staph" target="_blank">
+                            <div class="screenshot-container">
+                                <img src="img/staph.png" alt="">
+                            </div>
+                        </a>
+                        <!-- Description -->
+                        <div class="description">
+                            <h4>Grapes of Staph</h4>
+                            <p>Demo app for S. aureus diagnostics. Stack: React, Zustand.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div>
+                        <!-- Description -->
+                        <div class="description">
+                            <h4>DNA/RNA Analyzer</h4>
+                            <p>Fundamental bioinformatics tool with extras. Stack: Streamlit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div>
+                        <div class="description">
+                            <!-- Description -->
+                            <h4>FM FAQ</h4>
+                            <p>Frequently asked questions about fructose malabsorption. Stack: HTML, CSS.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div>
+                        <div class="description">
+                            <!-- Description -->
+                            <h4>Bola AI</h4>
+                            <p>Dental voice AI for Windows and Chrome. Brought on just for UX/UI.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
+            </section>
 
             <!-- DESIGN -->
-            <div class="design">
+            <section class="flex-wrapper">
+                <!-- Header -->
                 <div>
                     <h3>Visual Design</h3>
-                    <p>Pics or it didn’t happen</p>
+                    <p class="subtitle">Pics or it didn’t happen</p>
                 </div>
-                <span class="arrow">➔</span>
-            </div>
+
+                <div>
+                    <!-- Cover image -->
+                    <a href="design.html">
+                        <div class="img-container">
+                            <img src="img/comp-neuro-homepage.png" alt="A cover image for the Visual Design section">
+                        </div>
+                    </a>
+                    <div class="caption-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-mouse-pointer-click">
+                            <path d="M14 4.1 12 6" />
+                            <path d="m5.1 8-2.9-.8" />
+                            <path d="m6 12-1.9 2" />
+                            <path d="M7.2 2.2 8 5.1" />
+                            <path
+                                d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" />
+                        </svg>
+                        <p class="caption">Click the cover image to view a handful of specimens</p>
+                    </div>
+                </div>
+            </section>
 
             <!-- BIO -->
-            <div class="grid-wrapper">
+            <section class="flex-wrapper">
                 <!-- Header -->
                 <div>
                     <h3>Biomedical</h3>
@@ -92,12 +170,12 @@
 
                 <div class="grid">
 
+                    <!-- Labs -->
                     <div class="card-bio">
-                        <div class="card-header">
-                            <h4>Labs</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="#ff6a4d" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-microscope icon">
+                        <div class="card-header orange-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#ff720d" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-microscope ">
                                 <path d="M6 18h8" />
                                 <path d="M3 22h18" />
                                 <path d="M14 22a7 7 0 1 0 0-14h-1" />
@@ -105,33 +183,35 @@
                                 <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" />
                                 <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
                             </svg>
+                            <h4>Labs</h4>
                         </div>
                         <p>
-                            Timmons Lab at the University of Kansas,<br>Open Science Network in Vancouver
+                            Timmons Lab at the University of Kansas, Open Science Network in Vancouver
                         </p>
                     </div>
 
+                    <!-- Organisms -->
                     <div class="card-bio">
-                        <div class="card-header">
-                            <h4>Organisms</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="#ff6a4d" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-worm icon">
+                        <div class="card-header orange-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#ff720d" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-worm ">
                                 <path d="m19 12-1.5 3" />
                                 <path d="M19.63 18.81 22 20" />
                                 <path
                                     d="M6.47 8.23a1.68 1.68 0 0 1 2.44 1.93l-.64 2.08a6.76 6.76 0 0 0 10.16 7.67l.42-.27a1 1 0 1 0-2.73-4.21l-.42.27a1.76 1.76 0 0 1-2.63-1.99l.64-2.08A6.66 6.66 0 0 0 3.94 3.9l-.7.4a1 1 0 1 0 2.55 4.34z" />
                             </svg>
+                            <h4>Organisms</h4>
                         </div>
                         <p>E. coli, S. cerevisiae, C. elegans, M. musculus, HEK293</p>
                     </div>
 
+                    <!-- Techniques -->
                     <div class="card-bio">
-                        <div class="card-header">
-                            <h4>Techniques</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="#ff6a4d" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-dna icon">
+                        <div class="card-header orange-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#ff720d" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-dna ">
                                 <path d="m10 16 1.5 1.5" />
                                 <path d="m14 8-1.5-1.5" />
                                 <path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993" />
@@ -144,6 +224,7 @@
                                 <path d="m7 18 2.891 2.891" />
                                 <path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993" />
                             </svg>
+                            <h4>Techniques</h4>
                         </div>
                         <p>Gel electrophoresis, PCR, primer design, restriction digestion, restriction mapping,
                             miniprep,
@@ -153,50 +234,47 @@
                             mammalian cell culture</p>
                     </div>
 
+                    <!-- Red Cross -->
                     <div class="card-bio">
-                        <div class="card-header">
-                            <h4>American Red Cross Volunteer</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="#ff6a4d" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-cross icon">
+                        <div class="card-header red-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#ff4d5b" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-cross">
                                 <path
                                     d="M11 2a2 2 0 0 0-2 2v5H4a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h5v5c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-5h5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-5V4a2 2 0 0 0-2-2h-2z" />
                             </svg>
+                            <h4>American Red Cross</h4>
                         </div>
-                        <p>
-                            Our team of ~10 people organized Community Blood Drives, made reusable pads
+                        <p>Our team of ~10 volunteers organized Community Blood Drives, made reusable pads
                             for Tanzanian girls and women, carried out a Home Fire Preparedness Campaign, and helped
-                            disabled students move apartments.
-                        </p>
+                            disabled students move apartments.</p>
                     </div>
 
+                    <!-- Business Plan Award -->
                     <div class="card-bio">
-                        <div class="card-header">
-                            <h4>Mark L. Morris, Jr. New Venture Business Plan Award</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="#ff6a4d" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-heart-pulse icon">
+                        <div class="card-header red-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="#ff4d5b" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-heart-pulse">
                                 <path
                                     d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                                 <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
                             </svg>
+                            <h4>Mark L. Morris, Jr. Award</h4>
                         </div>
-                        <!-- <p>After completing a university course in Entrepreneurship in 2015, my final class project
-                            received an award. The project was a business plan for a made-up company that would provide
-                            automatic interpretation of EKG using machine learning.</p> -->
                         <p>My award-winning project for an Entrepreneurship class (2015) was a business plan for a
                             fictional company offering automated EKG interpretation using ML.</p>
                     </div>
 
+                    <!-- Learn Neuroscience -->
                     <a href="https://dvbl.notion.site/Learn-Neuroscience-66dc61f4f4de4003874f3aa9d27846a5"
                         target="_blank">
-                        <div class="card-bio neuro">
+                        <div class="card-bio neuro-card">
 
-                            <div class="card-header">
-                                <h4>Learn Neuroscience</h4>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#ff6a4d" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-brain icon">
+                            <div class="card-header pink-header">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#ff4db5" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-brain">
                                     <path
                                         d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
                                     <path
@@ -209,26 +287,19 @@
                                     <path d="M6 18a4 4 0 0 1-1.967-.516" />
                                     <path d="M19.967 17.484A4 4 0 0 1 18 18" />
                                 </svg>
+                                <h4>Learn Neuroscience</h4>
                             </div>
 
-                            <p>A collection of resources for learning about the brain, nervous system, and
+                            <p>A collection of <span class="neuro-link">resources</span> for learning about the brain,
+                                nervous system, and
                                 neurotechnology. Books, online courses, videos, subreddits,
                                 twitter accounts, podcasts, and newsletters.</p>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="#999999" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-square-arrow-out-up-right">
-                                <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
-                                <path d="m21 3-9 9" />
-                                <path d="M15 3h6v6" />
-                            </svg>
-
                         </div>
                     </a>
 
                 </div> <!-- grid -->
-            </div> <!-- grid-wrapper -->
-        </section>
+            </section> <!-- grid-wrapper -->
+        </section> <!-- portfolio -->
     </main>
 
     <!-- FOOTER -->

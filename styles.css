@@ -6,8 +6,7 @@
   --default-color: #737373;
   --accent-color: #ff6a4d;
   --dark-grey: #595959;
-  --mid-grey-text: #999999;
-  --card-bg: #f7f7f7;
+  --mid-grey-text: #9e9e9e;
 
   --orange: #ff6d05;
   --orange-light: #fff6f0;
@@ -95,34 +94,61 @@ img {
 
 header {
   width: 100%;
-  font-size: 0.96rem;
   padding: 3rem var(--px);
-
-  svg {
-    stroke: var(--mid-grey-text);
-    /* a bit translucent so that bubble is slightly visible underneath */
-    fill: rgba(255, 255, 255, 0.9);
-    /* can't use backdrop-filter bcs of corners */
-    transition: stroke 0.05s ease-in-out;
-  }
-
-  svg:hover {
-    stroke: var(--accent-color);
-  }
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
   color: var(--dark-grey);
   font-weight: 550;
+  font-size: 0.96rem;
   /* padding: 1rem 1.25rem;
   border-radius: 8px;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px); */
+}
+
+.contact {
+  z-index: 0;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  color: var(--mid-grey-text);
+
+  svg {
+    stroke: var(--mid-grey-text);
+    /* a bit translucent so that bubble is slightly visible underneath */
+    // fill: rgba(255, 255, 255, 0.9);
+    /* can't use backdrop-filter bcs of corners */
+    transition: stroke 0.1s ease-in-out;
+  }
+
+  svg:hover {
+    stroke: var(--accent-color);
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    transition: all 0.1s ease-in-out;
+  }
+
+  span:hover {
+    color: var(--dark-grey);
+    // text-decoration: underline;
+    // text-underline-position: under;
+  }
+
+  #email-text {
+    display: inline-block;
+    width: 13ch;
+  }
 }
 
 /****************************************************************************************/
@@ -147,7 +173,16 @@ main {
 
 /* HERO section*/
 
-.hero {
+.hero-section {
+  height: 90vh;
+  padding: 0 0 11rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text {
+  z-index: 2;
   background: radial-gradient(
     rgba(255, 255, 255, 0.95),
     rgba(255, 255, 255, 0.9),
@@ -164,13 +199,13 @@ main {
   /* backdrop-filter: blur(0px); */
   /* -webkit-backdrop-filter: blur(15px); */
   /* border-radius: 0%; */
-  padding: 0 0 11rem 0;
+  padding: 8rem 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  justify-content: center;
+  // justify-content: center;
   text-align: center;
-  height: 90vh;
+  // height: 90vh;
 }
 
 /* Hero text */
@@ -298,6 +333,7 @@ h3 {
     object-fit: scale-down;
     border-radius: 12px;
     /* opacity: 0.75; */
+    z-index: 2;
   }
 }
 
@@ -451,10 +487,28 @@ footer {
   align-items: center;
   border-radius: 50%;
   opacity: 0;
-  z-index: -1;
+  z-index: 1;
   color: white;
   /* font-weight: bold; */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   animation: float 20s ease-in-out infinite;
+}
+
+.bubble-t {
+  background-color: rgba(255, 26, 45, 0.6);
+}
+.bubble-u {
+  background-color: rgba(255, 26, 45, 0.6);
+}
+.bubble-a {
+  background-color: rgba(68, 204, 0, 0.6);
+}
+.bubble-c {
+  background-color: rgba(0, 127, 255, 0.6);
+}
+.bubble-g {
+  background-color: rgba(255, 106, 0, 0.6);
 }
 
 /* Bubble animation */
@@ -471,7 +525,7 @@ footer {
         calc(var(--move-y) * 0.05px)
       )
       scale(1.1);
-    opacity: 0.8;
+    opacity: 1;
   }
 
   10% {
@@ -494,7 +548,7 @@ footer {
         calc(var(--move-y) * 0.95px)
       )
       scale(0.5);
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 

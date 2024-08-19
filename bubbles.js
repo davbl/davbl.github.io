@@ -1,9 +1,9 @@
 const bubblesData = [
-  { color: "#FF5959", letter: "T" }, // Red for 'T'
-  { color: "#FF5959", letter: "U" }, // Red for 'U'
-  { color: "#6CD936", letter: "A" }, // Green for 'A'
-  { color: "#4DA6FF", letter: "C" }, // Blue for 'C'
-  { color: "#FF8F40", letter: "G" }, // Orange for 'G'
+  { bgClass: "bubble-t", textColor: "#FF5967", letter: "T" }, // Red for 'T'
+  { bgClass: "bubble-u", textColor: "#FF5967", letter: "U" }, // Red for 'U'
+  { bgClass: "bubble-a", textColor: "#48D900", letter: "A" }, // Green for 'A'
+  { bgClass: "bubble-c", textColor: "#4DA6FF", letter: "C" }, // Blue for 'C'
+  { bgClass: "bubble-g", textColor: "#FF8F40", letter: "G" }, // Orange for 'G'
 ];
 
 // Adjust the number of bubbles based on screen width
@@ -41,13 +41,12 @@ function getRandomPosition() {
 for (let i = 0; i < numBubbles; i++) {
   const bubble = document.createElement("div");
   const bubbleData = bubblesData[i % bubblesData.length];
-  bubble.classList.add("bubble");
+  bubble.classList.add("bubble", bubbleData.bgClass);
 
   const size = Math.random() * 20 + 10;
   bubble.style.width = `${size}px`;
   bubble.style.height = `${size}px`;
   bubble.style.fontSize = `${size / 2}px`; // Font size scales with bubble size
-  bubble.style.backgroundColor = bubbleData.color;
 
   const { x, y } = getRandomPosition();
   bubble.style.left = `${x}px`;
@@ -55,7 +54,7 @@ for (let i = 0; i < numBubbles; i++) {
 
   const duration = Math.random() * 10 + 15; // 15-25 seconds
   bubble.style.animationDuration = `${duration}s`;
-  bubble.style.animationDelay = `${Math.random() * 10}s`;
+  bubble.style.animationDelay = `${Math.random() * 10}s`; // 0-10 seconds
 
   const distance = 100 + Math.random() * 100; // 100-200 pixels
   const angle = Math.random() * 360; // Random angle in degrees

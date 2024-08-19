@@ -136,7 +136,7 @@ main {
   flex-grow: 1;
   padding-bottom: 20vh;
   /* pb is/was problematic on mobile */
-  max-width: 1700px; /* TODO: figure what makes sense */
+  max-width: 1900px; /* TODO: figure what makes sense */
   padding-left: var(--px);
   padding-right: var(--px);
   width: 100%;
@@ -250,12 +250,16 @@ h3 {
 }
 
 /* Cards */
-.grid {
+.grid-dev {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, 400px); */
-  /* prob should't do higher min bcs mobile width. though i could figure out w media query for mobile */
+  /* min should not be lower than 270px, otherwise AM Browser description breaks into too many lines */
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+/* Cards */
+.grid-bio {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  /* justify-content: center; */
 }
 
 .gap-big {
@@ -263,7 +267,7 @@ h3 {
 }
 
 .gap-small {
-  gap: 3.5rem;
+  gap: 4rem;
 }
 
 /****************************************************************************************/
@@ -291,7 +295,7 @@ h3 {
   transition: all 0.2s ease-in-out;
 
   img {
-    object-fit: contain;
+    object-fit: scale-down;
     border-radius: 12px;
     /* opacity: 0.75; */
   }
@@ -313,7 +317,11 @@ h3 {
 .description {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.3rem;
+
+  h4 {
+    color: var(--dark-grey);
+  }
 }
 
 /****************************************************************************************/
@@ -394,10 +402,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   /* line-height: 1.5; */
   /* padding-right: 1rem; */
   font-weight: 550;
+  /* color: var(--dark-grey); */
 }
 
 .neuro-card:hover {

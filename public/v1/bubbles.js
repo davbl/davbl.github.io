@@ -9,11 +9,15 @@ const bubblesData = [
 // Adjust the number of bubbles based on screen width
 let numBubbles;
 if (window.innerWidth < 600) {
-  numBubbles = 8; // Smaller screens
-} else if (window.innerWidth < 900) {
-  numBubbles = 12; // Medium screens
+  numBubbles = 8; // Mobile screens
+} else if (window.innerWidth < 1000) {
+  numBubbles = 12; // Small screens
+} else if (window.innerWidth < 1400) {
+  numBubbles = 16; // Medium screens
+} else if (window.innerWidth < 1800) {
+  numBubbles = 20; // Standard screens
 } else {
-  numBubbles = 16; // Larger screens
+  numBubbles = 24; // Large screens
 }
 
 function getRandomPosition() {
@@ -43,7 +47,7 @@ for (let i = 0; i < numBubbles; i++) {
   const bubbleData = bubblesData[i % bubblesData.length];
   bubble.classList.add("bubble", bubbleData.bgClass);
 
-  const size = Math.random() * 20 + 10;
+  const size = Math.random() * 30 + 10;
   bubble.style.width = `${size}px`;
   bubble.style.height = `${size}px`;
   bubble.style.fontSize = `${size / 2}px`; // Font size scales with bubble size

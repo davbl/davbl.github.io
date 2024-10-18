@@ -135,7 +135,7 @@ nav {
 
   span {
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 425;
     transition: all 0.1s ease-in-out;
   }
 
@@ -175,7 +175,7 @@ main {
 
 .hero-section {
   height: 90vh;
-  padding: 0 0 11rem 0;
+  padding: 0 0 12.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -224,7 +224,7 @@ h1 {
 
 /* Hero text gradient */
 .gradient {
-  background: linear-gradient(90deg, #ff974d, #ff4d4d);
+  background: linear-gradient(90deg, #ff974d, #ff4d5b);
   background-clip: text;
   -webkit-background-clip: text;
   /* text-fill-color: transparent; */
@@ -435,7 +435,45 @@ h3 {
 .pink-header {
   background-color: var(--pink-light);
   color: var(--pink);
+  // animation: fmri 5s ease-in-out infinite;
+
+  // svg {
+  //   // fill: var(--accent-color);
+  //   // animation: fmri 5s ease-in-out infinite;
+  // }
 }
+
+// @keyframes fmri {
+//   0%,
+//   100% {
+//     stroke: var(--pink);
+//     fill: var(--pink-light);
+//     color: var(--pink);
+//     background-color: var(--pink-light);
+//   }
+
+//   20%,
+//   80% {
+//     stroke: var(--red);
+//     fill: var(--red-light);
+//     color: var(--red);
+//     background-color: var(--red-light);
+//   }
+
+//   40%,
+//   60% {
+//     stroke: var(--orange);
+//     fill: var(--orange-light);
+//     color: var(--orange);
+//     background-color: var(--orange-light);
+//   }
+//   50% {
+//     stroke: #f2de00;
+//     fill: #fefbe0;
+//     color: #f2de00;
+//     background-color: #fefbe0;
+//   }
+// }
 
 h4 {
   font-size: 1.1rem;
@@ -524,7 +562,7 @@ footer {
         calc(var(--move-x) * 0.05px),
         calc(var(--move-y) * 0.05px)
       )
-      scale(1.1);
+      scale(1);
     opacity: 1;
   }
 
@@ -533,7 +571,7 @@ footer {
         calc(var(--move-x) * 0.1px),
         calc(var(--move-y) * 0.1px)
       )
-      scale(1.2);
+      scale(1);
     opacity: 1;
   }
 
@@ -547,7 +585,7 @@ footer {
         calc(var(--move-x) * 0.95px),
         calc(var(--move-y) * 0.95px)
       )
-      scale(0.5);
+      scale(0.75);
     opacity: 1;
   }
 }

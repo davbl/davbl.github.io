@@ -1,7 +1,23 @@
+import Header from "../components/header/header";
+import Hero from "../components/hero/hero";
+import Dev from "../components/dev/dev";
+import VisDesign from "../components/visual-design/visual-design";
+import Biomed from "../components/biomed/biomed";
+import OthersSay from "../components/others-say/others-say";
+import Footer from "../components/footer/footer";
+
 function Home() {
   return (
     <>
-      <h1>Software + Biology</h1>
+      <Header />
+      <main>
+        <Hero />
+        <Dev />
+        <VisDesign />
+        <Biomed />
+        <OthersSay />
+      </main>
+      <Footer />
     </>
   );
 }

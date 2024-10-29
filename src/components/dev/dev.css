@@ -1,0 +1,40 @@
+.dev-bento {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "am-browser am-browser bola"
+    "fm analyzer analyzer"
+    "staph staph nothing";
+  padding-top: 4rem;
+}
+
+.am-browser {
+  grid-area: am-browser;
+  height: 765px;
+  background-color: #ff5b42;
+}
+
+.bola {
+  grid-area: bola;
+  height: 765px;
+  background-color: #6185f2;
+}
+
+.fm {
+  grid-area: fm;
+  height: 765px;
+  background-color: #467ee5;
+}
+
+.analyzer {
+  grid-area: analyzer;
+  height: 765px;
+  background-color: #ff4b4b;
+}
+
+.staph {
+  grid-area: staph;
+  height: 765px;
+  background-color: #7869bf;
+}

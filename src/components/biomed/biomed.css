@@ -1,0 +1,195 @@
+.bio-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "techniques labs organisms"
+    "neuro red-cross red-cross"
+    "neuro award award";
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+@media (max-width: 1200px) {
+  .bio-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "techniques labs"
+      "organisms neuro"
+      "red-cross neuro"
+      "award award";
+  }
+}
+
+@media (max-width: 775px) {
+  .bio-bento {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "techniques"
+      "labs"
+      "organisms"
+      "neuro"
+      "red-cross"
+      "award";
+  }
+}
+
+@media (max-width: 400px) {
+  .bio-bento {
+    gap: 1rem;
+  }
+}
+
+.card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h4 {
+    font-size: 2rem;
+  }
+}
+
+/* @media (max-width: 400px) {
+  .card {
+    border-radius: 0.5rem;
+  }
+} */
+
+.techniques {
+  grid-area: techniques;
+  height: 375px;
+
+  &::before {
+    /* Squircle background color  */
+    background: #4d3e46;
+  }
+
+  &:hover {
+    /* Squircle border color */
+    background: var(--accent-color);
+  }
+
+  h4 {
+    color: #ff8359;
+  }
+
+  p {
+    color: #cc9685;
+  }
+}
+
+.labs {
+  grid-area: labs;
+  height: 375px;
+
+  &::before {
+    /* Squircle background color  */
+    background: #4d3e46;
+  }
+
+  &:hover {
+    /* Squircle border color */
+    background: var(--accent-color);
+  }
+
+  h4 {
+    color: #ff8359;
+  }
+
+  p {
+    color: #cc9685;
+  }
+}
+
+.organisms {
+  grid-area: organisms;
+  height: 375px;
+
+  &::before {
+    /* Squircle background color  */
+    background: #4d3e46;
+  }
+
+  &:hover {
+    /* Squircle border color */
+    background: var(--accent-color);
+  }
+
+  h4 {
+    color: #ff8359;
+  }
+
+  p {
+    color: #cc9685;
+  }
+}
+
+.neuro {
+  grid-area: neuro;
+  min-height: 375px;
+
+  &::before {
+    /* Squircle background color  */
+    background: #4d3451;
+  }
+
+  &:hover {
+    /* Squircle border color */
+    background: #ff4db5;
+  }
+
+  h4 {
+    color: #ff4db5;
+  }
+
+  p {
+    color: #cc85ae;
+  }
+}
+
+.red-cross {
+  grid-area: red-cross;
+  height: 375px;
+
+  &::before {
+    /* Squircle background color  */
+    background: #4d3444;
+  }
+
+  &:hover {
+    /* Squircle border color */
+    background: #ff5968;
+  }
+
+  h4 {
+    color: #ff5968;
+  }
+
+  p {
+    color: #cc858b;
+  }
+}
+
+.award {
+  grid-area: award;
+  height: 375px;
+
+  &::before {
+    /* Squircle background color  */
+    background: #4d3444;
+  }
+
+  &:hover {
+    /* Squircle border color */
+    background: #ff5968;
+  }
+
+  h4 {
+    color: #ff5968;
+  }
+
+  p {
+    color: #cc858b;
+  }
+}

@@ -1,0 +1,28 @@
+footer {
+  display: grid;
+  grid-template-areas:
+    "contact built-with"
+    "feedback copyright";
+  gap: 1rem;
+  padding-top: 16rem;
+
+  h3 {
+    opacity: 1;
+  }
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.feedback {
+  grid-area: feedback;
+}
+
+.built-with {
+  grid-area: built-with;
+}
+
+.copyright {
+  grid-area: copyright;
+}

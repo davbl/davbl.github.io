@@ -1,8 +1,9 @@
 :root {
   /* COLORS *******************************************************************************/
 
-  --bg-color: #615c66;
-  --primary-color: #f6f5fa;
+  --bg-color: #2d3040;
+  --primary-color: white;
+  --accent-color: #ff9f80;
   background-color: var(--bg-color);
   color: var(--primary-color);
 
@@ -110,4 +111,31 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+@media (max-width: 400px) {
+  #root {
+    padding: 1rem;
+  }
+}
+
+::selection {
+  color: var(--bg-color);
+  /* background-color: var(--accent-color); */
+  background-color: white;
+}
+
+/* Section headings */
+h2 {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 700;
+  padding-top: 16rem;
+}
+
+/* Section subheadings */
+h3 {
+  opacity: 0.3;
+  font-weight: 550;
+  font-size: 1.25rem;
 }

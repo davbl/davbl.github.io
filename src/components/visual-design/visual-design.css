@@ -24,6 +24,24 @@
   gap: var(--bento-gap);
 }
 
+/* Define column widths */
+/* Tablet */
+@media (min-width: 701px) and (max-width: 1000px) {
+  .col1,
+  .col2 {
+    flex: 1; /* Equal width */
+  }
+}
+/* Desktop */
+@media (min-width: 1001px) {
+  .col1 {
+    flex: 2; /* Twice the width of .col2 */
+  }
+  .col2 {
+    flex: 1;
+  }
+}
+
 /* No scroll animation on mobile */
 /* Change pixel value if changed in React file */
 @media (min-width: 701px) {
@@ -31,7 +49,6 @@
     transform: translateY(calc(var(--scroll-position, 0) * 0.05px));
     /* will-change: transform; */
   }
-
   .col2 {
     transform: translateY(calc(var(--scroll-position, 0) * -0.05px));
     /* will-change: transform; */

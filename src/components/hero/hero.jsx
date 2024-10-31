@@ -20,8 +20,8 @@ function Hero() {
         <div className="fine-print">
           <span>☉</span>
           <p>
-            Fine print: Only projects related to biology and healthcare are
-            showcased on this site.
+            Fine print: Only projects related to bio & health are showcased on
+            this site.
           </p>
         </div>
       </div>

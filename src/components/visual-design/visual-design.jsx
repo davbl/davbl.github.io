@@ -1,13 +1,14 @@
-import "./visual-design.css";
-import { Squircle } from "corner-smoothing";
-import compNeuro from "./img/comp-neuro.png";
-import stickers from "./img/stickers.png";
-import fig1 from "./img/figure-1.png";
-import fig2 from "./img/figure-2.png";
-import multitasking from "./img/multi-tasking.png";
-import elspac from "./img/elspac.png";
-import abyky from "./img/abyky.png";
 import { useEffect, useRef, useState } from "react";
+import { Squircle } from "corner-smoothing";
+
+import "./visual-design.css";
+import compNeuro from "./img/comp-neuro.avif";
+import stickers from "./img/stickers.avif";
+import fig1 from "./img/figure-1.avif";
+import fig2 from "./img/figure-2.avif";
+import multitasking from "./img/multi-tasking.avif";
+import elspac from "./img/elspac.avif";
+import abyky from "./img/abyky.avif";
 import MobileLayout from "./vis-design-mobile";
 import TabletLayout from "./vis-design-tablet";
 
@@ -34,8 +35,6 @@ function VisDesign() {
   const isTablet = useMediaQuery("(max-width: 1000px)");
   // Change mobile pixel value if changed in css file
   const isMobile = useMediaQuery("(max-width: 700px)");
-  const bentoRef = useRef(null);
-
   const images = {
     compNeuro,
     stickers,
@@ -45,35 +44,49 @@ function VisDesign() {
     elspac,
     abyky,
   };
+  const bentoRef = useRef(null);
+  const ticking = useRef(false); // useRef to maintain ticking state across renders
 
   // Get scroll position for scroll animation
   useEffect(() => {
     function handleScroll() {
       if (!bentoRef.current) return;
 
-      // Get the section's position relative to the viewport
-      const rect = bentoRef.current.getBoundingClientRect();
-      const sectionTop = rect.top;
-      const windowHeight = window.innerHeight;
+      // Only proceed if there's no pending animation frame
+      if (!ticking.current) {
+        requestAnimationFrame(() => {
+          // Get the section's position relative to the viewport
+          const rect = bentoRef.current.getBoundingClientRect();
+          const sectionTop = rect.top;
+          const windowHeight = window.innerHeight;
 
-      // Calculate relative scroll position
-      // This will be 0 when the section is at the bottom of the viewport,
-      // and increase as we scroll through it
-      const relativeScroll = Math.max(0, windowHeight - sectionTop);
+          // Calculate relative scroll position
+          const relativeScroll = Math.max(0, windowHeight - sectionTop);
 
-      document.documentElement.style.setProperty(
-        "--scroll-position",
-        relativeScroll
-      );
+          // Update the custom CSS variable for use in animations
+          document.documentElement.style.setProperty(
+            "--scroll-position",
+            relativeScroll
+          );
+
+          // Reset the ticking flag
+          ticking.current = false;
+        });
+
+        // Set the flag to true to prevent multiple requests
+        ticking.current = true;
+      }
     }
 
+    // Add the scroll event listener
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial calculation
+    handleScroll(); // Initial calculation on component mount
 
+    // Clean up the scroll listener on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []); // Empty dependency array to run once on mount
 
   return (
     <section>

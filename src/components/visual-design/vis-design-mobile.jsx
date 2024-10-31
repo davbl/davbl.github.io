@@ -60,20 +60,6 @@ function MobileLayout({ images }) {
         </Squircle>
       </Squircle>
 
-      {/* Fig 1 */}
-      <Squircle
-        className="piece"
-        cornerRadius={20}
-        borderWidth={1.5}
-        cornerSmoothing={0.8}>
-        <Squircle cornerRadius={16} cornerSmoothing={0.8}>
-          <img
-            src={images.fig1}
-            alt="A diagram comparing sufficient and limited cognitive processing resources. It shows two human profiles with labeled brain areas. The top row, labeled 'Sufficient Processing Resources,' shows a brain image with bright areas leading to a full plate of food. The bottom row, labeled 'Limited Processing Resources,' shows a dimly labeled brain area leading to a plate with only one food item."
-          />
-        </Squircle>
-      </Squircle>
-
       {/* Fig 2 */}
       <Squircle
         className="piece"
@@ -84,6 +70,20 @@ function MobileLayout({ images }) {
           <img
             src={images.fig2}
             alt="A diagram of the working memory model, titled 'Central Executive.' It shows two components linked to the Central Executive: the 'Visuospatial Sketchpad,' represented by a blue diamond with an eye, handling visual and spatial information, and the 'Phonological Loop,' represented by an orange circle with an ear, handling verbal and auditory information. A note suggests combining tasks from different components for efficient multitasking."
+          />
+        </Squircle>
+      </Squircle>
+
+      {/* Fig 1 */}
+      <Squircle
+        className="piece"
+        cornerRadius={20}
+        borderWidth={1.5}
+        cornerSmoothing={0.8}>
+        <Squircle cornerRadius={16} cornerSmoothing={0.8}>
+          <img
+            src={images.fig1}
+            alt="A diagram comparing sufficient and limited cognitive processing resources. It shows two human profiles with labeled brain areas. The top row, labeled 'Sufficient Processing Resources,' shows a brain image with bright areas leading to a full plate of food. The bottom row, labeled 'Limited Processing Resources,' shows a dimly labeled brain area leading to a plate with only one food item."
           />
         </Squircle>
       </Squircle>

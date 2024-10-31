@@ -5,14 +5,12 @@
   --bento-gap: 2rem;
   gap: var(--bento-gap);
   display: flex;
-  /* will-change: transform; */
 }
 
 .col1 {
   display: flex;
   flex-direction: column;
   gap: var(--bento-gap);
-  /* will-change: transform; */
 }
 
 .row2 {
@@ -24,7 +22,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--bento-gap);
-  /* will-change: transform; */
 }
 
 /* No scroll animation on mobile */
@@ -32,10 +29,12 @@
 @media (min-width: 701px) {
   .col1 {
     transform: translateY(calc(var(--scroll-position, 0) * 0.05px));
+    /* will-change: transform; */
   }
 
   .col2 {
     transform: translateY(calc(var(--scroll-position, 0) * -0.05px));
+    /* will-change: transform; */
   }
 }
 

@@ -10,11 +10,13 @@ import award from "./img/award-4x.png";
 function Biomed() {
   return (
     <section>
-      <div className="heading">
+      {/* Section heading */}
+      <div>
         <h2>Biomedical</h2>
         <h3>The flip side</h3>
       </div>
 
+      {/* Bento grid */}
       <div className="bio-bento">
         <Squircle
           className="techniques card"

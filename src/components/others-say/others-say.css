@@ -1,0 +1,89 @@
+.quotes-container {
+  padding-top: 4rem;
+  display: flex;
+  gap: 2rem;
+  /* position: relative; */
+  color: var(--sec-color);
+}
+
+.quote-card {
+  padding: 4rem;
+  background-color: rgba(229, 233, 255, 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  blockquote {
+    position: relative;
+
+    /* Hanging quote */
+    &::before {
+      content: '"';
+      position: absolute;
+      left: 0;
+      top: 0;
+      /* translate(x, y) */
+      transform: translate(-0.44rem, 1rem);
+    }
+  }
+
+  p {
+    padding-top: 1rem;
+    max-width: 65ch;
+  }
+}
+
+.steve-card {
+  color: var(--accent-color);
+  background-color: rgba(255, 140, 102, 0.1);
+
+  /* translate(x, y) */
+  transform: translate(0rem, 10rem);
+
+  /* Background blur */
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+.person-info {
+  display: flex;
+  gap: 1.25rem;
+  padding-top: 5rem;
+
+  p {
+    padding-top: 0;
+    line-height: 1.45;
+  }
+
+  .photo-steve {
+    padding: 5px;
+
+    /* Squircle border color */
+    background: var(--accent-color);
+
+    &::before {
+      /* Squircle background color  */
+      background: #433a45;
+    }
+  }
+
+  .photo-derick {
+    padding: 5px;
+
+    /* Squircle border color */
+    background: var(--sec-color);
+
+    &::before {
+      /* Squircle background color  */
+      background: #3c3e4f;
+    }
+  }
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  padding-bottom: 3px;
+}

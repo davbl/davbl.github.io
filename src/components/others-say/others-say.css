@@ -2,8 +2,10 @@
   padding-top: 4rem;
   display: flex;
   gap: 2rem;
-  /* position: relative; */
+  position: relative;
   color: var(--sec-color);
+  /* so that Steve doesn't have to be as high as Derick, which has more content */
+  align-items: flex-start;
 }
 
 .quote-card {
@@ -12,7 +14,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   blockquote {
     position: relative;
@@ -30,60 +32,149 @@
 
   p {
     padding-top: 1rem;
-    max-width: 65ch;
+  }
+}
+
+.derick-card {
+  width: calc(100% - 5.3rem);
+  transform: translateY(2rem);
+
+  p {
+    max-width: 47%;
+  }
+
+  .person-info {
+    width: 47.4%;
+    /* so that the text wraps at the same time as Steve text */
+    p {
+      width: 256px;
+    }
+  }
+
+  a:hover .icon {
+    stroke: var(--accent-color);
+    transform: translate(1px, -1px);
   }
 }
 
 .steve-card {
   color: var(--accent-color);
   background-color: rgba(255, 140, 102, 0.1);
-
-  /* translate(x, y) */
-  transform: translate(0rem, 10rem);
-
   /* Background blur */
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+
+  transform: translateY(-3.5rem);
+  position: absolute;
+  /* top: 4rem; */
+  right: 0;
+  width: 50%;
+
+  a:hover .icon {
+    stroke: var(--sec-color);
+    transform: translate(1px, -1px);
+  }
 }
 
 .person-info {
   display: flex;
   gap: 1.25rem;
-  padding-top: 5rem;
+  padding-top: 2.5rem;
+  flex-wrap: wrap;
 
+  /* Job title, company */
   p {
     padding-top: 0;
     line-height: 1.45;
-  }
-
-  .photo-steve {
-    padding: 5px;
-
-    /* Squircle border color */
-    background: var(--accent-color);
-
-    &::before {
-      /* Squircle background color  */
-      background: #433a45;
-    }
-  }
-
-  .photo-derick {
-    padding: 5px;
-
-    /* Squircle border color */
-    background: var(--sec-color);
-
-    &::before {
-      /* Squircle background color  */
-      background: #3c3e4f;
-    }
+    max-width: 100%;
   }
 }
 
+/* Name */
 h5 {
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.4;
+}
+
+.name-and-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding-bottom: 3px;
+
+  .icon {
+    transition: all 0.1s ease;
+  }
+}
+
+.photo-steve {
+  padding: 5px;
+
+  /* Squircle border color */
+  background: var(--accent-color);
+
+  &::before {
+    /* Squircle background color  */
+    background: #433a45;
+  }
+}
+
+.photo-derick {
+  padding: 5px;
+
+  /* Squircle border color */
+  background: var(--sec-color);
+
+  &::before {
+    /* Squircle background color  */
+    background: #3c3e4f;
+  }
+}
+
+/* MEDIA QUERIES ******************************************************************************************************/
+
+/* Mid-screen */
+@media (max-width: 830px) {
+  .quote-card {
+    padding: 2.5rem;
+  }
+
+  .derick-card {
+    p {
+      max-width: 50%;
+    }
+  }
+}
+
+/* Small-screen */
+@media (max-width: 734px) {
+  .quote-card {
+    padding: 2rem;
+  }
+
+  .quotes-container {
+    flex-direction: column;
+  }
+
+  .derick-card {
+    width: 100%;
+    transform: translateY(0);
+    order: 2;
+
+    p {
+      max-width: 100%;
+    }
+
+    .person-info {
+      width: 100%;
+    }
+  }
+
+  .steve-card {
+    transform: translateY(0);
+    position: relative;
+    width: 100%;
+    order: 1;
+  }
 }

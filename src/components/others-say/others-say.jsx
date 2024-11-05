@@ -2,6 +2,7 @@ import { Squircle } from "corner-smoothing";
 import "./others-say.css";
 import derick from "./img/derick.png";
 import steve from "./img/steve.png";
+import { SquareArrowUpRight } from "lucide-react";
 
 function OthersSay() {
   return (
@@ -56,21 +57,34 @@ function OthersSay() {
               <Squircle cornerRadius={16} cornerSmoothing={0.8}>
                 <img
                   src={derick}
-                  alt="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TODO"
+                  alt="Portrait photo of Derick Schweppe."
                   width="96"
                   height="96"
                 />
               </Squircle>
             </Squircle>
 
-            <div>
-              <h5>Derick Schweppe</h5>
-              <p>
-                Lead Product Designer
-                <br />
-                Garmin
-              </p>
-            </div>
+            {/* Text */}
+            <a
+              href="https://www.linkedin.com/in/derick-schweppe-62581231/"
+              target="_blank">
+              <div>
+                <div className="name-and-icon">
+                  <h5>Derick Schweppe</h5>
+                  <SquareArrowUpRight
+                    size={16.5}
+                    strokeWidth={2}
+                    className="icon"
+                  />
+                </div>
+
+                <p>
+                  Lead Product Designer
+                  <br />
+                  Garmin
+                </p>
+              </div>
+            </a>
           </div>
         </Squircle>
 
@@ -105,6 +119,7 @@ function OthersSay() {
           </blockquote>
 
           {/* Person info */}
+
           <div className="person-info">
             {/* Photo */}
             <Squircle
@@ -115,21 +130,34 @@ function OthersSay() {
               <Squircle cornerRadius={16} cornerSmoothing={0.8}>
                 <img
                   src={steve}
-                  alt="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TODO"
+                  alt="Portrait photo of Steve Penrod."
                   width="96"
                   height="96"
                 />
               </Squircle>
             </Squircle>
 
-            <div>
-              <h5>Steve Penrod</h5>
-              <p>
-                Sr. Director of Product Development
-                <br />
-                TripleBlind
-              </p>
-            </div>
+            {/* Text */}
+            <a
+              href="https://www.linkedin.com/in/steve-penrod-60b1813/"
+              target="_blank">
+              <div>
+                <div className="name-and-icon">
+                  <h5>Steve Penrod</h5>
+                  <SquareArrowUpRight
+                    size={16.5}
+                    strokeWidth={2}
+                    className="icon"
+                  />
+                </div>
+
+                <p>
+                  Sr. Director of Product Development
+                  <br />
+                  TripleBlind
+                </p>
+              </div>
+            </a>
           </div>
         </Squircle>
       </div>

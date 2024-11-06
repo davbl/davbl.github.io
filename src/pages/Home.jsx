@@ -4,6 +4,7 @@ import Dev from "../components/dev/dev";
 import VisDesign from "../components/visual-design/visual-design";
 import Biomed from "../components/biomed/biomed";
 import OthersSay from "../components/others-say/others-say";
+import Logos from "../components/logo-marquee/logo-marquee";
 import Footer from "../components/footer/footer";
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
         <VisDesign />
         <Biomed />
         <OthersSay />
+        <Logos />
       </main>
       <Footer />
     </>

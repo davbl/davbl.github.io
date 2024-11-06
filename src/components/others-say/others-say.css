@@ -98,7 +98,7 @@ h5 {
 }
 
 .name-and-icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 5px;
   padding-bottom: 3px;

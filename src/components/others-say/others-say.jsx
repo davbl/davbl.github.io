@@ -65,10 +65,10 @@ function OthersSay() {
             </Squircle>
 
             {/* Text */}
-            <a
-              href="https://www.linkedin.com/in/derick-schweppe-62581231/"
-              target="_blank">
-              <div>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/derick-schweppe-62581231/"
+                target="_blank">
                 <div className="name-and-icon">
                   <h5>Derick Schweppe</h5>
                   <SquareArrowUpRight
@@ -77,14 +77,14 @@ function OthersSay() {
                     className="icon"
                   />
                 </div>
+              </a>
 
-                <p>
-                  Lead Product Designer
-                  <br />
-                  Garmin
-                </p>
-              </div>
-            </a>
+              <p>
+                Lead Product Designer
+                <br />
+                Garmin
+              </p>
+            </div>
           </div>
         </Squircle>
 
@@ -138,10 +138,10 @@ function OthersSay() {
             </Squircle>
 
             {/* Text */}
-            <a
-              href="https://www.linkedin.com/in/steve-penrod-60b1813/"
-              target="_blank">
-              <div>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/steve-penrod-60b1813/"
+                target="_blank">
                 <div className="name-and-icon">
                   <h5>Steve Penrod</h5>
                   <SquareArrowUpRight
@@ -150,14 +150,14 @@ function OthersSay() {
                     className="icon"
                   />
                 </div>
+              </a>
 
-                <p>
-                  Sr. Director of Product Development
-                  <br />
-                  TripleBlind
-                </p>
-              </div>
-            </a>
+              <p>
+                Sr. Director of Product Development
+                <br />
+                TripleBlind
+              </p>
+            </div>
           </div>
         </Squircle>
       </div>

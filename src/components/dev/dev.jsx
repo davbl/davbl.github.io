@@ -1,19 +1,81 @@
 import "./dev.css";
+import ProjectDescription from "./project-description";
 
 function Dev() {
   return (
     <section>
+      {/* Section heading */}
       <div className="heading">
         <h2>Development</h2>
         <h3 className="subheading">And UX/UI</h3>
       </div>
 
+      {/* Grid */}
       <div className="dev-bento">
-        <div className="am-browser"></div>
-        <div className="bola"></div>
-        <div className="fm"></div>
-        <div className="analyzer"></div>
-        <div className="staph"></div>
+        {/* AM Browser */}
+        <div className="am-browser project">
+          <div className="cover"></div>
+          <ProjectDescription
+            title="AlphaMissense Browser"
+            link=""
+            text="Search the AlphaMissense dataset without a Jupyter notebook. Built with:"
+            color="#ff5b42"
+            chips={["Flask", "SQLite", "Unpoly", "Tailwind"]}
+          />
+        </div>
+
+        {/* Bola */}
+        <div className="bola project">
+          <div className="cover"></div>
+          <ProjectDescription
+            title="Bola AI"
+            link=""
+            text="Dental voice AI for Windows and Chrome. Brought on for UX/UI. Built with:"
+            color="#6185f2"
+            chips={["Figma"]}
+          />
+        </div>
+
+        {/* FM */}
+        <div className="fm project">
+          <div className="cover"></div>
+          <ProjectDescription
+            title="FM FAQ"
+            link="https://dnarna.co/fmfaq/"
+            text="Frequently asked questions about fructose malabsorption. Built with:"
+            color="#467ee5"
+            chips={["HTML", "CSS"]}
+          />
+        </div>
+
+        {/* Analyzer */}
+        <div className="analyzer project">
+          <div className="cover"></div>
+          <ProjectDescription
+            title="DNA/RNA Analyzer"
+            link="https://dnarna.streamlit.app"
+            text="Get standard bioinformatics stats, and more, for your DNA or RNA sequence. Built with:"
+            color="#ff4b4b"
+            chips={["Streamlit"]}
+          />
+        </div>
+
+        {/* Staph */}
+        <div className="staph project">
+          <div className="cover"></div>
+          <ProjectDescription
+            title="Grapes of Staph"
+            link="https://dnarna.co/grapes-of-staph"
+            text={
+              <>
+                Is it <em>S. aureus</em>? A simple demo app for lab diagnostics.
+                Built with:
+              </>
+            }
+            color="#7869bf"
+            chips={["React", "Vite", "Zustand"]}
+          />
+        </div>
       </div>
     </section>
   );

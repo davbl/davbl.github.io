@@ -1,18 +1,10 @@
 .logos-section {
-  padding-top: 12rem;
-}
-
-.logos-heading {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: var(--sec-color);
+  padding-top: 8.5rem;
 }
 
 .logos-container {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   overflow: hidden;
   user-select: none;
   display: flex;

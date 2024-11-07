@@ -3,7 +3,7 @@
   display: flex;
   gap: 2rem;
   position: relative;
-  color: var(--sec-color);
+  color: var(--primary-color);
   /* so that Steve doesn't have to be as high as Derick, which has more content */
   align-items: flex-start;
 }
@@ -71,7 +71,7 @@
   width: 50%;
 
   a:hover .icon {
-    stroke: var(--sec-color);
+    stroke: var(--primary-color);
     transform: translate(1px, -1px);
   }
 }
@@ -124,7 +124,7 @@ h5 {
   padding: 5px;
 
   /* Squircle border color */
-  background: var(--sec-color);
+  background: var(--primary-color);
 
   &::before {
     /* Squircle background color  */

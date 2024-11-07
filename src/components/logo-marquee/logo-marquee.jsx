@@ -10,8 +10,7 @@ import progress from "./img/progress-forum-logo.svg";
 function Logos() {
   return (
     <section className="logos-section">
-      {/* TODO: change <p> to appropriate <h> */}
-      <p className="logos-heading">Pleasure to have worked with</p>
+      <h3 className="subheading">Pleasure to have worked with</h3>
 
       <div className="logos-container">
         <div className="marquee">

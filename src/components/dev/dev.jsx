@@ -5,7 +5,7 @@ function Dev() {
     <section>
       <div className="heading">
         <h2>Development</h2>
-        <h3>And UX/UI</h3>
+        <h3 className="subheading">And UX/UI</h3>
       </div>
 
       <div className="dev-bento">

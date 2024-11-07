@@ -93,7 +93,7 @@ function VisDesign() {
       {/* Section heading */}
       <div>
         <h2>Visual Design</h2>
-        <h3>A handful of specimens</h3>
+        <h3 className="subheading">A handful of specimens</h3>
       </div>
 
       {/* Bento grid */}

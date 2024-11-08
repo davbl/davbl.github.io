@@ -1,16 +1,24 @@
 .project-description {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.35rem;
 }
 
 .project-title {
   display: flex;
-  gap: 5px;
+  gap: 6px;
   align-items: center;
   font-size: 1.5em;
   font-weight: 600;
   max-width: fit-content;
+
+  .icon {
+    transition: all 0.2s ease;
+  }
+
+  &:hover .icon {
+    transform: translate(1px, -1px) rotate(360deg);
+  }
 }
 
 .project-text {
@@ -21,7 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
-  padding-top: 0.6rem;
+  padding-top: 0.7rem;
 }
 
 .chip {
@@ -29,5 +37,5 @@
   padding-block: 0.3rem;
   border-radius: 99px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 550;
 }

@@ -14,8 +14,9 @@ const ProjectDescription = ({
     <div className="project-description">
       {/* Project title and icon */}
       <a href={link} target="_blank" className="project-title">
-        {title}
+        <h4>{title}</h4>
         <SquareArrowUpRight
+          className="icon"
           style={{ color: color }}
           size={20}
           strokeWidth={2}
@@ -33,7 +34,7 @@ const ProjectDescription = ({
             className="chip"
             style={{
               color: color,
-              backgroundColor: `${color}20`, // 20 is approx 12% opacity
+              backgroundColor: `${color}25`, // 20 is approx 12% opacity
             }}>
             {chip}
           </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Squircle } from "corner-smoothing";
-import { Copy } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import { Blocks } from "lucide-react";
 
 import "./footer.css";
@@ -25,7 +25,7 @@ function Footer() {
         setDisplayText("Copied!");
         setTimeout(() => {
           setDisplayText("dave@dnarna.co");
-        }, 1000);
+        }, 1500);
       })
       .catch((err) => {
         console.error("Failed to copy: ", err);
@@ -57,9 +57,18 @@ function Footer() {
             {/* Contact */}
             <div className="contact">
               <h3>Contact</h3>
-              <button className="icon-and-text" onClick={handleCopy}>
-                <Copy size={15} strokeWidth={2} />
-                <p>{displayText}</p>
+              <button
+                className={`icon-and-text ${
+                  displayText === "Copied!" ? "copied" : ""
+                }`}
+                onClick={handleCopy}
+                aria-label="Copy email address">
+                {displayText === "Copied!" ? (
+                  <Check size={15} strokeWidth={2} />
+                ) : (
+                  <Copy size={15} strokeWidth={2} />
+                )}
+                <p role="status">{displayText}</p>
               </button>
             </div>
 

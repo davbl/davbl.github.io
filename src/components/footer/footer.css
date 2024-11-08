@@ -95,13 +95,17 @@ footer {
   border: none;
 }
 
+.copied {
+  color: #80ffaa;
+}
+
 .blocks-icon {
   margin-bottom: 1.5px;
   transition: all 0.1s ease;
 }
 
-.icon-and-text:hover {
-  color: white;
+.icon-and-text:not(.copied, .react):hover {
+  color: #ccd5ff;
 
   .blocks-icon {
     transform: rotate(-90deg);

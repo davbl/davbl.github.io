@@ -1,5 +1,9 @@
-import "./dev.css";
 import ProjectDescription from "./project-description";
+import "./dev.css";
+import bola from "./img/bola.png";
+import fm from "./img/fm.png";
+import analyzer from "./img/analyzer.avif";
+import staph from "./img/staph.avif";
 
 function Dev() {
   return (
@@ -26,31 +30,39 @@ function Dev() {
 
         {/* Bola */}
         <div className="bola project">
-          <div className="cover"></div>
+          <div className="cover">
+            <img src={bola} alt="" />
+          </div>
+
           <ProjectDescription
             title="Bola AI"
             link=""
             text="Dental voice AI for Windows and Chrome. Brought on for UX/UI. Built with:"
-            color="#6185f2"
+            color="#668CFF"
             chips={["Figma"]}
           />
         </div>
 
         {/* FM */}
         <div className="fm project">
-          <div className="cover"></div>
+          <div className="cover">
+            <img src={fm} alt="" />
+          </div>
+
           <ProjectDescription
             title="FM FAQ"
             link="https://dnarna.co/fmfaq/"
             text="Frequently asked questions about fructose malabsorption. Built with:"
-            color="#467ee5"
+            color="#4E8CFF"
             chips={["HTML", "CSS"]}
           />
         </div>
 
         {/* Analyzer */}
         <div className="analyzer project">
-          <div className="cover"></div>
+          <div className="cover">
+            <img className="vid" src={analyzer} alt="" />
+          </div>
           <ProjectDescription
             title="DNA/RNA Analyzer"
             link="https://dnarna.streamlit.app"
@@ -62,7 +74,10 @@ function Dev() {
 
         {/* Staph */}
         <div className="staph project">
-          <div className="cover"></div>
+          <div className="cover">
+            <img className="vid" src={staph} alt="" />
+          </div>
+
           <ProjectDescription
             title="Grapes of Staph"
             link="https://dnarna.co/grapes-of-staph"
@@ -72,7 +87,7 @@ function Dev() {
                 Built with:
               </>
             }
-            color="#7869bf"
+            color="#9381EB"
             chips={["React", "Vite", "Zustand"]}
           />
         </div>

@@ -13,12 +13,20 @@
 .project {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .cover {
-  height: 765px;
-  border-radius: 16px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .vid {
+    border-radius: 12px;
+  }
 }
 
 .am-browser {
@@ -58,5 +66,30 @@
 
   .cover {
     background-color: #7869bf;
+  }
+}
+
+/* MEDIA QUERIES  ***************************************************************************************************************/
+
+@media (max-width: 998px) {
+  .dev-bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "am-browser am-browser"
+      "bola fm"
+      "analyzer analyzer"
+      "staph staph";
+  }
+}
+
+@media (max-width: 676px) {
+  .dev-bento {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "am-browser"
+      "bola"
+      "analyzer"
+      "fm"
+      "staph";
   }
 }

@@ -22,6 +22,14 @@ footer {
     /* Squircle background color  */
     background: var(--bg-color);
   }
+
+  /* Hover effect */
+  transition: all 0.2s ease;
+
+  &:hover {
+    scale: 1.03;
+    rotate: -3deg;
+  }
 }
 
 .text-and-btn {

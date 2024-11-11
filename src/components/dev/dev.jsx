@@ -1,5 +1,7 @@
 import ProjectDescription from "./project-description";
+import { Squircle } from "corner-smoothing";
 import "./dev.css";
+import am from "./img/am.avif";
 import bola from "./img/bola.png";
 import fm from "./img/fm.png";
 import analyzer from "./img/analyzer.avif";
@@ -13,12 +15,20 @@ function Dev() {
         <h2>Development</h2>
         <h3 className="subheading">And UX/UI</h3>
       </div>
-
-      {/* Grid */}
+      {/* Grid container */}
       <div className="dev-bento">
-        {/* AM Browser */}
+        {/* Grid items: */}
+        {/* AM BROWSER */}
         <div className="am-browser project">
-          <div className="cover"></div>
+          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
+            <Squircle cornerRadius={14} cornerSmoothing={0.8}>
+              <img
+                src={am}
+                alt="A looping video showing how the AlphaMissense Browser works."
+              />
+            </Squircle>
+          </Squircle>
+
           <ProjectDescription
             title="AlphaMissense Browser"
             link=""
@@ -28,11 +38,14 @@ function Dev() {
           />
         </div>
 
-        {/* Bola */}
+        {/* BOLA */}
         <div className="bola project">
-          <div className="cover">
-            <img src={bola} alt="" />
-          </div>
+          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
+            <img
+              src={bola}
+              alt="A screenshot of the Welcome screen from the Bola AI app for Windows."
+            />
+          </Squircle>
 
           <ProjectDescription
             title="Bola AI"
@@ -43,11 +56,14 @@ function Dev() {
           />
         </div>
 
-        {/* FM */}
+        {/* FM FAQ */}
         <div className="fm project">
-          <div className="cover">
-            <img src={fm} alt="" />
-          </div>
+          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
+            <img
+              src={fm}
+              alt="Screenshot of the uppermost portion of the FM FAQ webpage, displayed on an iPhone."
+            />
+          </Squircle>
 
           <ProjectDescription
             title="FM FAQ"
@@ -58,11 +74,17 @@ function Dev() {
           />
         </div>
 
-        {/* Analyzer */}
+        {/* ANALYZER */}
         <div className="analyzer project">
-          <div className="cover">
-            <img className="vid" src={analyzer} alt="" />
-          </div>
+          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
+            <Squircle cornerRadius={14} cornerSmoothing={0.8}>
+              <img
+                src={analyzer}
+                alt="A looping video showing how the DNA/RNA Analyzer works."
+              />
+            </Squircle>
+          </Squircle>
+
           <ProjectDescription
             title="DNA/RNA Analyzer"
             link="https://dnarna.streamlit.app"
@@ -72,11 +94,16 @@ function Dev() {
           />
         </div>
 
-        {/* Staph */}
+        {/* STAPH */}
         <div className="staph project">
-          <div className="cover">
-            <img className="vid" src={staph} alt="" />
-          </div>
+          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
+            <Squircle cornerRadius={14} cornerSmoothing={0.8}>
+              <img
+                src={staph}
+                alt="A looping video showing how the Grapes of Staph webtool works."
+              />
+            </Squircle>
+          </Squircle>
 
           <ProjectDescription
             title="Grapes of Staph"
@@ -92,6 +119,7 @@ function Dev() {
           />
         </div>
       </div>
+      {/* Grid end */}
     </section>
   );
 }

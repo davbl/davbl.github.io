@@ -23,10 +23,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .vid {
-    border-radius: 12px;
-  }
 }
 
 .am-browser {

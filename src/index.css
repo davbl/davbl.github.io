@@ -146,3 +146,9 @@ h3 {
   opacity: 0.5;
   padding-left: 2px;
 }
+
+h4 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.15;
+}

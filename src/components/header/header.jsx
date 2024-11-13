@@ -3,8 +3,8 @@ import "./header.css";
 function Header() {
   return (
     <header>
-      <span>Acid Nucleique</span>
-      <span>My online phenotype</span>
+      <h3>Acid Nucleique</h3>
+      <h3>My online phenotype</h3>
     </header>
   );
 }

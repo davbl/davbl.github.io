@@ -1,85 +1,129 @@
 .dev-bento {
-  padding-top: 2rem;
-  display: grid;
+  padding-top: 6rem;
+
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+
+  /* Grid */
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "am-browser am-browser bola"
     "fm analyzer analyzer"
     "staph staph nothing";
   row-gap: 4rem;
-  column-gap: 2rem;
+  column-gap: 2rem; */
 }
 
-.project {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.cover {
-  padding: 1.5rem;
-  border-radius: 12px;
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.am-browser {
+/* For grid only */
+/* .am-browser {
   grid-area: am-browser;
-
-  .cover {
-    background-color: #ff5b42;
-  }
 }
 
 .bola {
   grid-area: bola;
-
-  .cover {
-    background-color: #6185f2;
-  }
 }
 
 .fm {
   grid-area: fm;
-
-  .cover {
-    background-color: #467ee5;
-  }
 }
 
 .analyzer {
   grid-area: analyzer;
-
-  .cover {
-    background-color: #ff4b4b;
-  }
 }
 
 .staph {
   grid-area: staph;
+} */
 
-  .cover {
-    background-color: #7869bf;
+/*****************************************************************************************************************************/
+
+.project {
+  display: flex;
+  /* Gap between cover and description */
+  gap: 1.5rem;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+
+  /* For grid only */
+  /* flex-direction: column; */
+}
+
+/* This class includes the outline */
+.cover {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  /* justify-content: center; */
+  align-items: center;
+  transition: all 0.3s ease;
+
+  img {
+    max-height: 600px;
   }
+
+  /*** SQUIRCLE ***/
+
+  /*** Squircle border color ***/
+  /* Gradient outline - light blue */
+  background: radial-gradient(
+    circle at top center,
+    rgba(229, 234, 255, 1),
+    rgba(229, 234, 255, 0.2) 30%
+  );
+
+  /*** Squircle background color  ***/
+  &::before {
+    /* This color is light blue of 5% opacity on dark blue bg */
+    background: #363a4a;
+  }
+}
+
+/* Scale .cover when hovering over .project-title *********************************************************************************/
+.project:has(.project-title:hover) .cover {
+  /* rotate: -3deg; */
+  scale: 1.02;
+}
+
+.project:has(.project-title:hover) .am-browser-outline {
+  background: #ff5b42;
+}
+
+.project:has(.project-title:hover) .bola-outline {
+  background: #668cff;
+}
+
+.project:has(.project-title:hover) .analyzer-outline {
+  background: #ff4b4b;
+}
+
+.project:has(.project-title:hover) .fm-outline {
+  background: #4e8cff;
+}
+
+.project:has(.project-title:hover) .staph-outline {
+  background: #9381eb;
 }
 
 /* MEDIA QUERIES  ***************************************************************************************************************/
 
 @media (max-width: 998px) {
-  .dev-bento {
+  /* For grid only */
+  /* .dev-bento {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "am-browser am-browser"
       "bola fm"
       "analyzer analyzer"
       "staph staph";
-  }
+  } */
 }
 
 @media (max-width: 676px) {
-  .dev-bento {
+  /* For grid only */
+  /* .dev-bento {
     grid-template-columns: 1fr;
     grid-template-areas:
       "am-browser"
@@ -87,5 +131,5 @@
       "analyzer"
       "fm"
       "staph";
-  }
+  } */
 }

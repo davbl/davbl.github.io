@@ -2,8 +2,12 @@ import ProjectDescription from "./project-description";
 import { Squircle } from "corner-smoothing";
 import "./dev.css";
 import am from "./img/am.avif";
-import bola from "./img/bola.png";
-import fm from "./img/fm.png";
+import bolaWelcome from "./img/bola-welcome.png";
+import bolaTeeth from "./img/bola-teeth.png";
+import bolaIndex from "./img/bola-index.png";
+import fmHero from "./img/fm-hero.png";
+import fmWhatis from "./img/fm-whatis.png";
+import fmGenetic from "./img/fm-genetic.png";
 import analyzer from "./img/analyzer.avif";
 import staph from "./img/staph.avif";
 
@@ -15,12 +19,18 @@ function Dev() {
         <h2>Development</h2>
         <h3 className="subheading">And UX/UI</h3>
       </div>
+
       {/* Grid container */}
       <div className="dev-bento">
-        {/* Grid items: */}
+        {/* Grid items ↓ */}
+
         {/* AM BROWSER */}
-        <div className="am-browser project">
-          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
+        <div className="project am-browser">
+          <Squircle
+            className="cover am-browser-outline"
+            cornerRadius={20}
+            cornerSmoothing={0.8}
+            borderWidth={1.5}>
             <Squircle cornerRadius={14} cornerSmoothing={0.8}>
               <img
                 src={am}
@@ -39,11 +49,25 @@ function Dev() {
         </div>
 
         {/* BOLA */}
-        <div className="bola project">
-          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
+        <div className="project bola">
+          <Squircle
+            className="cover bola-outline"
+            cornerRadius={20}
+            cornerSmoothing={0.8}
+            borderWidth={1.5}>
             <img
-              src={bola}
+              src={bolaWelcome}
               alt="A screenshot of the Welcome screen from the Bola AI app for Windows."
+            />
+
+            <img
+              src={bolaIndex}
+              alt="TODO: A screenshot of the Welcome screen from the Bola AI app for Windows."
+            />
+
+            <img
+              src={bolaTeeth}
+              alt="TODO: A screenshot of the Welcome screen from the Bola AI app for Windows."
             />
           </Squircle>
 
@@ -56,27 +80,13 @@ function Dev() {
           />
         </div>
 
-        {/* FM FAQ */}
-        <div className="fm project">
-          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
-            <img
-              src={fm}
-              alt="Screenshot of the uppermost portion of the FM FAQ webpage, displayed on an iPhone."
-            />
-          </Squircle>
-
-          <ProjectDescription
-            title="FM FAQ"
-            link="https://dnarna.co/fmfaq/"
-            text="Frequently asked questions about fructose malabsorption. Built with:"
-            color="#4E8CFF"
-            chips={["HTML", "CSS"]}
-          />
-        </div>
-
         {/* ANALYZER */}
-        <div className="analyzer project">
-          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
+        <div className="project analyzer">
+          <Squircle
+            className="cover analyzer-outline"
+            cornerRadius={20}
+            cornerSmoothing={0.8}
+            borderWidth={1.5}>
             <Squircle cornerRadius={14} cornerSmoothing={0.8}>
               <img
                 src={analyzer}
@@ -94,9 +104,45 @@ function Dev() {
           />
         </div>
 
+        {/* FM FAQ */}
+        <div className="project fm">
+          <Squircle
+            className="cover fm-outline"
+            cornerRadius={20}
+            cornerSmoothing={0.8}
+            borderWidth={1.5}>
+            <img
+              src={fmWhatis}
+              alt="TODO: Screenshot of the uppermost portion of the FM FAQ webpage, displayed on an iPhone."
+            />
+
+            <img
+              src={fmHero}
+              alt="Screenshot of the uppermost portion of the FM FAQ webpage, displayed on an iPhone."
+            />
+
+            <img
+              src={fmGenetic}
+              alt="TODO: Screenshot of the uppermost portion of the FM FAQ webpage, displayed on an iPhone."
+            />
+          </Squircle>
+
+          <ProjectDescription
+            title="FM FAQ"
+            link="https://dnarna.co/fmfaq/"
+            text="Frequently asked questions about fructose malabsorption. Built with:"
+            color="#4E8CFF"
+            chips={["HTML", "CSS"]}
+          />
+        </div>
+
         {/* STAPH */}
-        <div className="staph project">
-          <Squircle className="cover" cornerRadius={16} cornerSmoothing={0.8}>
+        <div className="project staph">
+          <Squircle
+            className="cover staph-outline"
+            cornerRadius={20}
+            cornerSmoothing={0.8}
+            borderWidth={1.5}>
             <Squircle cornerRadius={14} cornerSmoothing={0.8}>
               <img
                 src={staph}

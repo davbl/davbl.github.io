@@ -1,18 +1,20 @@
 .project-description {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  /* Gap between title, text and chips */
+  gap: 0.5rem;
 }
 
 .project-title {
   display: flex;
   gap: 6px;
   align-items: center;
-  max-width: fit-content;
+  /* So that the link doesn't extend to empty space */
+  width: fit-content;
 
   .icon {
     transition: all 0.2s ease;
-    margin-top: 4px;
+    margin-top: 5px;
   }
 
   &:hover .icon {
@@ -20,15 +22,15 @@
   }
 }
 
-.project-text {
+/* .project-text {
   max-width: 40ch;
-}
+} */
 
 .chips-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
-  padding-top: 0.6rem;
+  padding-top: 0.5rem;
 }
 
 .chip {

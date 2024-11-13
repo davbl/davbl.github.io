@@ -18,7 +18,7 @@ const ProjectDescription = ({
         <SquareArrowUpRight
           className="icon"
           style={{ color: color }}
-          size={20}
+          size={18}
           strokeWidth={2}
         />
       </a>

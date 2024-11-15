@@ -24,27 +24,32 @@ function Dev() {
       <div className="dev-bento">
         {/* Grid items ↓ */}
 
-        {/* AM BROWSER */}
-        <div className="project am-browser">
+        {/* STAPH */}
+        <div className="project staph">
           <Squircle
-            className="cover am-browser-outline"
+            className="cover staph-outline"
             cornerRadius={20}
             cornerSmoothing={0.8}
             borderWidth={1.5}>
             <Squircle cornerRadius={14} cornerSmoothing={0.8}>
               <img
-                src={am}
-                alt="A looping video showing how the AlphaMissense Browser works."
+                src={staph}
+                alt="A looping video showing how the Grapes of Staph webtool works."
               />
             </Squircle>
           </Squircle>
 
           <ProjectDescription
-            title="AlphaMissense Browser"
-            link=""
-            text="Search the AlphaMissense dataset without a Jupyter notebook. Built with:"
-            color="#ff5b42"
-            chips={["Flask", "SQLite", "Unpoly", "Tailwind"]}
+            title="Grapes of Staph"
+            link="https://dnarna.co/grapes-of-staph"
+            text={
+              <>
+                Is it <em>S. aureus</em>? A simple demo app for lab diagnostics.
+                Built with:
+              </>
+            }
+            color="#9381EB"
+            chips={["React", "Vite", "Zustand"]}
           />
         </div>
 
@@ -77,6 +82,7 @@ function Dev() {
             text="Dental voice AI for Windows and Chrome. Brought on for UX/UI. Built with:"
             color="#668CFF"
             chips={["Figma"]}
+            isLocal={true}
           />
         </div>
 
@@ -136,34 +142,41 @@ function Dev() {
           />
         </div>
 
-        {/* STAPH */}
-        <div className="project staph">
+        {/* AM BROWSER */}
+        <div className="project am-browser">
           <Squircle
-            className="cover staph-outline"
+            className="cover am-browser-outline"
             cornerRadius={20}
             cornerSmoothing={0.8}
             borderWidth={1.5}>
             <Squircle cornerRadius={14} cornerSmoothing={0.8}>
               <img
-                src={staph}
-                alt="A looping video showing how the Grapes of Staph webtool works."
+                src={am}
+                alt="A looping video showing how the AlphaMissense Browser works."
               />
             </Squircle>
           </Squircle>
 
           <ProjectDescription
-            title="Grapes of Staph"
-            link="https://dnarna.co/grapes-of-staph"
+            title="AlphaMissense Browser"
+            // link=""
             text={
               <>
-                Is it <em>S. aureus</em>? A simple demo app for lab diagnostics.
-                Built with:
+                Search the{" "}
+                <a
+                  href="https://deepmind.google/discover/blog/a-catalogue-of-genetic-mutations-to-help-pinpoint-the-cause-of-diseases/"
+                  target="_blank">
+                  AlphaMissense
+                </a>{" "}
+                dataset without a Jupyter notebook. Built with:
               </>
             }
-            color="#9381EB"
-            chips={["React", "Vite", "Zustand"]}
+            color="#ff5b42"
+            chips={["Flask", "SQLite", "Unpoly", "Tailwind"]}
+            isUnderConstruction={true}
           />
         </div>
+        {/* Last item end */}
       </div>
       {/* Grid end */}
     </section>

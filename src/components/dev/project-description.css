@@ -20,11 +20,28 @@
   &:hover .icon {
     transform: translate(2px, -2px) rotate(360deg);
   }
+
+  &:hover .is-local {
+    transform: translateX(2px) rotate(360deg);
+  }
+
+  &:hover .under-construction {
+    transform: translateX(2px) rotate(360deg);
+  }
 }
 
-/* .project-text {
-  max-width: 40ch;
-} */
+.project-text {
+  /* max-width: 40ch; */
+
+  a {
+    color: #ff5b42;
+    transition: all 0.1s ease;
+
+    &:hover {
+      color: #ff8875;
+    }
+  }
+}
 
 .chips-container {
   display: flex;

@@ -1,6 +1,40 @@
 import PropTypes from "prop-types";
-import { SquareArrowUpRight } from "lucide-react";
+import {
+  SquareArrowUpRight,
+  Construction,
+  SquareArrowRight,
+} from "lucide-react";
 import "./project-description.css";
+
+const getIcon = (isUnderConstruction, isLocal, color) => {
+  if (isUnderConstruction) {
+    return (
+      <Construction
+        className="icon under-construction"
+        style={{ color: color }}
+        size={18}
+        strokeWidth={2}
+      />
+    );
+  } else if (isLocal) {
+    return (
+      <SquareArrowRight
+        className="icon is-local"
+        style={{ color: color }}
+        size={18}
+        strokeWidth={2}
+      />
+    );
+  }
+  return (
+    <SquareArrowUpRight
+      className="icon"
+      style={{ color: color }}
+      size={18}
+      strokeWidth={2}
+    />
+  );
+};
 
 const ProjectDescription = ({
   title,
@@ -8,6 +42,8 @@ const ProjectDescription = ({
   text,
   color = "#FFF",
   chips = [],
+  isUnderConstruction = false,
+  isLocal = false,
 }) => {
   // Render
   return (
@@ -15,12 +51,7 @@ const ProjectDescription = ({
       {/* Project title and icon */}
       <a href={link} target="_blank" className="project-title">
         <h4>{title}</h4>
-        <SquareArrowUpRight
-          className="icon"
-          style={{ color: color }}
-          size={18}
-          strokeWidth={2}
-        />
+        {getIcon(isUnderConstruction, isLocal, color)}
       </a>
 
       {/* Description text */}
@@ -50,6 +81,8 @@ ProjectDescription.propTypes = {
   text: PropTypes.node.isRequired,
   color: PropTypes.string.isRequired,
   chips: PropTypes.arrayOf(PropTypes.string.isRequired),
+  isUnderConstruction: PropTypes.bool,
+  isLocal: PropTypes.bool,
 };
 
 export default ProjectDescription;

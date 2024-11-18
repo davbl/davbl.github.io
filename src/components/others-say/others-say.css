@@ -10,11 +10,22 @@
 
 .quote-card {
   padding: 4rem;
-  background-color: rgba(229, 233, 255, 0.08);
   position: relative;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
+
+  /* Border */
+  outline: 1px solid rgba(229, 233, 255, 0.08);
+  outline-offset: -1.75px;
+  border-radius: 22px;
+
+  /* Background */
+  background-color: rgba(229, 233, 255, 0.08);
+
+  p {
+    padding-top: 1rem;
+  }
 
   blockquote {
     position: relative;
@@ -28,10 +39,6 @@
       /* translate(x, y) */
       transform: translate(-0.44rem, 1rem);
     }
-  }
-
-  p {
-    padding-top: 1rem;
   }
 }
 
@@ -60,6 +67,7 @@
 .steve-card {
   color: var(--accent-color);
   background-color: rgba(255, 140, 102, 0.1);
+  outline: 1px solid rgba(255, 140, 102, 0.1);
   /* Background blur */
   backdrop-filter: blur(35px);
   -webkit-backdrop-filter: blur(35px);
@@ -74,6 +82,23 @@
     stroke: var(--primary-color);
     transform: translate(1px, -1px);
   }
+
+  /* Bg texture - grain */
+  /* &::before {
+    content: "";
+    position: absolute;
+    background-image: url("./img/noise.svg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+    image-rendering: crisp-edges;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.2;
+  } */
 }
 
 .person-info {

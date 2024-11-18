@@ -18,12 +18,14 @@ function Biomed() {
 
       {/* Bento grid */}
       <div className="bio-bento">
+        {/* Techniques */}
         <Squircle
           className="techniques card"
           cornerRadius={20}
           borderWidth={1.5}
           cornerSmoothing={0.8}>
           <div className="card-header">
+            {/* Photo */}
             <Squircle
               className="photo-outline orange-outline"
               cornerRadius={20}
@@ -44,6 +46,7 @@ function Biomed() {
 
             <h4>Techniques</h4>
           </div>
+
           <p>
             Gel electrophoresis, PCR, primer design, restriction digestion,
             restriction mapping, miniprep, bacterial transformation,
@@ -51,12 +54,14 @@ function Biomed() {
           </p>
         </Squircle>
 
+        {/* Labs */}
         <Squircle
           className="labs card"
           cornerRadius={20}
           borderWidth={1.5}
           cornerSmoothing={0.8}>
           <div className="card-header">
+            {/* Photo */}
             <Squircle
               className="photo-outline orange-outline"
               cornerRadius={20}
@@ -77,6 +82,7 @@ function Biomed() {
 
             <h4>Laboratories</h4>
           </div>
+
           <p>
             Timmons Lab, University of Kansas
             <br />
@@ -84,12 +90,14 @@ function Biomed() {
           </p>
         </Squircle>
 
+        {/* Organisms */}
         <Squircle
           className="organisms card"
           cornerRadius={20}
           borderWidth={1.5}
           cornerSmoothing={0.8}>
           <div className="card-header">
+            {/* Photo */}
             <Squircle
               className="photo-outline orange-outline"
               cornerRadius={20}
@@ -110,18 +118,21 @@ function Biomed() {
 
             <h4>Organisms</h4>
           </div>
+
           <p>
             <span>E.&nbsp;coli, S.&nbsp;cerevisiae, C.&nbsp;elegans,</span>{" "}
             HEK293
           </p>
         </Squircle>
 
+        {/* Neuro */}
         <Squircle
           className="neuro card"
           cornerRadius={20}
           borderWidth={1.5}
           cornerSmoothing={0.8}>
           <div className="card-header">
+            {/* Photo */}
             <Squircle
               className="photo-outline neuro-outline"
               cornerRadius={20}
@@ -159,12 +170,14 @@ function Biomed() {
           </p>
         </Squircle>
 
+        {/* Red Cross */}
         <Squircle
           className="red-cross card"
           cornerRadius={20}
           borderWidth={1.5}
           cornerSmoothing={0.8}>
           <div className="card-header">
+            {/* Photo */}
             <Squircle
               className="photo-outline red-outline"
               cornerRadius={20}
@@ -185,6 +198,7 @@ function Biomed() {
 
             <h4>American Red Cross</h4>
           </div>
+
           <p>
             Our team of ~10 volunteers organized Community Blood Drives, made
             reusable pads for Tanzanian girls and women, and carried out a Home
@@ -192,12 +206,14 @@ function Biomed() {
           </p>
         </Squircle>
 
+        {/* Award */}
         <Squircle
           className="award card"
           cornerRadius={20}
           borderWidth={1.5}
           cornerSmoothing={0.8}>
           <div className="card-header">
+            {/* Photo */}
             <Squircle
               className="photo-outline red-outline"
               cornerRadius={20}
@@ -218,6 +234,7 @@ function Biomed() {
 
             <h4>Mark L. Morris, Jr. Award</h4>
           </div>
+
           <p>
             My award-winning project for an Entrepreneurship class (2015) was a
             business plan for a fictional company offering automated EKG

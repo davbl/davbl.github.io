@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Squircle } from "corner-smoothing";
-import { Copy, Check } from "lucide-react";
-import { Blocks } from "lucide-react";
+import { Copy, Check, Blocks } from "lucide-react";
 
 import "./footer.css";
 import dave from "./img/dave.png";

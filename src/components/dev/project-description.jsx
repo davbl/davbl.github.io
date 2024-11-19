@@ -49,7 +49,10 @@ const ProjectDescription = ({
   return (
     <div className="project-description">
       {/* Project title and icon */}
-      <a href={link} target="_blank" className="project-title">
+      <a
+        href={link}
+        target={isLocal ? "_self" : "_blank"}
+        className="project-title">
         <h4>{title}</h4>
         {getIcon(isUnderConstruction, isLocal, color)}
       </a>

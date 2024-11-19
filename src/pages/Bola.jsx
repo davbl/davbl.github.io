@@ -1,7 +1,7 @@
 function Bola() {
   return (
     <>
-      <h1>Bola AI</h1>
+      <h4>Bola AI</h4>
     </>
   );
 }

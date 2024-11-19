@@ -20,7 +20,7 @@
 
 /* Btn and fine print container */
 .btn-and-fine-print {
-  padding-top: 0.75rem;
+  padding-top: 0.8rem;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -62,4 +62,11 @@
     /* line-height: 1.4; */
     /* max-width: 80ch; */
   }
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #565b73;
 }

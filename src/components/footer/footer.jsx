@@ -4,7 +4,7 @@ import { Copy, Check, Blocks } from "lucide-react";
 
 import "./footer.css";
 import dave from "./img/dave.png";
-import Biology from "./img/Biology.svg";
+import Biology from "../../assets/biology.svg";
 
 function Footer() {
   // Scroll to Top
@@ -61,7 +61,8 @@ function Footer() {
                   displayText === "Copied!" ? "copied" : ""
                 }`}
                 onClick={handleCopy}
-                aria-label="Copy email address">
+                aria-label="Copy email address"
+                title="Click to copy">
                 {displayText === "Copied!" ? (
                   <Check size={15} strokeWidth={2} />
                 ) : (

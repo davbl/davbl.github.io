@@ -31,7 +31,10 @@ function Dev() {
             cornerRadius={20}
             cornerSmoothing={0.8}
             borderWidth={1.5}>
-            <Squircle cornerRadius={14} cornerSmoothing={0.8}>
+            <Squircle
+              cornerRadius={14}
+              cornerSmoothing={0.8}
+              className="vid staph-vid">
               <img
                 src={staph}
                 alt="A looping video showing how the Grapes of Staph webtool works."
@@ -67,18 +70,18 @@ function Dev() {
 
             <img
               src={bolaIndex}
-              alt="TODO: A screenshot of the Welcome screen from the Bola AI app for Windows."
+              alt="A screenshot of the Perio Index screen."
             />
 
             <img
               src={bolaTeeth}
-              alt="TODO: A screenshot of the Welcome screen from the Bola AI app for Windows."
+              alt="A screenshot of the Missing Teeth screen."
             />
           </Squircle>
 
           <ProjectDescription
             title="Bola AI"
-            link=""
+            link="/bola"
             text="Dental voice AI for Windows and Chrome. Brought on for UX/UI. Built with:"
             color="#668CFF"
             chips={["Figma"]}
@@ -93,7 +96,10 @@ function Dev() {
             cornerRadius={20}
             cornerSmoothing={0.8}
             borderWidth={1.5}>
-            <Squircle cornerRadius={14} cornerSmoothing={0.8}>
+            <Squircle
+              cornerRadius={14}
+              cornerSmoothing={0.8}
+              className="vid analyzer-vid">
               <img
                 src={analyzer}
                 alt="A looping video showing how the DNA/RNA Analyzer works."
@@ -119,17 +125,17 @@ function Dev() {
             borderWidth={1.5}>
             <img
               src={fmWhatis}
-              alt="TODO: Screenshot of the uppermost portion of the FM FAQ webpage, displayed on an iPhone."
+              alt="A screenshot of two cards from the Fructose Malabsorption FAQ webpage, displayed on an iPhone. The first card is titled 'What is fructose?' and the second one is 'What is fructose malabsorption?'."
             />
 
             <img
               src={fmHero}
-              alt="Screenshot of the uppermost portion of the FM FAQ webpage, displayed on an iPhone."
+              alt="A screenshot of the uppermost portion of the FM FAQ webpage."
             />
 
             <img
               src={fmGenetic}
-              alt="TODO: Screenshot of the uppermost portion of the FM FAQ webpage, displayed on an iPhone."
+              alt="Another screenshot of two cards from the webpage, this time 'Is it genetic?' and 'Is fructose malabsorption fructose intolerance?'."
             />
           </Squircle>
 
@@ -149,7 +155,10 @@ function Dev() {
             cornerRadius={20}
             cornerSmoothing={0.8}
             borderWidth={1.5}>
-            <Squircle cornerRadius={14} cornerSmoothing={0.8}>
+            <Squircle
+              cornerRadius={14}
+              cornerSmoothing={0.8}
+              className="vid am-vid">
               <img
                 src={am}
                 alt="A looping video showing how the AlphaMissense Browser works."

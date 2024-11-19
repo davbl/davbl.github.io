@@ -5,38 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 7rem;
-
-  /* Grid */
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "am-browser am-browser bola"
-    "fm analyzer analyzer"
-    "staph staph nothing";
-  row-gap: 4rem;
-  column-gap: 2rem; */
 }
-
-/* For grid only */
-/* .am-browser {
-  grid-area: am-browser;
-}
-
-.bola {
-  grid-area: bola;
-}
-
-.fm {
-  grid-area: fm;
-}
-
-.analyzer {
-  grid-area: analyzer;
-}
-
-.staph {
-  grid-area: staph;
-} */
 
 /*****************************************************************************************************************************/
 
@@ -46,9 +15,6 @@
   gap: 1.5rem;
   flex-direction: column;
   /* flex-wrap: wrap; */
-
-  /* For grid only */
-  /* flex-direction: column; */
 }
 
 /* This class includes the outline */
@@ -81,6 +47,39 @@
   }
 }
 
+.vid {
+  width: 100%;
+  justify-items: center;
+
+  img {
+    outline-offset: -2px;
+  }
+}
+
+.staph-vid {
+  background-color: #f3f3f7;
+
+  img {
+    outline: #f3f3f7 solid 2px;
+  }
+}
+
+.analyzer-vid {
+  background-color: #fefefe;
+
+  img {
+    outline: #fefefe solid 3px;
+  }
+}
+
+.am-vid {
+  background-color: #222222;
+
+  img {
+    outline: #222222 solid 2px;
+  }
+}
+
 /* Scale .cover when hovering over .project-title *********************************************************************************/
 .project:has(.project-title:hover) .cover {
   /* rotate: -3deg; */
@@ -110,26 +109,7 @@
 /* MEDIA QUERIES  ***************************************************************************************************************/
 
 @media (max-width: 998px) {
-  /* For grid only */
-  /* .dev-bento {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "am-browser am-browser"
-      "bola fm"
-      "analyzer analyzer"
-      "staph staph";
-  } */
 }
 
 @media (max-width: 676px) {
-  /* For grid only */
-  /* .dev-bento {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "am-browser"
-      "bola"
-      "analyzer"
-      "fm"
-      "staph";
-  } */
 }

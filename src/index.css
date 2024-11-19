@@ -110,7 +110,9 @@ body {
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding-inline: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1.75rem;
 }
 
 /* if change the max-width value below, then need to change grid gap media queries in all bento sections too */

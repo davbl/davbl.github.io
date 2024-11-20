@@ -2,7 +2,7 @@
   /* COLORS *******************************************************************************/
 
   --bg-color: #2d3040;
-  --primary-color: #e5eaff;
+  --primary-color: #e0e5ff;
   --accent-color: #ff9f80;
   background-color: var(--bg-color);
   color: var(--primary-color);

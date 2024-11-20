@@ -1,6 +1,8 @@
-import ProjectDescription from "./project-description";
 import { Squircle } from "corner-smoothing";
+import ProjectDescription from "./project-description";
 import "./dev.css";
+
+// Cover images and vids
 import am from "./img/am.avif";
 import bolaWelcome from "./img/bola-welcome.png";
 import bolaTeeth from "./img/bola-teeth.png";
@@ -110,7 +112,7 @@ function Dev() {
           <ProjectDescription
             title="DNA/RNA Analyzer"
             link="https://dnarna.streamlit.app"
-            text="Get standard bioinformatics stats, and more, for your DNA or RNA sequence. Built with:"
+            text="Enter a DNA or RNA sequence and get standard bioinformatics stats, and more. Built with:"
             color="#ff4b4b"
             chips={["Streamlit"]}
           />
@@ -169,17 +171,7 @@ function Dev() {
           <ProjectDescription
             title="AlphaMissense Browser"
             // link=""
-            text={
-              <>
-                Search the{" "}
-                <a
-                  href="https://deepmind.google/discover/blog/a-catalogue-of-genetic-mutations-to-help-pinpoint-the-cause-of-diseases/"
-                  target="_blank">
-                  AlphaMissense
-                </a>{" "}
-                dataset without a Jupyter notebook. Built with:
-              </>
-            }
+            text="Get a pathogenicity score for your missense mutation. Built with:"
             color="#ff5b42"
             chips={["Flask", "SQLite", "Unpoly", "Tailwind"]}
             isUnderConstruction={true}

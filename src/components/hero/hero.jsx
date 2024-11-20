@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
-import "./hero.css";
 import { ScrollText } from "lucide-react";
-// import { BadgeInfo } from "lucide-react";
+import "./hero.css";
+// import Biology from "../../assets/biology.svg";
+import HeroText from "../../assets/hero-text.svg";
 
 function Hero() {
   return (
     <section className="hero">
       <h1>
-        Software + <br />
-        Biology
+        {/* <span className="software">Software</span>
+        <span className="ampersand">&</span> */}
+        <img src={HeroText} alt="Software & Biology" />
       </h1>
 
       <p>

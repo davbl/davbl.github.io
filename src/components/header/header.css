@@ -1,10 +1,16 @@
 header {
+  position: sticky;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
 
   h3 {
     font-size: 0.78rem;
     opacity: 0.5;
+  }
+
+  .right-align {
+    text-align: right;
   }
 }
 

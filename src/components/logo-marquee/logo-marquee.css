@@ -44,7 +44,8 @@
   align-items: center;
   flex-shrink: 0;
   min-width: 100%;
-  animation: marquee 40s linear infinite;
+  animation: marquee 50s linear infinite;
+  /* animation-direction: reverse; */
 
   /* &:hover {
     animation-play-state: paused;

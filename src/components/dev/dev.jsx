@@ -86,7 +86,7 @@ function Dev() {
             link="/bola"
             text="Dental voice AI for Windows and Chrome. Brought on for UX/UI. Built with:"
             color="#668CFF"
-            chips={["Figma"]}
+            chips={["Figma", "Illustrator"]}
             isLocal={true}
           />
         </div>
@@ -114,7 +114,7 @@ function Dev() {
             link="https://dnarna.streamlit.app"
             text="Enter a DNA or RNA sequence and get standard bioinformatics stats, and more. Built with:"
             color="#ff4b4b"
-            chips={["Streamlit"]}
+            chips={["Streamlit", "Pandas", "Altair"]}
           />
         </div>
 

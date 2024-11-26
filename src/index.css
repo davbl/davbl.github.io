@@ -130,10 +130,11 @@ body {
 
 /* Section headings */
 h2 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   line-height: 1.2;
   font-weight: 700;
-  padding-top: 16rem;
+  padding-top: 18rem;
+  text-align: center;
 }
 
 /* Section subheadings and heading in footer */
@@ -142,11 +143,12 @@ h3 {
   font-size: 0.8rem;
   font-weight: 550;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .subheading {
   opacity: 0.5;
-  padding-left: 2px;
+  /* padding-left: 2px; */
 }
 
 h4 {

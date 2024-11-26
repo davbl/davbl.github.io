@@ -1,7 +1,7 @@
 /* GRID *******************************************************************************/
 
 .visdesign-bento {
-  margin-top: 4rem;
+  margin-top: 6rem;
   --bento-gap: 2rem;
   gap: var(--bento-gap);
   display: flex;

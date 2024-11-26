@@ -16,7 +16,7 @@
 .project {
   display: flex;
   /* Gap between cover and description */
-  gap: 1.5rem;
+  gap: 2rem;
   flex-direction: column;
   /* flex-wrap: wrap; */
 }

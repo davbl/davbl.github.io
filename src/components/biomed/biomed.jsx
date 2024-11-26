@@ -12,7 +12,7 @@ function Biomed() {
     <section>
       {/* Section heading */}
       <div>
-        <h2>Biomedical</h2>
+        <h2 className="h2-biomedical">Biomedical</h2>
         <h3 className="subheading">The flip side</h3>
       </div>
 

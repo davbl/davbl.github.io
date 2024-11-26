@@ -3,6 +3,7 @@
 
   --bg-color: #2d3040;
   --primary-color: #e0e5ff;
+  --dim: #7a7f99;
   --accent-color: #ff9f80;
   background-color: var(--bg-color);
   color: var(--primary-color);
@@ -135,6 +136,10 @@ h2 {
   font-weight: 700;
   padding-top: 18rem;
   text-align: center;
+}
+
+.h2-biomedical {
+  padding-top: 14rem;
 }
 
 /* Section subheadings and heading in footer */

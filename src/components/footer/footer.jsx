@@ -50,6 +50,7 @@ function Footer() {
 
       {/* GRID */}
       <div className="content-grid">
+        {/* GRID items: */}
         {/* Contact */}
         <div className="contact">
           <h3>Contact</h3>
@@ -63,7 +64,7 @@ function Footer() {
             {displayText === "Copied!" ? (
               <Check size={15} strokeWidth={2} />
             ) : (
-              <Copy size={15} strokeWidth={2} />
+              <Copy size={15} strokeWidth={2} className="copy-icon" />
             )}
             <p role="status">{displayText}</p>
           </button>

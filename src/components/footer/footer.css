@@ -67,13 +67,14 @@ footer {
   }
 
   .scroll-btn:hover span {
-    display: inline-block;
-    transform: translateY(-15px);
+    /* display: inline-block; */
+    transform: translateY(-16px);
   }
 
   /* Arrows */
   span {
-    transition: all 0.1s ease;
+    display: inline-block;
+    transition: all 0.15s ease;
   }
 
   .props {
@@ -106,9 +107,22 @@ footer {
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: all 0.1s ease;
   background-color: transparent;
   border: none;
+  transition: all 0.15s ease;
+}
+
+.icon-and-text:not(.copied, .react):hover {
+  /* color: #ccd5ff; */
+
+  .copy-icon {
+    color: var(--accent-color);
+  }
+
+  .blocks-icon {
+    transform: rotate(-90deg);
+    color: var(--accent-color);
+  }
 }
 
 .copied {
@@ -117,20 +131,16 @@ footer {
 
 .blocks-icon {
   margin-bottom: 1.5px;
-  transition: all 0.1s ease;
-}
-
-.icon-and-text:not(.copied, .react):hover {
-  color: #ccd5ff;
-
-  .blocks-icon {
-    transform: rotate(-90deg);
-  }
+  transition: all 0.15s ease;
 }
 
 .react-icon {
   margin-bottom: 1px;
-  transition: all 0.1s ease;
+  /* transition: all 0.15s ease; */
+}
+
+.react {
+  transition: all 0.15s ease;
 }
 
 .react:hover {

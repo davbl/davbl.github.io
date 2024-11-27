@@ -1,5 +1,6 @@
 .marquee-container {
   --gap: 2rem;
+  --gap-mobile: 1rem;
   position: absolute;
   top: 0;
   /* left: 0; */
@@ -39,41 +40,41 @@
 
   .img {
     opacity: 0.11;
-    max-width: 175px;
-    max-height: 175px;
+    max-width: 70%;
+    max-height: 70%;
     filter: saturate(0);
   }
 
   .hand {
     opacity: 0.09;
-    max-height: 200px;
+    max-height: 80%;
     align-self: end;
   }
 
   .hip {
     opacity: 0.05;
-    max-height: 200px;
+    max-height: 80%;
     align-self: end;
     translate: -8px 0;
   }
 
   .brain {
     opacity: 0.05;
-    max-height: 188px;
+    max-height: 75%;
     align-self: end;
   }
 
   .angiogram {
     opacity: 0.09;
-    max-height: 200px;
+    max-height: 80%;
     align-self: end;
     translate: 10px 0;
   }
 
   .protein {
     opacity: 0.08;
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 60%;
+    max-height: 60%;
     filter: saturate(0);
   }
 }
@@ -88,5 +89,36 @@
   }
   100% {
     transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+/* MEDIA QUERIES ****************************************************************************************************************/
+
+/* 657px is when the marquee-rectangle starts getting smaller than 250px */
+@media (max-width: 657px) {
+  .marquee-container {
+    gap: var(--gap-mobile);
+  }
+
+  .marquee-column {
+    gap: var(--gap-mobile);
+  }
+
+  .marquee-track {
+    gap: var(--gap-mobile);
+  }
+
+  @keyframes hero-marquee {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(calc(-100% - var(--gap-mobile)));
+    }
+  }
+
+  .marquee-rectangle {
+    width: clamp(150px, 39vw, 250px);
+    height: clamp(150px, 39vw, 250px);
   }
 }

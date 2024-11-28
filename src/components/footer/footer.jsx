@@ -114,8 +114,20 @@ function Footer() {
 
         {/* Props */}
         <p className="props">
-          Props to FlyWire, Wikimedia, and Molstar for providing illustrative
-          images for the background animation at the top of the page.
+          Props to{" "}
+          <a href="https://flywire.ai" target="_blank">
+            FlyWire
+          </a>
+          ,{" "}
+          <a href="https://commons.wikimedia.org" target="_blank">
+            Wikimedia
+          </a>
+          , and{" "}
+          <a href="https://molstar.org" target="_blank">
+            Molstar
+          </a>{" "}
+          for providing illustrative images for the background animation at the
+          top of the page.
         </p>
         {/* END content-grid */}
       </div>

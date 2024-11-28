@@ -45,6 +45,10 @@
     filter: saturate(0);
   }
 
+  .fw5 {
+    max-height: 65%;
+  }
+
   .hand {
     opacity: 0.09;
     max-height: 80%;
@@ -69,6 +73,12 @@
     max-height: 80%;
     align-self: end;
     translate: 10px 0;
+  }
+
+  .pace {
+    opacity: 0.09;
+    max-height: 65%;
+    align-self: center;
   }
 
   .protein {

@@ -19,6 +19,19 @@ h1 {
   flex-grow: 1;
   padding-bottom: 0.5rem;
   user-select: none;
+  animation: hero-text 2s ease;
+  /* filter: blur(50px); */
+}
+
+@keyframes hero-text {
+  0% {
+    opacity: 0;
+    filter: blur(50px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }
 
 .bigger-text {

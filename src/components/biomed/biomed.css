@@ -58,9 +58,13 @@
     padding-top: 2rem;
   }
 
+  /* heading text and photo outline */
   --orange-accent: #ff8359;
+  /* card bg */
   --orange-bg: #423b46;
+  /* paragraph text */
   --orange-light: #d9a898;
+  /* card border */
   --orange-faint: rgba(255, 159, 128, 0.15);
 
   --red-accent: #ff4d5d;

@@ -7,6 +7,28 @@ footer {
   align-items: center;
 }
 
+footer:has(.email:hover) .photo-dave {
+  scale: 1.03;
+  rotate: -3deg;
+}
+
+footer:has(.copied) .photo-dave {
+  background: #80ffaa;
+  animation: photo 0.275s ease-out;
+}
+
+@keyframes photo {
+  0% {
+    scale: 1.03;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1.03;
+  }
+}
+
 .photo-dave {
   padding: 6px;
   min-width: max-content;
@@ -118,19 +140,43 @@ footer {
   background-color: transparent;
   border: none;
   transition: all 0.15s ease;
+  /* position: relative; */
 }
 
 .icon-and-text:not(.copied, .react):hover {
   /* color: #ccd5ff; */
+  transition: all 0.15s ease;
 
   .copy-icon {
     color: var(--accent-color);
+    transition: all 0.15s ease;
   }
 
   .blocks-icon {
     transform: rotate(-90deg);
     color: var(--accent-color);
+    transition: all 0.15s ease;
   }
+}
+
+.email-text-container {
+  position: relative;
+  display: inline-block;
+}
+
+.email-text {
+  transition: opacity 0.15s ease;
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+  display: inline;
+}
+
+.fade-out {
+  opacity: 0;
+  display: none;
 }
 
 .copied {

@@ -15,15 +15,15 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   // Copy email to clipboard
-  const [displayText, setDisplayText] = useState("dave@dnarna.co");
+  const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     navigator.clipboard
       .writeText("dave@dnarna.co")
       .then(() => {
-        setDisplayText("Copied!");
+        setCopied(true);
         setTimeout(() => {
-          setDisplayText("dave@dnarna.co");
-        }, 1500);
+          setCopied(false);
+        }, 1750);
       })
       .catch((err) => {
         console.error("Failed to copy: ", err);
@@ -55,18 +55,27 @@ function Footer() {
         <div className="contact">
           <h3>Contact</h3>
           <button
-            className={`icon-and-text ${
-              displayText === "Copied!" ? "copied" : ""
-            }`}
+            className="icon-and-text email"
             onClick={handleCopy}
             aria-label="Copy email address"
-            title="Click to copy">
-            {displayText === "Copied!" ? (
-              <Check size={15} strokeWidth={2} />
+            title="Click to copy email">
+            {copied ? (
+              <Check size={15} strokeWidth={2} className="copied" />
             ) : (
               <Copy size={15} strokeWidth={2} className="copy-icon" />
             )}
-            <p role="status">{displayText}</p>
+            <p
+              role="status"
+              className={`email-text ${copied ? "fade-out" : "fade-in"}`}>
+              dave@dnarna.co
+            </p>
+            <p
+              role="status"
+              className={`email-text ${
+                copied ? "copied fade-in" : "fade-out"
+              }`}>
+              Email copied!&emsp;&emsp;
+            </p>
           </button>
         </div>
 

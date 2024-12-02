@@ -61,7 +61,7 @@
   padding: 5px;
 
   /* Squircle border color */
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(224, 229, 255, 0.3);
 
   &::before {
     /* Squircle background color  */

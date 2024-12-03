@@ -1,6 +1,7 @@
 .marquee-container {
   --gap: 2rem;
   --gap-mobile: 1rem;
+  /* --gap-large: 3rem; */
   position: absolute;
   top: 0;
   /* left: 0; */
@@ -132,3 +133,27 @@
     height: clamp(150px, 39vw, 250px);
   }
 }
+
+/* For large monitors */
+/* @media (min-width: 3000px) {
+  .marquee-container {
+    gap: var(--gap-large);
+  }
+
+  .marquee-column {
+    gap: var(--gap-large);
+  }
+
+  .marquee-track {
+    gap: var(--gap-large);
+  }
+
+  @keyframes hero-marquee {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(calc(-100% - var(--gap-large)));
+    }
+  }
+} */

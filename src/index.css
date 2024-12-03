@@ -132,7 +132,9 @@ body {
 
 /* Section headings */
 h2 {
-  font-size: 4.5rem;
+  /* font-size: 4.5rem; */
+  /* font-size: clamp(2rem, 4.5rem, 4.5rem); */
+  font-size: min(4.5rem, 14.75vw);
   line-height: 1.2;
   font-weight: 700;
   padding-top: 18rem;
@@ -151,6 +153,11 @@ h3 {
   letter-spacing: 0.5px;
   text-align: center;
   color: var(--dim);
+  padding-top: 1.15rem;
+}
+
+.h3-biomedical {
+  padding-top: 0.5rem;
 }
 
 h4 {
@@ -163,3 +170,12 @@ h4 {
   background-color: var(--bg-color);
   border: none;
 }
+
+/* MEDIA QUERIES ****************************************************************************************************************/
+
+/* when small text breaks into 2 lines */
+/* @media (max-width: 500px) {
+  h2 {
+    font-size: 3.25rem;
+  }
+} */

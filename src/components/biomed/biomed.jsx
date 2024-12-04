@@ -215,7 +215,7 @@ function Biomed() {
           <div className="card-header">
             {/* Photo */}
             <Squircle
-              className="photo-outline red-outline"
+              className="photo-outline red-outline heartbeat"
               cornerRadius={20}
               borderWidth={1.5}
               cornerSmoothing={0.8}>

@@ -49,6 +49,8 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 375px;
+  position: relative;
+  /* backdrop-filter: blur(100px); */
 
   h4 {
     font-size: 2rem;
@@ -59,11 +61,11 @@
   }
 
   /* heading text and photo outline */
-  --orange-accent: #ff8359;
+  --orange-accent: #ff7c5c;
   /* card bg */
   --orange-bg: #423b46;
   /* paragraph text */
-  --orange-light: #d9a898;
+  --orange-light: #d9a598;
   /* card border */
   --orange-faint: rgba(255, 159, 128, 0.15);
 
@@ -127,12 +129,78 @@
   background: var(--red-accent);
 }
 
+.heartbeat {
+  animation: beat 4s ease-out infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  4% {
+    transform: scale(0.9);
+  }
+  /* overshoot */
+  8% {
+    transform: scale(1.01);
+  }
+  12% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* .blob-gradient {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 198, 178, 0.1),
+    var(--orange-bg) 70%
+  );
+  animation: blob 25s infinite linear;
+}
+
+.delay1 {
+  animation-delay: 5s;
+}
+
+.delay2 {
+  animation-delay: -5s;
+}
+
+@keyframes blob {
+  0% {
+    translate: -25% 0%;
+    scale: 1.25;
+  }
+  33% {
+    translate: 50% 75%;
+    scale: 0.75;
+  }
+
+  66% {
+    translate: 100% -20%;
+    scale: 1;
+  }
+  100% {
+    translate: -25% 0%;
+    scale: 1.25;
+  }
+} */
+
 .techniques {
   grid-area: techniques;
 
   &::before {
     /* Squircle background color  */
-    background: var(--orange-bg);
+    /* background: var(--orange-bg); */
+    background: radial-gradient(circle at 0% 0%, #423d49, #3b3643 90%);
   }
 
   /* Squircle border color */
@@ -152,7 +220,8 @@
 
   &::before {
     /* Squircle background color  */
-    background: var(--orange-bg);
+    /* background: var(--orange-bg); */
+    background: radial-gradient(circle at 0% 0%, #423d49, #3b3643 90%);
   }
 
   /* Squircle border color */
@@ -172,7 +241,8 @@
 
   &::before {
     /* Squircle background color  */
-    background: var(--orange-bg);
+    /* background: var(--orange-bg); */
+    background: radial-gradient(circle at 0% 0%, #423d49, #3b3643 90%);
   }
 
   /* Squircle border color */
@@ -196,7 +266,8 @@
 
   &::before {
     /* Squircle background color  */
-    background: var(--pink-bg);
+    /* background: var(--pink-bg); */
+    background: radial-gradient(circle at 0% 0%, #423b4f, #3b3548 90%);
   }
 
   /* Squircle border color */
@@ -225,7 +296,8 @@
 
   &::before {
     /* Squircle background color  */
-    background: var(--red-bg);
+    /* background: var(--red-bg); */
+    background: radial-gradient(circle at 0% 0%, #423b4a, #3b3544 90%);
   }
 
   /* Squircle border color */
@@ -245,7 +317,8 @@
 
   &::before {
     /* Squircle background color  */
-    background: var(--red-bg);
+    /* background: var(--red-bg); */
+    background: radial-gradient(circle at 0% 0%, #423b4a, #3b3544 90%);
   }
 
   /* Squircle border color */

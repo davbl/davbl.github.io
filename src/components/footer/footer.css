@@ -14,7 +14,7 @@ footer:has(.email:hover) .photo-dave {
 
 footer:has(.copied) .photo-dave {
   background: #80ffaa;
-  animation: photo 0.275s ease-out;
+  animation: photo 0.25s ease-out;
 }
 
 @keyframes photo {
@@ -22,7 +22,7 @@ footer:has(.copied) .photo-dave {
     scale: 1.03;
   }
   50% {
-    scale: 1.1;
+    scale: 0.95;
   }
   100% {
     scale: 1.03;

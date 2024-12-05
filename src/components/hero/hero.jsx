@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ScrollText, BadgeInfo } from "lucide-react";
+// import { ScrollText, BadgeInfo } from "lucide-react";
+import { BadgeInfo } from "lucide-react";
 
 import HeroMarquee from "./hero-marquee";
 import "./hero.css";
@@ -37,10 +38,10 @@ function Hero() {
       {/* Small text */}
       <div className="small-text-container">
         {/* Origin story */}
-        <Link to="/origin" className="small-text story">
+        {/* <Link to="/origin" className="small-text story">
           <ScrollText size={14} strokeWidth={2} />
           <p>Origin story</p>
-        </Link>
+        </Link> */}
 
         {/* Fine print */}
         <div className="small-text">

@@ -67,16 +67,16 @@
   /* paragraph text */
   --orange-light: #d9a598;
   /* card border */
-  --orange-faint: rgba(255, 159, 128, 0.15);
+  /* --orange-faint: rgba(255, 159, 128, 0.15); */
 
   --red-accent: #ff4d5d;
   --red-bg: #423847;
   --red-light: #d9989e;
-  --red-faint: rgba(255, 128, 138, 0.15);
+  /* --red-faint: rgba(255, 128, 138, 0.15); */
 
   --pink-accent: #ff59ba;
   --pink-bg: #42384e;
-  --pink-faint: rgba(255, 128, 202, 0.15);
+  /* --pink-faint: rgba(255, 128, 202, 0.15); */
 }
 
 .card-header {
@@ -152,48 +152,6 @@
   }
 }
 
-/* .blob-gradient {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 198, 178, 0.1),
-    var(--orange-bg) 70%
-  );
-  animation: blob 25s infinite linear;
-}
-
-.delay1 {
-  animation-delay: 5s;
-}
-
-.delay2 {
-  animation-delay: -5s;
-}
-
-@keyframes blob {
-  0% {
-    translate: -25% 0%;
-    scale: 1.25;
-  }
-  33% {
-    translate: 50% 75%;
-    scale: 0.75;
-  }
-
-  66% {
-    translate: 100% -20%;
-    scale: 1;
-  }
-  100% {
-    translate: -25% 0%;
-    scale: 1.25;
-  }
-} */
-
 .techniques {
   grid-area: techniques;
 
@@ -204,7 +162,12 @@
   }
 
   /* Squircle border color */
-  background: var(--orange-faint);
+  /* background: var(--orange-faint); */
+  background: radial-gradient(
+    circle at 0% 0%,
+    rgba(255, 159, 128, 0.2),
+    rgba(255, 159, 128, 0.1) 90%
+  );
 
   h4 {
     color: var(--orange-accent);
@@ -225,7 +188,12 @@
   }
 
   /* Squircle border color */
-  background: var(--orange-faint);
+  /* background: var(--orange-faint); */
+  background: radial-gradient(
+    circle at 0% 0%,
+    rgba(255, 159, 128, 0.2),
+    rgba(255, 159, 128, 0.1) 90%
+  );
 
   h4 {
     color: var(--orange-accent);
@@ -246,7 +214,12 @@
   }
 
   /* Squircle border color */
-  background: var(--orange-faint);
+  /* background: var(--orange-faint); */
+  background: radial-gradient(
+    circle at 0% 0%,
+    rgba(255, 159, 128, 0.2),
+    rgba(255, 159, 128, 0.1) 90%
+  );
 
   h4 {
     color: var(--orange-accent);
@@ -271,7 +244,12 @@
   }
 
   /* Squircle border color */
-  background: var(--pink-faint);
+  /* background: var(--pink-faint); */
+  background: radial-gradient(
+    circle at 0% 0%,
+    rgba(255, 128, 202, 0.2),
+    rgba(255, 128, 202, 0.1) 90%
+  );
 
   h4 {
     color: var(--pink-accent);
@@ -301,7 +279,12 @@
   }
 
   /* Squircle border color */
-  background: var(--red-faint);
+  /* background: var(--red-faint); */
+  background: radial-gradient(
+    circle at 0% 0%,
+    rgba(255, 128, 138, 0.2),
+    rgba(255, 128, 138, 0.1) 90%
+  );
 
   h4 {
     color: var(--red-accent);
@@ -322,7 +305,12 @@
   }
 
   /* Squircle border color */
-  background: var(--red-faint);
+  /* background: var(--red-faint); */
+  background: radial-gradient(
+    circle at 0% 0%,
+    rgba(255, 128, 138, 0.2),
+    rgba(255, 128, 138, 0.1) 90%
+  );
 
   h4 {
     color: var(--red-accent);

@@ -135,7 +135,7 @@ h2 {
   /* font-size: 4.5rem; */
   /* font-size: clamp(2rem, 4.5rem, 4.5rem); */
   font-size: min(4.5rem, 14.75vw);
-  line-height: 1.2;
+  line-height: 1.1;
   font-weight: 700;
   padding-top: 18rem;
   text-align: center;
@@ -145,7 +145,7 @@ h2 {
   padding-top: 14rem;
 }
 
-/* Section subheadings and heading in footer */
+/* 1) Section subheadings, 2) header headings, and 3) headings in footer */
 h3 {
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -153,11 +153,27 @@ h3 {
   letter-spacing: 0.5px;
   text-align: center;
   color: var(--dim);
-  padding-top: 1.15rem;
+  padding-top: 0.9rem;
 }
 
-.h3-biomedical {
-  padding-top: 0.5rem;
+.h3-dev {
+  padding-top: 1.1rem;
+}
+
+/* .h3-biomedical {
+  padding-top: 0.7rem;
+} */
+
+@media (max-width: 516px) {
+  .h3-visdesign {
+    padding-top: 1.4rem;
+  }
+}
+
+@media (max-width: 605px) {
+  .h3-others-say {
+    padding-top: 1.4rem;
+  }
 }
 
 h4 {

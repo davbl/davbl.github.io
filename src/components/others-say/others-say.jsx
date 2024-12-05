@@ -10,7 +10,7 @@ function OthersSay() {
       {/* Section heading */}
       <div>
         <h2>What others say</h2>
-        <h3 className="subheading">Competence sparks joy</h3>
+        <h3 className="h3-others-say">Competence sparks joy</h3>
       </div>
 
       {/* Quotes container */}

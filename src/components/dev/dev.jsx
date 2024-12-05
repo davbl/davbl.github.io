@@ -19,7 +19,7 @@ function Dev() {
       {/* Section heading */}
       <div className="heading">
         <h2>Development</h2>
-        <h3 className="subheading uxui">And UX/UI</h3>
+        <h3 className="h3-dev">And UX/UI</h3>
       </div>
 
       {/* Grid container */}

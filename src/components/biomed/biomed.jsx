@@ -1,11 +1,11 @@
 import "./biomed.css";
 import { Squircle } from "corner-smoothing";
-import techniques from "./img/techniques-4x.png";
-import labs from "./img/labs-4x.png";
-import organisms from "./img/organisms-4x.png";
-import brain from "./img/brain-4x.png";
-import redCross from "./img/red-cross-4x.png";
-import award from "./img/award-4x.png";
+import techniques from "./img/techniques-4x.avif";
+import labs from "./img/labs-4x.avif";
+import organisms from "./img/organisms-4x.avif";
+import brain from "./img/brain-4x.avif";
+import redCross from "./img/red-cross-4x.avif";
+import award from "./img/award-4x.avif";
 
 function Biomed() {
   return (

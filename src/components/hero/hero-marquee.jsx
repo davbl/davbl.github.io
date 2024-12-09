@@ -1,22 +1,22 @@
 import "./hero-marquee.css";
 // Images - col1
-import Fw1 from "./img/flywire1.png";
-import Fw2 from "./img/flywire2.png";
-import Fw3 from "./img/flywire3.png";
-import Fw4 from "./img/flywire4.png";
-import Fw5 from "./img/flywire5.png";
+import Fw1 from "./img/flywire1.avif";
+import Fw2 from "./img/flywire2.avif";
+import Fw3 from "./img/flywire3.avif";
+import Fw4 from "./img/flywire4.avif";
+import Fw5 from "./img/flywire5.avif";
 // Images - col2
 import hand from "./img/xray-hand.png";
 import hip from "./img/xray-hip.png";
 import angiogram from "./img/angiogram.png";
 import brain from "./img/brain.png";
-import pace from "./img/xray-pace.png";
+import pace from "./img/xray-pace.avif";
 // Images - col2
-import prot1 from "./img/prot1.png";
-import prot2 from "./img/prot2.png";
-import prot3 from "./img/prot3.png";
-import prot4 from "./img/prot4.png";
-import prot5 from "./img/prot5.png";
+import prot1 from "./img/prot1.avif";
+import prot2 from "./img/prot2.avif";
+import prot3 from "./img/prot3.avif";
+import prot4 from "./img/prot4.avif";
+import prot5 from "./img/prot5.avif";
 
 function HeroMarquee() {
   return (

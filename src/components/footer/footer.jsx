@@ -3,7 +3,7 @@ import { Squircle } from "corner-smoothing";
 import { Copy, Check, Blocks } from "lucide-react";
 
 import "./footer.css";
-import dave from "./img/dave.png";
+import dave from "./img/dave.avif";
 
 function Footer() {
   // Scroll to Top

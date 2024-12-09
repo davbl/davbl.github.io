@@ -1,7 +1,7 @@
 function Origin() {
   return (
     <>
-      <h4>Origin Story</h4>
+      <h2>Origin Story</h2>
     </>
   );
 }

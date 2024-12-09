@@ -1,0 +1,150 @@
+.fundraising-container {
+  text-align: center;
+  padding-bottom: 6rem;
+
+  h4 {
+    color: var(--accent-color);
+    margin-top: 2.75rem;
+    font-size: 2.25rem;
+    display: inline-block;
+    transition: all 0.2s ease;
+  }
+
+  .institution-link {
+    /* margin-top: 2.75rem; */
+    /* display: inline-block; */
+
+    &:hover {
+      h4 {
+        color: #ff8066;
+      }
+      .arrow-icon {
+        transform: translate(2px, -4px) rotate(360deg);
+        color: #ff8066;
+      }
+    }
+  }
+
+  .arrow-icon {
+    margin-left: 7px;
+    margin-bottom: -2px;
+    color: var(--accent-color);
+    transition: all 0.2s ease;
+  }
+
+  @media (max-width: 687px) {
+    .arrow-icon {
+      display: none;
+    }
+  }
+
+  h5 {
+    padding-top: 0.15rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 556px) {
+    h5 {
+      padding-top: 0.35rem;
+    }
+  }
+}
+
+.intro {
+  padding-top: 4rem;
+  max-width: 700px;
+  text-align: center;
+}
+
+.institution-list {
+  padding-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+}
+
+.institution-cover {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  outline: 1px solid rgba(224, 229, 255, 0.2);
+  background-color: rgba(224, 229, 255, 0.05);
+  border-radius: 16px;
+
+  img {
+    border-radius: 12px;
+    width: calc((100% - 0.5rem) / 2);
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .institution-cover {
+    flex-direction: column;
+  }
+  .institution-cover img {
+    width: 100%;
+  }
+}
+
+.caption {
+  color: var(--dim);
+  padding-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.location {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 657px) {
+  .cali {
+    padding-top: 0.75rem;
+  }
+}
+
+@media (max-width: 556px) {
+  .brno {
+    padding-top: 0.65rem;
+  }
+}
+
+.institution-description {
+  padding-top: 1.5rem;
+  color: var(--dim);
+  margin-inline: auto;
+  max-width: 760px;
+}
+
+/* .long-description {
+  max-width: 800px;
+} */
+
+.bracket-link {
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.label {
+  margin-top: 2rem;
+  margin-inline: auto;
+  background-color: rgba(26, 64, 255, 0.2);
+  width: fit-content;
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 6px;
+  outline: 1px solid #667fff;
+  color: #667fff;
+}

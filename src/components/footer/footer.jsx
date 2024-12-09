@@ -116,7 +116,6 @@ function Footer() {
         </div>
 
         {/* BTN - Scroll to top */}
-        {/* TODO maybe: add Squircle, inside or outside of button */}
         <button className="scroll-btn" onClick={scrollToTop}>
           <span>↑</span> Back to Top <span>↑</span>
         </button>

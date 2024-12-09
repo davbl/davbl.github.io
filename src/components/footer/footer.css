@@ -218,7 +218,6 @@ footer:has(.copied) .photo-dave {
 /* MEDIA QUERIES ****************************************************************************************************************/
 
 /* 3-column */
-/* TODO: fix */
 @media (max-width: 1180px) {
   .content-grid {
     grid-template-areas:

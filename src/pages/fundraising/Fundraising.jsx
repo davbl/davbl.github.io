@@ -26,8 +26,14 @@ function Fundraising() {
         <div className="institution">
           {/* Cover images */}
           <div className="institution-cover">
-            <img src={buck} alt="" />
-            <img src={campisi} alt="" />
+            <img
+              src={buck}
+              alt="Aerial photo of the Buck Institute building in California."
+            />
+            <img
+              src={campisi}
+              alt="Photo of late Judy Campisi in discussion with another Buck scientist in front of a microscope."
+            />
           </div>
           <p className="caption">
             Second photo: Late{" "}
@@ -72,8 +78,14 @@ function Fundraising() {
         <div className="institution">
           {/* Cover images */}
           <div className="institution-cover">
-            <img src={ceitec} alt="" />
-            <img src={mraz} alt="" />
+            <img
+              src={ceitec}
+              alt="Photo of a modern lobby inside the Central European Institute of Technology (CEITEC) building."
+            />
+            <img
+              src={mraz}
+              alt="Photo of two scientists from the Center for Molecular Medicine. On the right is Marek Mraz who leads one of the 7 research groups at the Center."
+            />
           </div>
           <p className="caption">
             Second photo:{" "}

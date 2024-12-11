@@ -40,6 +40,7 @@ function Biomed() {
                   alt="A photo of a scientist working with a microcentrifuge tube and a biopsy punch inside a biosafety cabinet."
                   width="96"
                   height="96"
+                  loading="lazy"
                 />
               </Squircle>
             </Squircle>
@@ -76,6 +77,7 @@ function Biomed() {
                   alt="A photo of a scientist in a laboratory examining a sample through a light microscope."
                   width="96"
                   height="96"
+                  loading="lazy"
                 />
               </Squircle>
             </Squircle>
@@ -112,6 +114,7 @@ function Biomed() {
                   alt="Microscopic view of a few C. elegans worms with visible internal structures on an agar plate."
                   width="96"
                   height="96"
+                  loading="lazy"
                 />
               </Squircle>
             </Squircle>
@@ -147,6 +150,7 @@ function Biomed() {
                   alt="A photo of several coronal brain slices showing cortical and subcortical structures."
                   width="96"
                   height="96"
+                  loading="lazy"
                 />
               </Squircle>
             </Squircle>
@@ -192,6 +196,7 @@ function Biomed() {
                   alt="A photo of an American Red Cross volunteer wearing a vest covered in handwritten thank-you messages and signatures on the back."
                   width="96"
                   height="96"
+                  loading="lazy"
                 />
               </Squircle>
             </Squircle>
@@ -228,6 +233,7 @@ function Biomed() {
                   alt="A photo of a realistic hard plastic heart model showing major arteries and veins."
                   width="96"
                   height="96"
+                  loading="lazy"
                 />
               </Squircle>
             </Squircle>

@@ -60,6 +60,7 @@ function OthersSay() {
                   alt="Portrait photo of Derick Schweppe."
                   width="96"
                   height="96"
+                  loading="lazy"
                 />
               </Squircle>
             </Squircle>
@@ -133,6 +134,7 @@ function OthersSay() {
                   alt="Portrait photo of Steve Penrod."
                   width="96"
                   height="96"
+                  loading="lazy"
                 />
               </Squircle>
             </Squircle>

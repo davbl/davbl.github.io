@@ -44,6 +44,7 @@ function Footer() {
             alt="Photo of Dave, the author of this website."
             width="250"
             height="250"
+            loading="lazy"
           />
         </Squircle>
       </Squircle>

@@ -14,23 +14,23 @@ function Logos() {
 
       <div className="logos-container">
         <div className="marquee">
-          <img src={mycroft} alt="Mycroft AI logo" />
-          <img src={ntx} alt="NeurotechX logo" width="178" />
-          <img src={drverde} alt="Doctor Verde logo" />
-          <img src={bola} alt="Bola AI logo" />
-          <img src={kisk} alt="KISK logo" />
-          <img src={abyky} alt="Abyky logo" />
-          <img src={progress} alt="Progress Forum logo" />
+          <img src={mycroft} alt="Mycroft AI logo" loading="lazy" />
+          <img src={ntx} alt="NeurotechX logo" width="178" loading="lazy" />
+          <img src={drverde} alt="Doctor Verde logo" loading="lazy" />
+          <img src={bola} alt="Bola AI logo" loading="lazy" />
+          <img src={kisk} alt="KISK logo" loading="lazy" />
+          <img src={abyky} alt="Abyky logo" loading="lazy" />
+          <img src={progress} alt="Progress Forum logo" loading="lazy" />
         </div>
 
         <div className="marquee">
-          <img src={mycroft} alt="Mycroft AI logo" />
-          <img src={ntx} alt="NeurotechX logo" width="178" />
-          <img src={drverde} alt="Doctor Verde logo" />
-          <img src={bola} alt="Bola AI logo" />
-          <img src={kisk} alt="KISK logo" />
-          <img src={abyky} alt="Abyky logo" />
-          <img src={progress} alt="Progress Forum logo" />
+          <img src={mycroft} alt="Mycroft AI logo" loading="lazy" />
+          <img src={ntx} alt="NeurotechX logo" width="178" loading="lazy" />
+          <img src={drverde} alt="Doctor Verde logo" loading="lazy" />
+          <img src={bola} alt="Bola AI logo" loading="lazy" />
+          <img src={kisk} alt="KISK logo" loading="lazy" />
+          <img src={abyky} alt="Abyky logo" loading="lazy" />
+          <img src={progress} alt="Progress Forum logo" loading="lazy" />
         </div>
       </div>
     </section>

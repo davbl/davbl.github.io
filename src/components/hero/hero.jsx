@@ -11,10 +11,11 @@ function Hero() {
     <section className="hero-section">
       {/* Bg marquee */}
       <HeroMarquee />
+
       <div className="hero-mobile">
         {/* Hero svg */}
         <h1>
-          <img src={HeroText} alt="Software & Biology" />
+          <img src={HeroText} alt="Software & Biology" loading="eager" />
         </h1>
 
         {/* Bigger text */}

@@ -7,9 +7,9 @@ import am from "./img/am.avif";
 import bolaWelcome from "./img/bola-welcome-1800h.avif";
 import bolaTeeth from "./img/bola-teeth-1800h.avif";
 import bolaIndex from "./img/bola-index-1800h.avif";
-import fmHero from "./img/fm-hero.png";
-import fmWhatis from "./img/fm-whatis.png";
-import fmGenetic from "./img/fm-genetic.png";
+import fmHero from "./img/fm-hero.avif";
+import fmWhatis from "./img/fm-whatis.avif";
+import fmGenetic from "./img/fm-genetic.avif";
 import analyzer from "./img/analyzer.avif";
 import staph from "./img/staph.avif";
 

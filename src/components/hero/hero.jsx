@@ -15,12 +15,7 @@ function Hero() {
       <div className="hero-mobile">
         {/* Hero svg */}
         <h1>
-          <img
-            src={HeroText}
-            alt="Software & Biology"
-            loading="eager"
-            fetchPriority="high"
-          />
+          <img src={HeroText} alt="Software & Biology" loading="eager" />
         </h1>
 
         {/* Bigger text */}

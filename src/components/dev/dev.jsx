@@ -4,9 +4,9 @@ import "./dev.css";
 
 // Cover images and vids
 import am from "./img/am.avif";
-import bolaWelcome from "./img/bola-welcome.png";
-import bolaTeeth from "./img/bola-teeth.png";
-import bolaIndex from "./img/bola-index.png";
+import bolaWelcome from "./img/bola-welcome-1800h.avif";
+import bolaTeeth from "./img/bola-teeth-1800h.avif";
+import bolaIndex from "./img/bola-index-1800h.avif";
 import fmHero from "./img/fm-hero.png";
 import fmWhatis from "./img/fm-whatis.png";
 import fmGenetic from "./img/fm-genetic.png";

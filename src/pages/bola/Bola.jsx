@@ -1,18 +1,18 @@
 import "./bola.css";
 
-import bola1 from "./img/bola1.avif";
-import bola2 from "./img/bola2.avif";
-import bola3 from "./img/bola3.avif";
-import bola4 from "./img/bola4.avif";
-import bola5 from "./img/bola5.avif";
-import bola6 from "./img/bola6.avif";
-import bola7 from "./img/bola7.avif";
-import bola8 from "./img/bola8.avif";
-import bola9 from "./img/bola9.avif";
-import bola10 from "./img/bola10.avif";
-import bola11 from "./img/bola11.avif";
-import bola12 from "./img/bola12.avif";
-import bola13 from "./img/bola13.avif";
+import bola1 from "./img/bola1-1800h.avif";
+import bola2 from "./img/bola2-1800h.avif";
+import bola3 from "./img/bola3-1800h.avif";
+import bola4 from "./img/bola4-1800h.avif";
+import bola5 from "./img/bola5-1800h.avif";
+import bola6 from "./img/bola6-1800h.avif";
+import bola7 from "./img/bola7-1800h.avif";
+import bola8 from "./img/bola8-1800h.avif";
+import bola9 from "./img/bola9-1800h.avif";
+import bola10 from "./img/bola10-1800h.avif";
+import bola11 from "./img/bola11-1800h.avif";
+import bola12 from "./img/bola12-2658w.avif";
+import bola13 from "./img/bola13-2658w.avif";
 
 function Bola() {
   return (

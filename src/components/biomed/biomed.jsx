@@ -1,5 +1,6 @@
-import "./biomed.css";
 import { Squircle } from "corner-smoothing";
+import "./biomed.css";
+
 import techniques from "./img/techniques-4x.avif";
 import labs from "./img/labs-4x.avif";
 import organisms from "./img/organisms-4x.avif";

@@ -1,8 +1,9 @@
 import { Squircle } from "corner-smoothing";
-import "./others-say.css";
-import derick from "./img/derick.png";
-import steve from "./img/steve.png";
 import { SquareArrowUpRight } from "lucide-react";
+
+import "./others-say.css";
+import derick from "./img/derick.avif";
+import steve from "./img/steve.avif";
 
 function OthersSay() {
   return (

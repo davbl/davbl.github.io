@@ -1,15 +1,39 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
+
+// Pages
 import Home from "./pages/Home";
-import Fundraising from "./pages/fundraising/Fundraising";
-import Bola from "./pages/bola/Bola";
+// import Fundraising from "./pages/fundraising/Fundraising";
+const Fundraising = lazy(() => import("./pages/fundraising/Fundraising"));
+// import Bola from "./pages/bola/Bola";
+const Bola = lazy(() => import("./pages/bola/Bola"));
 
 function App() {
   return (
     <Router>
       <Routes>
+        {/* Home */}
         <Route path="/" element={<Home />} />
-        <Route path="/fundraising" element={<Fundraising />} />
-        <Route path="/bola" element={<Bola />} />
+
+        {/* Fundraising */}
+        <Route
+          path="/fundraising"
+          element={
+            <Suspense fallback={<p>Loading...</p>}>
+              <Fundraising />
+            </Suspense>
+          }
+        />
+
+        {/* Bola */}
+        <Route
+          path="/bola"
+          element={
+            <Suspense fallback={<p>Loading...</p>}>
+              <Bola />
+            </Suspense>
+          }
+        />
       </Routes>
     </Router>
   );

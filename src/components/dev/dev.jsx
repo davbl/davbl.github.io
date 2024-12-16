@@ -2,16 +2,17 @@ import { Squircle } from "corner-smoothing";
 import ProjectDescription from "./project-description";
 import "./dev.css";
 
-// Cover images and vids
-import am from "./img/am.avif";
+// Cover images
 import bolaWelcome from "./img/bola-welcome-1800h.avif";
 import bolaTeeth from "./img/bola-teeth-1800h.avif";
 import bolaIndex from "./img/bola-index-1800h.avif";
 import fmHero from "./img/fm-hero.avif";
 import fmWhatis from "./img/fm-whatis.avif";
 import fmGenetic from "./img/fm-genetic.avif";
-import analyzer from "./img/analyzer.avif";
+// Vids
 import staph from "./img/staph.webm";
+import analyzer from "./img/analyzer.webm";
+import am from "./img/am.webm";
 
 // Import images for /bola to preload on hover
 import { preloadImages } from "../../utils/preloadImages";
@@ -50,11 +51,6 @@ function Dev() {
               cornerRadius={14}
               cornerSmoothing={0.8}
               className="vid-canvas staph-vid">
-              {/* <img
-                src={staph}
-                alt="A looping video showing how the Grapes of Staph webtool works."
-              /> */}
-
               {/* Video */}
               <video
                 className="playback"
@@ -126,10 +122,15 @@ function Dev() {
               cornerRadius={14}
               cornerSmoothing={0.8}
               className="vid-canvas analyzer-vid">
-              <img
+              {/* Video */}
+              <video
+                className="playback"
                 src={analyzer}
-                alt="A looping video showing how the DNA/RNA Analyzer works."
-              />
+                autoPlay
+                loop
+                playsInline
+                muted
+                height="600"></video>
             </Squircle>
           </Squircle>
 
@@ -185,10 +186,15 @@ function Dev() {
               cornerRadius={14}
               cornerSmoothing={0.8}
               className="vid-canvas am-vid">
-              <img
+              {/* Video */}
+              <video
+                className="playback"
                 src={am}
-                alt="A looping video showing how the AlphaMissense Browser works."
-              />
+                autoPlay
+                loop
+                playsInline
+                muted
+                height="600"></video>
             </Squircle>
           </Squircle>
 

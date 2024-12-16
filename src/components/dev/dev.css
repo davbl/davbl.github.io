@@ -47,37 +47,42 @@
   }
 }
 
-.vid {
+.vid-canvas {
   width: 100%;
   justify-items: center;
 
-  img {
+  /* img {
     outline-offset: -2px;
-  }
+  } */
+}
+
+.playback {
+  display: block;
+  margin: 0 auto;
 }
 
 .staph-vid {
-  background-color: #f3f3f7;
+  background-color: #f7f7fa;
 
-  img {
+  /* img {
     outline: #f3f3f7 solid 2px;
-  }
+  } */
 }
 
 .analyzer-vid {
   background-color: #fefefe;
 
-  img {
+  /* img {
     outline: #fefefe solid 3px;
-  }
+  } */
 }
 
 .am-vid {
-  background-color: #222222;
+  background-color: #2a2a2a;
 
-  img {
+  /* img {
     outline: #222222 solid 2px;
-  }
+  } */
 }
 
 /* Scale .cover when hovering over .project-title *********************************************************************************/

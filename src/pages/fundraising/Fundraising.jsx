@@ -81,10 +81,12 @@ function Fundraising() {
             <img
               src={ceitec}
               alt="Photo of a modern lobby inside the Central European Institute of Technology (CEITEC) building."
+              loading="lazy"
             />
             <img
               src={mraz}
               alt="Photo of two scientists from the Center for Molecular Medicine. On the right is Marek Mraz who leads one of the 7 research groups at the Center."
+              loading="lazy"
             />
           </div>
           <p className="caption">

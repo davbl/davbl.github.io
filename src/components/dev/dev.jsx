@@ -11,9 +11,20 @@ import fmHero from "./img/fm-hero.avif";
 import fmWhatis from "./img/fm-whatis.avif";
 import fmGenetic from "./img/fm-genetic.avif";
 import analyzer from "./img/analyzer.avif";
-import staph from "./img/staph.avif";
+import staph from "./img/staph.webm";
+
+// Import images for /bola to preload on hover
+import { preloadImages } from "../../utils/preloadImages";
+import bola1 from "../../pages/bola/img/bola1-1800h.avif";
+import bola2 from "../../pages/bola/img/bola2-1800h.avif";
+import bola3 from "../../pages/bola/img/bola3-1800h.avif";
 
 function Dev() {
+  const handleBolaHover = () => {
+    preloadImages([bola1, bola2, bola3]);
+  };
+
+  // Render
   return (
     <section>
       {/* Section heading */}
@@ -28,19 +39,31 @@ function Dev() {
 
         {/* STAPH */}
         <div className="project staph">
+          {/* Outline */}
           <Squircle
             className="cover staph-outline"
             cornerRadius={20}
             cornerSmoothing={0.8}
             borderWidth={1.5}>
+            {/* Video canvas */}
             <Squircle
               cornerRadius={14}
               cornerSmoothing={0.8}
-              className="vid staph-vid">
-              <img
+              className="vid-canvas staph-vid">
+              {/* <img
                 src={staph}
                 alt="A looping video showing how the Grapes of Staph webtool works."
-              />
+              /> */}
+
+              {/* Video */}
+              <video
+                className="playback"
+                src={staph}
+                autoPlay
+                loop
+                playsInline
+                muted
+                height="600"></video>
             </Squircle>
           </Squircle>
 
@@ -88,6 +111,7 @@ function Dev() {
             color="#668CFF"
             chips={["Figma", "Illustrator"]}
             isLocal={true}
+            onMouseEnter={handleBolaHover}
           />
         </div>
 
@@ -101,7 +125,7 @@ function Dev() {
             <Squircle
               cornerRadius={14}
               cornerSmoothing={0.8}
-              className="vid analyzer-vid">
+              className="vid-canvas analyzer-vid">
               <img
                 src={analyzer}
                 alt="A looping video showing how the DNA/RNA Analyzer works."
@@ -160,7 +184,7 @@ function Dev() {
             <Squircle
               cornerRadius={14}
               cornerSmoothing={0.8}
-              className="vid am-vid">
+              className="vid-canvas am-vid">
               <img
                 src={am}
                 alt="A looping video showing how the AlphaMissense Browser works."

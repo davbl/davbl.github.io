@@ -45,15 +45,16 @@ const ProjectDescription = ({
   chips = [],
   isUnderConstruction = false,
   isLocal = false,
+  onMouseEnter,
 }) => {
   // if local route, use <Link>, else use <a> for external link
   const LinkElement = isLocal ? (
-    <Link to={link} className="project-title">
+    <Link to={link} className="project-title" onMouseEnter={onMouseEnter}>
       <h4>{title}</h4>
       {getIcon(isUnderConstruction, isLocal, color)}
     </Link>
   ) : (
-    <a href={link} target="_blank" className="project-title">
+    <a href={link} className="project-title" target="_blank">
       <h4>{title}</h4>
       {getIcon(isUnderConstruction, isLocal, color)}
     </a>
@@ -94,6 +95,7 @@ ProjectDescription.propTypes = {
   chips: PropTypes.arrayOf(PropTypes.string.isRequired),
   isUnderConstruction: PropTypes.bool,
   isLocal: PropTypes.bool,
+  onMouseEnter: PropTypes.func,
 };
 
 export default ProjectDescription;

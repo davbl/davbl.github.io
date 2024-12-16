@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom";
-// import { ScrollText, BadgeInfo } from "lucide-react";
 import { BadgeInfo } from "lucide-react";
+// import { ScrollText, BadgeInfo } from "lucide-react";
 
-import HeroMarquee from "./hero-marquee";
 import "./hero.css";
 import HeroText from "../../assets/hero-text.svg";
+import HeroMarquee from "./hero-marquee";
+
+// Import images for /fundraising to preload on hover
+import { preloadImages } from "../../utils/preloadImages";
+import buck from "../../pages/fundraising/img/buck.avif";
+import campisi from "../../pages/fundraising/img/campisi.avif";
 
 function Hero() {
+  const handleFundraisingHover = () => {
+    preloadImages([buck, campisi]);
+  };
+
+  // Render
   return (
     <section className="hero-section">
       {/* Bg marquee */}
@@ -28,7 +38,10 @@ function Hero() {
           <p>
             I’m trained in molecular biology and have experience with
             small-scale{" "}
-            <Link to="/fundraising" className="link">
+            <Link
+              to="/fundraising"
+              className="link"
+              onMouseEnter={handleFundraisingHover}>
               bioscience&nbsp;fundraising
             </Link>
             .

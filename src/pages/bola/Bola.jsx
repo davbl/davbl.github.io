@@ -26,18 +26,54 @@ function Bola() {
         <img src={bola1} alt="Register app screen" className="app-screen" />
         <img src={bola2} alt="Welcome screen" className="app-screen" />
         <img src={bola3} alt="Home screen" className="app-screen" />
-        <img src={bola4} alt="Missing teeth screen" className="app-screen" />
-        <img src={bola5} alt="Settings screen" className="app-screen" />
-        <img src={bola6} alt="App training screen" className="app-screen" />
-        <img src={bola7} alt="Perio index screen" className="app-screen" />
-        <img src={bola8} alt="Send feedback screen" className="app-screen" />
-        <img src={bola9} alt="Clinical notes screen" className="app-screen" />
+        <img
+          src={bola4}
+          alt="Missing teeth screen"
+          className="app-screen"
+          loading="lazy"
+        />
+        <img
+          src={bola5}
+          alt="Settings screen"
+          className="app-screen"
+          loading="lazy"
+        />
+        <img
+          src={bola6}
+          alt="App training screen"
+          className="app-screen"
+          loading="lazy"
+        />
+        <img
+          src={bola7}
+          alt="Perio index screen"
+          className="app-screen"
+          loading="lazy"
+        />
+        <img
+          src={bola8}
+          alt="Send feedback screen"
+          className="app-screen"
+          loading="lazy"
+        />
+        <img
+          src={bola9}
+          alt="Clinical notes screen"
+          className="app-screen"
+          loading="lazy"
+        />
         <img
           src={bola10}
           alt="Clinical templates screen"
           className="app-screen"
+          loading="lazy"
         />
-        <img src={bola11} alt="Edit template screen" className="app-screen" />
+        <img
+          src={bola11}
+          alt="Edit template screen"
+          className="app-screen"
+          loading="lazy"
+        />
         <div className="shadow-screen"></div>
       </div>
 
@@ -47,11 +83,13 @@ function Bola() {
           src={bola12}
           alt="Bola AI Welcome email"
           className="desktop-screen"
+          loading="lazy"
         />
         <img
           src={bola13}
           alt="Bola AI Help Center homepage"
           className="desktop-screen"
+          loading="lazy"
         />
       </div>
     </div>

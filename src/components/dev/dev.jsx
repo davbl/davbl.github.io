@@ -58,8 +58,7 @@ function Dev() {
                 autoPlay
                 loop
                 playsInline
-                muted
-                height="600"></video>
+                muted></video>
             </Squircle>
           </Squircle>
 
@@ -129,8 +128,7 @@ function Dev() {
                 autoPlay
                 loop
                 playsInline
-                muted
-                height="600"></video>
+                muted></video>
             </Squircle>
           </Squircle>
 
@@ -193,8 +191,7 @@ function Dev() {
                 autoPlay
                 loop
                 playsInline
-                muted
-                height="600"></video>
+                muted></video>
             </Squircle>
           </Squircle>
 

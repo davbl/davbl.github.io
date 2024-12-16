@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import {
   SquareArrowUpRight,
   Construction,
@@ -45,17 +46,24 @@ const ProjectDescription = ({
   isUnderConstruction = false,
   isLocal = false,
 }) => {
+  // if local route, use <Link>, else use <a> for external link
+  const LinkElement = isLocal ? (
+    <Link to={link} className="project-title">
+      <h4>{title}</h4>
+      {getIcon(isUnderConstruction, isLocal, color)}
+    </Link>
+  ) : (
+    <a href={link} target="_blank" className="project-title">
+      <h4>{title}</h4>
+      {getIcon(isUnderConstruction, isLocal, color)}
+    </a>
+  );
+
   // Render
   return (
     <div className="project-description">
       {/* Project title and icon */}
-      <a
-        href={link}
-        target={isLocal ? "_self" : "_blank"}
-        className="project-title">
-        <h4>{title}</h4>
-        {getIcon(isUnderConstruction, isLocal, color)}
-      </a>
+      {LinkElement}
 
       {/* Description text */}
       <p className="project-text">{text}</p>

@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import "./bola.css";
 
+// Images
 import bola1 from "./img/bola1-1800h.avif";
 import bola2 from "./img/bola2-1800h.avif";
 import bola3 from "./img/bola3-1800h.avif";
@@ -15,6 +17,11 @@ import bola12 from "./img/bola12-2658w.avif";
 import bola13 from "./img/bola13-2658w.avif";
 
 function Bola() {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Always top
+  }, []);
+
+  // Render
   return (
     <div className="subpage-container">
       {/* Heading */}

@@ -1,12 +1,19 @@
-import "./fundraising.css";
+import { useEffect } from "react";
 import { SquareArrowUpRight } from "lucide-react";
+import "./fundraising.css";
 
+// Images
 import buck from "./img/buck.avif";
 import campisi from "./img/campisi.avif";
 import ceitec from "./img/ceitec.avif";
 import mraz from "./img/mraz.avif";
 
 function Fundraising() {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Always top
+  }, []);
+
+  // Render
   return (
     <div className="subpage-container fundraising-container">
       {/* HEADING */}

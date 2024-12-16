@@ -86,6 +86,7 @@ function Footer() {
           <a
             href="https://forms.gle/Qx6KpfVdYJTqWvLc9"
             target="_blank"
+            rel="noopener"
             className="icon-and-text">
             <Blocks size={16} strokeWidth={2} className="blocks-icon" />
             <p>Tell me what to improve</p>
@@ -124,15 +125,18 @@ function Footer() {
         {/* Props */}
         <p className="props">
           Props to{" "}
-          <a href="https://flywire.ai" target="_blank">
+          <a href="https://flywire.ai" target="_blank" rel="noopener">
             FlyWire
           </a>
           ,{" "}
-          <a href="https://commons.wikimedia.org" target="_blank">
+          <a
+            href="https://commons.wikimedia.org"
+            target="_blank"
+            rel="noopener">
             Wikimedia
           </a>
           , and{" "}
-          <a href="https://molstar.org" target="_blank">
+          <a href="https://molstar.org" target="_blank" rel="noopener">
             Molstar
           </a>{" "}
           for providing illustrative images for the background animation at the

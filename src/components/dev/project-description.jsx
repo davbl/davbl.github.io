@@ -54,7 +54,7 @@ const ProjectDescription = ({
       {getIcon(isUnderConstruction, isLocal, color)}
     </Link>
   ) : (
-    <a href={link} className="project-title" target="_blank">
+    <a href={link} className="project-title" target="_blank" rel="noopener">
       <h4>{title}</h4>
       {getIcon(isUnderConstruction, isLocal, color)}
     </a>

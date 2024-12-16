@@ -47,7 +47,8 @@ function Fundraising() {
             <a
               className="underline"
               href="https://www.cell.com/cell/fulltext/S0092-8674(24)00183-1"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Judy Campisi
             </a>{" "}
             (left) with another Buck scientist. Photography by: Winni
@@ -58,7 +59,8 @@ function Fundraising() {
           <a
             className="institution-link"
             href="https://www.buckinstitute.org"
-            target="_blank">
+            target="_blank"
+            rel="noopener">
             <h4>Buck Institute for Research on Aging</h4>
             <SquareArrowUpRight
               className="arrow-icon buck-icon"
@@ -74,7 +76,8 @@ function Fundraising() {
             <a
               className="bracket-link"
               href="https://en.m.wikipedia.org/wiki/Buck_Institute_for_Research_on_Aging"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               [1]
             </a>
           </p>
@@ -101,7 +104,8 @@ function Fundraising() {
             <a
               className="underline"
               href="https://www.ceitec.eu/microenvironment-of-immune-cells/rg115"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Marek Mraz
             </a>{" "}
             (right) leads one of the 7 research groups at the Center for
@@ -113,7 +117,8 @@ function Fundraising() {
           <a
             className="institution-link"
             href="https://www.ceitec.eu/molecular-medicine/rp7"
-            target="_blank">
+            target="_blank"
+            rel="noopener">
             <h4>Center for Molecular Medicine</h4>
             <SquareArrowUpRight
               className="arrow-icon ceitec-icon"
@@ -131,7 +136,8 @@ function Fundraising() {
             <a
               className="bracket-link"
               href="https://www.ceitec.eu/molecular-medicine/rp7"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               [2]
             </a>
           </p>

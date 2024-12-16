@@ -70,7 +70,8 @@ function OthersSay() {
             <div>
               <a
                 href="https://www.linkedin.com/in/derick-schweppe-62581231/"
-                target="_blank">
+                target="_blank"
+                rel="noopener">
                 <div className="name-and-icon">
                   <h5>Derick Schweppe</h5>
                   <SquareArrowUpRight
@@ -144,7 +145,8 @@ function OthersSay() {
             <div>
               <a
                 href="https://www.linkedin.com/in/steve-penrod-60b1813/"
-                target="_blank">
+                target="_blank"
+                rel="noopener">
                 <div className="name-and-icon">
                   <h5>Steve Penrod</h5>
                   <SquareArrowUpRight

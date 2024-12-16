@@ -166,7 +166,8 @@ function Biomed() {
             A collection of{" "}
             <a
               href="https://dvbl.notion.site/Learn-Neuroscience-66dc61f4f4de4003874f3aa9d27846a5"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               resources
             </a>{" "}
             for learning about the brain, nervous system, and neurotechnology.

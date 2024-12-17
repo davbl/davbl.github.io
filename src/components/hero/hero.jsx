@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { BadgeInfo } from "lucide-react";
 // import { ScrollText, BadgeInfo } from "lucide-react";
 
@@ -6,15 +7,28 @@ import "./hero.css";
 import HeroText from "../../assets/hero-text.svg";
 import HeroMarquee from "./hero-marquee";
 
-// Import images for /fundraising to preload on hover
+// Import images for Fundraising subpage - to preload them on hover
 import { preloadImages } from "../../utils/preloadImages";
 import buck from "../../pages/fundraising/img/buck.avif";
 import campisi from "../../pages/fundraising/img/campisi.avif";
+
+// Variable to track if hero-text reveal animation has run
+let hasAnimated = false;
 
 function Hero() {
   const handleFundraisingHover = () => {
     preloadImages([buck, campisi]);
   };
+
+  // Keep track if hero-text reveal animation has run
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    if (!hasAnimated) {
+      setAnimate(true);
+      hasAnimated = true;
+    }
+  }, []);
 
   // Render
   return (
@@ -25,7 +39,12 @@ function Hero() {
       <div className="hero-mobile">
         {/* Hero svg */}
         <h1>
-          <img src={HeroText} alt="Software & Biology" loading="eager" />
+          <img
+            src={HeroText}
+            className={animate ? "reveal" : ""}
+            alt="Software & Biology"
+            loading="eager"
+          />
         </h1>
 
         {/* Bigger text */}

@@ -19,14 +19,16 @@ h1 {
   flex-grow: 1;
   padding-bottom: 0.5rem;
   user-select: none;
-  animation: hero-text 1.5s ease;
-  /* filter: blur(50px); */
   align-items: center;
 
   img {
     width: 702px;
     height: 411px;
   }
+}
+
+.reveal {
+  animation: hero-text 1.5s ease;
 }
 
 @keyframes hero-text {
@@ -36,14 +38,13 @@ h1 {
   }
   100% {
     opacity: 1;
-    filter: blur(0px);
+    filter: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  h1 {
+  .reveal {
     animation: none;
-    /* filter: none !important; */
   }
 }
 

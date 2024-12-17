@@ -30,7 +30,8 @@ function HeroMarquee() {
             <div className="marquee-rectangle">
               <img
                 src={Fw1}
-                alt="50 largest neurons of the fly brain connectome. Tyler Sloan and Amy Sterling for FlyWire, Princeton University, (Dorkenwald et al., 2024)"
+                // gtp recommends empty alt for purely decorative images, to prevent noisy screen reader experience
+                alt=""
                 className="img"
                 loading="eager"
               />
@@ -38,22 +39,12 @@ function HeroMarquee() {
 
             {/* FlyWire img */}
             <div className="marquee-rectangle">
-              <img
-                src={Fw3}
-                alt="Bolt Neurons identified and proofread by Salil Bidaye and rendered by Amy Sterling for FlyWire."
-                className="img"
-                loading="eager"
-              />
+              <img src={Fw3} alt="" className="img" loading="eager" />
             </div>
 
             {/* FlyWire img */}
             <div className="marquee-rectangle">
-              <img
-                src={Fw5}
-                alt="CT1 neurons identified by Zhihao Zheng and proofread by Seung Lab. Rendered by Amy Sterling for FlyWire."
-                className="img fw5"
-                loading="eager"
-              />
+              <img src={Fw5} alt="" className="img fw5" loading="eager" />
             </div>
 
             {/* FlyWire img */}
@@ -63,12 +54,7 @@ function HeroMarquee() {
 
             {/* FlyWire img */}
             <div className="marquee-rectangle">
-              <img
-                src={Fw4}
-                alt="Keystone neurons (il3LN6) identified by Philipp Schlegel of Jefferis Lab and proofread in FlyWire by labs of Jefferis, Lee, Murthy, and Seung. Rendered by Amy Sterling for FlyWire."
-                className="img"
-                loading="eager"
-              />
+              <img src={Fw4} alt="" className="img" loading="eager" />
             </div>
             {/* Track end ↓ */}
           </div>
@@ -83,39 +69,24 @@ function HeroMarquee() {
           <div className="marquee-track reverse" key={trackIndex}>
             {/* imaging img */}
             <div className="marquee-rectangle">
-              <img
-                src={hand}
-                alt="An x-ray of a left hand."
-                className="hand"
-                loading="eager"
-              />
+              <img src={hand} alt="" className="hand" loading="eager" />
             </div>
 
             {/* imaging img */}
             <div className="marquee-rectangle">
-              <img
-                src={brain}
-                alt="A brain MRI, sagittal view."
-                className="brain"
-                loading="eager"
-              />
+              <img src={brain} alt="" className="brain" loading="eager" />
             </div>
 
             {/* imaging img */}
             <div className="marquee-rectangle">
-              <img
-                src={hip}
-                alt="An x-ray of a hip joint implant."
-                className="hip"
-                loading="eager"
-              />
+              <img src={hip} alt="" className="hip" loading="eager" />
             </div>
 
             {/* imaging img */}
             <div className="marquee-rectangle">
               <img
                 src={angiogram}
-                alt="A brain angiogram."
+                alt=""
                 className="angiogram"
                 loading="eager"
               />
@@ -123,12 +94,7 @@ function HeroMarquee() {
 
             {/* imaging img */}
             <div className="marquee-rectangle">
-              <img
-                src={pace}
-                alt="An x-ray of an implanted pacemaker."
-                className="pace"
-                loading="eager"
-              />
+              <img src={pace} alt="" className="pace" loading="eager" />
             </div>
             {/* Track end ↓ */}
           </div>
@@ -143,52 +109,27 @@ function HeroMarquee() {
           <div className="marquee-track" key={trackIndex}>
             {/* protein img */}
             <div className="marquee-rectangle">
-              <img
-                src={prot1}
-                alt="A cartoon render of the assembly of the phiX174 DNA binding protein."
-                className="protein"
-                loading="eager"
-              />
+              <img src={prot1} alt="" className="protein" loading="eager" />
             </div>
 
             {/* protein img */}
             <div className="marquee-rectangle">
-              <img
-                src={prot2}
-                alt="A cartoon render of IH/M structure of the Nuclear Pore Complex."
-                className="protein"
-                loading="eager"
-              />
+              <img src={prot2} alt="" className="protein" loading="eager" />
             </div>
 
             {/* protein img */}
             <div className="marquee-rectangle">
-              <img
-                src={prot3}
-                alt="A cartoon render of 4KTC."
-                className="protein"
-                loading="eager"
-              />
+              <img src={prot3} alt="" className="protein" loading="eager" />
             </div>
 
             {/* protein img */}
             <div className="marquee-rectangle">
-              <img
-                src={prot4}
-                alt="A render of aquaporin structure."
-                className="protein"
-                loading="eager"
-              />
+              <img src={prot4} alt="" className="protein" loading="eager" />
             </div>
 
             {/* protein img */}
             <div className="marquee-rectangle">
-              <img
-                src={prot5}
-                alt="A cartoon render of exosome interior."
-                className="protein"
-                loading="eager"
-              />
+              <img src={prot5} alt="" className="protein" loading="eager" />
             </div>
             {/* Track end ↓ */}
           </div>

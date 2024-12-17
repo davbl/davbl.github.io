@@ -49,12 +49,12 @@ function HeroMarquee() {
 
             {/* FlyWire img */}
             <div className="marquee-rectangle">
-              <img src={Fw2} alt="" className="img" loading="eager" />
+              <img src={Fw2} alt="" className="img" loading="lazy" />
             </div>
 
             {/* FlyWire img */}
             <div className="marquee-rectangle">
-              <img src={Fw4} alt="" className="img" loading="eager" />
+              <img src={Fw4} alt="" className="img" loading="lazy" />
             </div>
             {/* Track end ↓ */}
           </div>
@@ -88,13 +88,13 @@ function HeroMarquee() {
                 src={angiogram}
                 alt=""
                 className="angiogram"
-                loading="eager"
+                loading="lazy"
               />
             </div>
 
             {/* imaging img */}
             <div className="marquee-rectangle">
-              <img src={pace} alt="" className="pace" loading="eager" />
+              <img src={pace} alt="" className="pace" loading="lazy" />
             </div>
             {/* Track end ↓ */}
           </div>
@@ -124,12 +124,12 @@ function HeroMarquee() {
 
             {/* protein img */}
             <div className="marquee-rectangle">
-              <img src={prot4} alt="" className="protein" loading="eager" />
+              <img src={prot4} alt="" className="protein" loading="lazy" />
             </div>
 
             {/* protein img */}
             <div className="marquee-rectangle">
-              <img src={prot5} alt="" className="protein" loading="eager" />
+              <img src={prot5} alt="" className="protein" loading="lazy" />
             </div>
             {/* Track end ↓ */}
           </div>

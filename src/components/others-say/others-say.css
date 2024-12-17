@@ -16,7 +16,7 @@
   /* justify-content: space-between; */
 
   /* Border */
-  outline: 1px solid rgba(229, 233, 255, 0.08);
+  outline: 1px solid rgba(229, 233, 255, 0.09);
   outline-offset: -1.75px;
   border-radius: 22px;
 
@@ -67,11 +67,15 @@
 
 .steve-card {
   color: var(--accent-color);
-  background-color: rgba(255, 140, 102, 0.1);
-  outline: 1px solid rgba(255, 140, 102, 0.1);
+
+  /* background-color: rgba(255, 140, 102, 0.1); */
+  background-color: rgba(74, 66, 77, 0.9);
+  /* outline: 1px solid rgba(255, 140, 102, 0.1); */
+  outline: 1px solid rgba(255, 178, 153, 0.12);
+
   /* Background blur */
-  backdrop-filter: blur(35px);
-  -webkit-backdrop-filter: blur(35px);
+  /* backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px); */
 
   transform: translateY(-3.5rem);
   position: absolute;

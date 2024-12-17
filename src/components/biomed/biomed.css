@@ -152,6 +152,12 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .heartbeat {
+    animation: none;
+  }
+}
+
 .techniques {
   grid-area: techniques;
 

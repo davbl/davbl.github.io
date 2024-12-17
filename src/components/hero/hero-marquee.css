@@ -29,6 +29,12 @@
   /* flex-shrink: 0; */
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 .marquee-rectangle {
   width: 250px;
   height: 250px;

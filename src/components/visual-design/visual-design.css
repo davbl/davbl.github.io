@@ -53,6 +53,15 @@
     transform: translateY(calc(var(--scroll-position, 0) * -0.05px));
     /* will-change: transform; */
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .col1 {
+      transform: none;
+    }
+    .col2 {
+      transform: none;
+    }
+  }
 }
 
 /* PIECES *******************************************************************************/

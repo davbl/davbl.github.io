@@ -3,9 +3,8 @@ import { Suspense, lazy } from "react";
 
 // Pages
 import Home from "./pages/Home";
-// import Fundraising from "./pages/fundraising/Fundraising";
+// lazy load subpages
 const Fundraising = lazy(() => import("./pages/fundraising/Fundraising"));
-// import Bola from "./pages/bola/Bola";
 const Bola = lazy(() => import("./pages/bola/Bola"));
 
 function App() {

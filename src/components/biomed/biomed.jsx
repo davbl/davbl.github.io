@@ -1,6 +1,7 @@
 import { Squircle } from "corner-smoothing";
 import "./biomed.css";
 
+// Images
 import techniques from "./img/techniques-4x.avif";
 import labs from "./img/labs-4x.avif";
 import organisms from "./img/organisms-4x.avif";
@@ -249,6 +250,7 @@ function Biomed() {
             interpretation using ML.
           </p>
         </Squircle>
+        {/* bento grid end ↓ */}
       </div>
     </section>
   );

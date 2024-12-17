@@ -58,7 +58,8 @@ function Dev() {
                 autoPlay
                 loop
                 playsInline
-                muted></video>
+                muted
+                aria-label="A short looping video showing how the Grapes of Staph webtool works."></video>
             </Squircle>
           </Squircle>
 
@@ -128,7 +129,8 @@ function Dev() {
                 autoPlay
                 loop
                 playsInline
-                muted></video>
+                muted
+                aria-label="A short looping video showing how the DNA/RNA Analyzer works."></video>
             </Squircle>
           </Squircle>
 
@@ -191,7 +193,8 @@ function Dev() {
                 autoPlay
                 loop
                 playsInline
-                muted></video>
+                muted
+                aria-label="A short looping video showing how the AlphaMissense Browser works."></video>
             </Squircle>
           </Squircle>
 

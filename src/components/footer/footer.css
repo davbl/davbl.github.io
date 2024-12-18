@@ -81,7 +81,7 @@ footer:has(.copied) .photo-dave {
     font-weight: 550;
     width: fit-content;
     height: min-content;
-    outline: 1.5px solid rgba(255, 140, 102, 0.15);
+    outline: 1.5px solid rgba(255, 169, 140, 0.12);
   }
 
   .scroll-btn:hover {

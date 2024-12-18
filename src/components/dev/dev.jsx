@@ -1,4 +1,5 @@
 import { Squircle } from "corner-smoothing";
+import Video from "./video";
 import ProjectDescription from "./project-description";
 import "./dev.css";
 
@@ -14,7 +15,7 @@ import staph from "./img/staph.webm";
 import analyzer from "./img/analyzer.webm";
 import am from "./img/am.webm";
 
-// Import images for /bola to preload on hover
+// Import images for bola subpage - to preload on hover
 import { preloadImages } from "../../utils/preloadImages";
 import bola1 from "../../pages/bola/img/bola1-1800h.avif";
 import bola2 from "../../pages/bola/img/bola2-1800h.avif";
@@ -52,14 +53,19 @@ function Dev() {
               cornerSmoothing={0.8}
               className="vid-canvas staph-vid">
               {/* Video */}
-              <video
+              {/* <video
                 className="playback"
                 src={staph}
                 autoPlay
                 loop
                 playsInline
                 muted
-                aria-label="A short looping video showing how the Grapes of Staph webtool works."></video>
+                preload="metadata"
+                aria-label="A short looping video showing how the Grapes of Staph webtool works."></video> */}
+              <Video
+                src={staph}
+                ariaLabel="A short looping video showing how the Grapes of Staph webtool works."
+              />
             </Squircle>
           </Squircle>
 
@@ -123,14 +129,19 @@ function Dev() {
               cornerSmoothing={0.8}
               className="vid-canvas analyzer-vid">
               {/* Video */}
-              <video
+              {/* <video
                 className="playback"
                 src={analyzer}
                 autoPlay
                 loop
                 playsInline
                 muted
-                aria-label="A short looping video showing how the DNA/RNA Analyzer works."></video>
+                preload="metadata"
+                aria-label="A short looping video showing how the DNA/RNA Analyzer works."></video> */}
+              <Video
+                src={analyzer}
+                ariaLabel="A short looping video showing how the DNA/RNA Analyzer works."
+              />
             </Squircle>
           </Squircle>
 
@@ -187,14 +198,19 @@ function Dev() {
               cornerSmoothing={0.8}
               className="vid-canvas am-vid">
               {/* Video */}
-              <video
+              {/* <video
                 className="playback"
                 src={am}
                 autoPlay
                 loop
                 playsInline
                 muted
-                aria-label="A short looping video showing how the AlphaMissense Browser works."></video>
+                preload="metadata"
+                aria-label="A short looping video showing how the AlphaMissense Browser works."></video> */}
+              <Video
+                src={am}
+                ariaLabel="A short looping video showing how the AlphaMissense Browser works."
+              />
             </Squircle>
           </Squircle>
 

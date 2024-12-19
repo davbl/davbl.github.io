@@ -1,3 +1,4 @@
+// vite.config.js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import { VitePWA } from "vite-plugin-pwa";
@@ -7,26 +8,23 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      // No manifest for now, so we skip PWA metadata.
       workbox: {
         // Define runtime caching rules.
         runtimeCaching: [
           {
             // Cache images.
-            // This ensures images are served quickly after the first visit,
-            // and are updated only when the max age or refresh cycle is reached.
             urlPattern: ({ request }) => request.destination === "image",
             handler: "CacheFirst",
             options: {
               cacheName: "images-cache",
               expiration: {
-                maxEntries: 70, // Adjust depending on how many images you have
+                maxEntries: 70, // Adjust as needed
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
               },
             },
           },
           {
-            // Cache fonts (if any). If no fonts, you can remove this block.
+            // Cache fonts.
             urlPattern: ({ request }) => request.destination === "font",
             handler: "StaleWhileRevalidate",
             options: {
@@ -37,7 +35,7 @@ export default defineConfig({
             },
           },
           {
-            // Cache CSS, JS, and other static resources from the app.
+            // Cache CSS, JS, and other static resources.
             urlPattern: ({ request }) =>
               request.destination === "style" ||
               request.destination === "script" ||
@@ -47,8 +45,36 @@ export default defineConfig({
               cacheName: "static-resources",
             },
           },
+          {
+            // Only handle navigation requests for specific routes
+            urlPattern: ({ url }) => {
+              // Define the routes you want the service worker to handle
+              const allowedRoutes = [
+                "/",
+                "/fundraising",
+                "/bola",
+                // Add more routes as needed
+              ];
+
+              // Check if the pathname matches any of the allowed routes
+              return allowedRoutes.some((route) => {
+                // Ensure exact match or starts with the route followed by a slash
+                return (
+                  url.pathname === route || url.pathname.startsWith(`${route}/`)
+                );
+              });
+            },
+            handler: "NetworkFirst",
+            options: {
+              cacheName: "navigation-cache",
+              // You can define additional options here
+            },
+          },
         ],
+        // Disable navigateFallback to prevent handling all navigations
+        navigateFallback: null,
       },
+      // Other PWA configurations if necessary
     }),
   ],
 });

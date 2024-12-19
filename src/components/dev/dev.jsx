@@ -20,6 +20,9 @@ import analyzerLo from "./img/analyzer-850h.webm";
 import amHi from "./img/am-1500h.webm";
 import amMid from "./img/am-1198h.webm";
 import amLo from "./img/am-850h.webm";
+// Posters
+import staphPoster from "./img/staph-poster.avif";
+import analyzerPoster from "./img/analyzer-poster.avif";
 
 // Import images for bola subpage - to preload on hover
 import { preloadImages } from "../../utils/preloadImages";
@@ -59,20 +62,12 @@ function Dev() {
               cornerSmoothing={0.8}
               className="vid-canvas staph-vid">
               {/* Video */}
-              {/* <video
-                className="playback"
-                src={staph}
-                autoPlay
-                loop
-                playsInline
-                muted
-                preload="metadata"
-                aria-label="A short looping video showing how the Grapes of Staph webtool works."></video> */}
               <Video
                 srcHi={staphHi}
                 srcMid={staphMid}
                 srcLo={staphLo}
                 ariaLabel="A short looping video showing how the Grapes of Staph webtool works."
+                poster={staphPoster}
               />
             </Squircle>
           </Squircle>
@@ -137,20 +132,12 @@ function Dev() {
               cornerSmoothing={0.8}
               className="vid-canvas analyzer-vid">
               {/* Video */}
-              {/* <video
-                className="playback"
-                src={analyzer}
-                autoPlay
-                loop
-                playsInline
-                muted
-                preload="metadata"
-                aria-label="A short looping video showing how the DNA/RNA Analyzer works."></video> */}
               <Video
                 srcHi={analyzerHi}
                 srcMid={analyzerMid}
                 srcLo={analyzerLo}
                 ariaLabel="A short looping video showing how the DNA/RNA Analyzer works."
+                poster={analyzerPoster}
               />
             </Squircle>
           </Squircle>
@@ -208,15 +195,6 @@ function Dev() {
               cornerSmoothing={0.8}
               className="vid-canvas am-vid">
               {/* Video */}
-              {/* <video
-                className="playback"
-                src={am}
-                autoPlay
-                loop
-                playsInline
-                muted
-                preload="metadata"
-                aria-label="A short looping video showing how the AlphaMissense Browser works."></video> */}
               <Video
                 srcHi={amHi}
                 srcMid={amMid}

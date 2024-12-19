@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import "./video.css";
 
-const Video = ({ srcHi, srcMid, srcLo, ariaLabel }) => {
+const Video = ({ srcHi, srcMid, srcLo, ariaLabel, poster }) => {
   // Use the useInView hook to monitor visibility
   const { ref, inView } = useInView({
     threshold: 0.75, // % visibility of video
@@ -48,6 +48,7 @@ const Video = ({ srcHi, srcMid, srcLo, ariaLabel }) => {
       playsInline
       muted
       className="playback"
+      poster={poster}
       aria-label={ariaLabel}>
       {/* see Figma table for calculations */}
       <source src={srcHi} type="video/webm" media="(min-width: 724px)" />
@@ -63,6 +64,7 @@ Video.propTypes = {
   srcMid: PropTypes.string.isRequired,
   srcLo: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string.isRequired,
+  poster: PropTypes.string,
 };
 
 export default Video;

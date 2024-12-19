@@ -11,9 +11,15 @@ import fmHero from "./img/fm-hero.avif";
 import fmWhatis from "./img/fm-whatis.avif";
 import fmGenetic from "./img/fm-genetic.avif";
 // Vids
-import staph from "./img/staph.webm";
-import analyzer from "./img/analyzer.webm";
-import am from "./img/am.webm";
+import staphHi from "./img/staph-1500h.webm";
+import staphMid from "./img/staph-1198h.webm";
+import staphLo from "./img/staph-850h.webm";
+import analyzerHi from "./img/analyzer-1500h.webm";
+import analyzerMid from "./img/analyzer-1198h.webm";
+import analyzerLo from "./img/analyzer-850h.webm";
+import amHi from "./img/am-1500h.webm";
+import amMid from "./img/am-1198h.webm";
+import amLo from "./img/am-850h.webm";
 
 // Import images for bola subpage - to preload on hover
 import { preloadImages } from "../../utils/preloadImages";
@@ -63,7 +69,9 @@ function Dev() {
                 preload="metadata"
                 aria-label="A short looping video showing how the Grapes of Staph webtool works."></video> */}
               <Video
-                src={staph}
+                srcHi={staphHi}
+                srcMid={staphMid}
+                srcLo={staphLo}
                 ariaLabel="A short looping video showing how the Grapes of Staph webtool works."
               />
             </Squircle>
@@ -139,7 +147,9 @@ function Dev() {
                 preload="metadata"
                 aria-label="A short looping video showing how the DNA/RNA Analyzer works."></video> */}
               <Video
-                src={analyzer}
+                srcHi={analyzerHi}
+                srcMid={analyzerMid}
+                srcLo={analyzerLo}
                 ariaLabel="A short looping video showing how the DNA/RNA Analyzer works."
               />
             </Squircle>
@@ -208,7 +218,9 @@ function Dev() {
                 preload="metadata"
                 aria-label="A short looping video showing how the AlphaMissense Browser works."></video> */}
               <Video
-                src={am}
+                srcHi={amHi}
+                srcMid={amMid}
+                srcLo={amLo}
                 ariaLabel="A short looping video showing how the AlphaMissense Browser works."
               />
             </Squircle>

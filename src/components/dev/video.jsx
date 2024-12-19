@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import "./video.css";
 
-const Video = ({ src, ariaLabel }) => {
+const Video = ({ srcHi, srcMid, srcLo, ariaLabel }) => {
   // Use the useInView hook to monitor visibility
   const { ref, inView } = useInView({
     threshold: 0.75, // % visibility of video
@@ -42,20 +42,26 @@ const Video = ({ src, ariaLabel }) => {
         ref(node); // Attach the Intersection Observer ref
         videoRef.current = node; // Attach the video ref
       }}
-      src={src}
       preload="auto"
       autoPlay={inView}
       loop
       playsInline
       muted
       className="playback"
-      aria-label={ariaLabel}
-    />
+      aria-label={ariaLabel}>
+      {/* see Figma table for calculations */}
+      <source src={srcHi} type="video/webm" media="(min-width: 724px)" />
+      <source src={srcMid} type="video/webm" media="(min-width: 542px)" />
+      {/* the base is kinda min-width 360px */}
+      <source src={srcLo} type="video/webm" />
+    </video>
   );
 };
 
 Video.propTypes = {
-  src: PropTypes.string.isRequired,
+  srcHi: PropTypes.string.isRequired,
+  srcMid: PropTypes.string.isRequired,
+  srcLo: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string.isRequired,
 };
 

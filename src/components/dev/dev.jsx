@@ -23,6 +23,7 @@ import amLo from "./img/am-850h.webm";
 // Posters
 import staphPoster from "./img/staph-poster.avif";
 import analyzerPoster from "./img/analyzer-poster.avif";
+import amPoster from "./img/am-poster.avif";
 
 // Import images for bola subpage - to preload on hover
 import { preloadImages } from "../../utils/preloadImages";
@@ -200,6 +201,7 @@ function Dev() {
                 srcMid={amMid}
                 srcLo={amLo}
                 ariaLabel="A short looping video showing how the AlphaMissense Browser works."
+                poster={amPoster}
               />
             </Squircle>
           </Squircle>

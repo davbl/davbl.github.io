@@ -1,4 +1,4 @@
-// This is to fix the behavior of user scroll position when going to and back from subpages Bola and Fundraising
+// Used to fix the behavior of user scroll position when going to and back from subpages Bola and Fundraising
 
 let homeScrollPosition = 0;
 

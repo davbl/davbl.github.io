@@ -7,7 +7,7 @@ import "./hero.css";
 import HeroText from "../../assets/hero-text.svg";
 import HeroMarquee from "./hero-marquee";
 
-// Fundraising - import images for Fundraising subpage - to preload them on hover
+// Fundraising subpage - preload images on link hover
 import { preloadImages } from "../../utils/preloadImages";
 import buck from "../../pages/fundraising/img/buck.avif";
 import campisi from "../../pages/fundraising/img/campisi.avif";

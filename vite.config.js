@@ -4,6 +4,11 @@ import react from "@vitejs/plugin-react-swc";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  // Issue with block below: Other devices can access development site, but console.log doesn't work -> use --host
+  // server: {
+  //   host: true, // This makes the server listen on all addresses, including LAN
+  // },
+
   plugins: [
     react(),
     VitePWA({

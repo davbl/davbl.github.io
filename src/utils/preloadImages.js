@@ -1,4 +1,4 @@
-// utils/preloadImages.js
+// Used for preloading images on hover - for Bola and Fundraising subpages
 
 export function preloadImages(urls) {
   urls.forEach((url) => {

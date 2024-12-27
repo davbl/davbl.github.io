@@ -1,16 +1,19 @@
 import "./hero-marquee.css";
+
 // Images - col1
 import Fw1 from "./img/flywire1.avif";
 import Fw2 from "./img/flywire2.avif";
 import Fw3 from "./img/flywire3.avif";
 import Fw4 from "./img/flywire4.avif";
 import Fw5 from "./img/flywire5.avif";
+
 // Images - col2
 import hand from "./img/xray-hand.avif";
 import hip from "./img/xray-hip.avif";
 import angiogram from "./img/angiogram.avif";
 import brain from "./img/brain.avif";
 import pace from "./img/xray-pace.avif";
+
 // Images - col2
 import prot1 from "./img/prot1.avif";
 import prot2 from "./img/prot2.avif";

@@ -2,6 +2,8 @@ import { Squircle } from "corner-smoothing";
 import { SquareArrowUpRight } from "lucide-react";
 
 import "./others-say.css";
+
+// Images
 import derick from "./img/derick.avif";
 import steve from "./img/steve.avif";
 

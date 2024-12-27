@@ -7,7 +7,7 @@ import "./hero.css";
 import HeroText from "../../assets/hero-text.svg";
 import HeroMarquee from "./hero-marquee";
 
-// Import images for Fundraising subpage - to preload them on hover
+// Fundraising - import images for Fundraising subpage - to preload them on hover
 import { preloadImages } from "../../utils/preloadImages";
 import buck from "../../pages/fundraising/img/buck.avif";
 import campisi from "../../pages/fundraising/img/campisi.avif";
@@ -16,6 +16,7 @@ import campisi from "../../pages/fundraising/img/campisi.avif";
 let hasAnimated = false;
 
 function Hero() {
+  // Preload on hover
   const handleFundraisingHover = () => {
     preloadImages([buck, campisi]);
   };

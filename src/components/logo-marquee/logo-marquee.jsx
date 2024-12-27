@@ -1,5 +1,6 @@
 import "./logo-marquee.css";
 
+// Images
 import mycroft from "./img/mycroft-ai-logo.svg";
 import ntx from "./img/ntx-logo.avif";
 import drverde from "./img/dr-verde-logo.svg";

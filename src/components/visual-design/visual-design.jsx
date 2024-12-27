@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { Squircle } from "corner-smoothing";
 
 import "./visual-design.css";
+import MobileLayout from "./vis-design-mobile";
+import TabletLayout from "./vis-design-tablet";
+
+// Images
 import compNeuro from "./img/comp-neuro.avif";
 import stickers from "./img/stickers.avif";
 import fig1 from "./img/figure-1.avif";
@@ -9,8 +13,6 @@ import fig2 from "./img/figure-2.avif";
 import multitasking from "./img/multi-tasking.avif";
 import elspac from "./img/elspac.avif";
 import abyky from "./img/abyky.avif";
-import MobileLayout from "./vis-design-mobile";
-import TabletLayout from "./vis-design-tablet";
 
 // Handle different bento order for different screen sizes
 function useMediaQuery(query) {
@@ -48,6 +50,7 @@ function VisDesign() {
   const ticking = useRef(false); // useRef to maintain ticking state across renders
 
   // Get scroll position for scroll animation
+  // TODO: might be better to use intersection observer instead. Tracking scroll this way might be worse for performance.
   useEffect(() => {
     function handleScroll() {
       if (!bentoRef.current) return;

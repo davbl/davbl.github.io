@@ -41,7 +41,7 @@ import amMp4Lo from "./img/am/am-854h-60fps-hevc.mp4";
 import staphPoster from "./img/staph/staph-poster.avif";
 import analyzerPoster from "./img/analyzer/analyzer-poster.avif";
 // Commented out due to grey color in poster interpreted differently than grey color in video
-import amPoster from "./img/am/am-poster.avif";
+// import amPoster from "./img/am/am-poster.avif";
 
 // Bola subpage - preload first 3 images on link hover
 import { preloadImages } from "../../utils/preloadImages";
@@ -56,7 +56,6 @@ function Dev() {
   };
 
   // Detect OS and browser -> for am video container bg color
-  // TODO: we'll see if we need this after moving to hevc mp4 vids for Safari
   const [bgClass, setBgClass] = useState("am-vid-dark"); // Default class
 
   useEffect(() => {
@@ -249,8 +248,7 @@ function Dev() {
                 srcMp4Lo={amMp4Lo}
                 ariaLabel="A short looping video showing how the AlphaMissense Browser works."
                 // Commented out due to grey in poster interpreted differently than grey in video
-                // TODO: recheck
-                poster={amPoster}
+                // poster={amPoster}
               />
             </Squircle>
           </Squircle>

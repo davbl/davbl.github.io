@@ -3,11 +3,25 @@ import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import "./video.css";
+import { detectBrowserAndOS } from "../../utils/browserDetect";
 
-const Video = ({ srcHi, srcMid, srcLo, ariaLabel, poster }) => {
+function Video({
+  srcAvifHi,
+  srcAvifMid,
+  srcAvifLo,
+  srcMp4Hi,
+  srcMp4Mid,
+  srcMp4Lo,
+  ariaLabel,
+  poster,
+}) {
   // Use the useInView hook to monitor visibility
   const { ref, inView } = useInView({
-    threshold: 0.75, // % visibility of video
+    // I had to lower the threshold from 0.75 to 0.01 due to mobile/safari. The vid visibly flashes when it starts playing (on iphone).
+    // Not sure if keep the intersection observer here. More so given avif files served by <img> or <picture> have no play and pause.
+    // But stopping the mp4 vids might help performace on older ios/mac?
+    // TODO: try removing the intersection observer and see
+    threshold: 0.01, // % visibility of video
     triggerOnce: false, // Set to true if you want to trigger only once
   });
 
@@ -36,33 +50,52 @@ const Video = ({ srcHi, srcMid, srcLo, ariaLabel, poster }) => {
     }
   }, [inView]);
 
-  return (
-    <video
-      ref={(node) => {
-        ref(node); // Attach the Intersection Observer ref
-        videoRef.current = node; // Attach the video ref
-      }}
-      preload="auto"
-      autoPlay={inView}
-      loop
-      playsInline
-      muted
-      className="playback"
-      poster={poster}
-      aria-label={ariaLabel}>
-      {/* see Figma table for calculations */}
-      <source src={srcHi} type="video/webm" media="(min-width: 724px)" />
-      <source src={srcMid} type="video/webm" media="(min-width: 542px)" />
-      {/* the base is kinda min-width 360px */}
-      <source src={srcLo} type="video/webm" />
-    </video>
-  );
-};
+  // if Safari, play mp4, otherwise play avif vids
+  const { isSafari } = detectBrowserAndOS();
+
+  if (isSafari) {
+    return (
+      <video
+        ref={(node) => {
+          ref(node); // Attach the Intersection Observer ref
+          videoRef.current = node; // Attach the video ref
+        }}
+        preload="auto"
+        autoPlay={inView}
+        loop
+        playsInline
+        muted
+        className="playback"
+        poster={poster}
+        aria-label={ariaLabel}>
+        {/* SAFARI - same vids but mp4 hevc format for desktop and mobile Safari */}
+        <source src={srcMp4Hi} type="video/mp4" media="(min-width: 724px)" />
+        <source src={srcMp4Mid} type="video/mp4" media="(min-width: 542px)" />
+        <source src={srcMp4Lo} type="video/mp4" />
+      </video>
+    );
+  } else {
+    return (
+      // TODO 1: use <img> or <picture>?
+      // TODO 2: aria-label (on <picture> or <img>) or alt (on <img>)? both?
+      <picture>
+        {/* see Figma table for min-width calculations */}
+        <source srcSet={srcAvifHi} media="(min-width: 724px)" />
+        <source srcSet={srcAvifMid} media="(min-width: 542px)" />
+        {/* the base is kinda min-width 360px */}
+        <img src={srcAvifLo} alt="TODO" />
+      </picture>
+    );
+  }
+}
 
 Video.propTypes = {
-  srcHi: PropTypes.string.isRequired,
-  srcMid: PropTypes.string.isRequired,
-  srcLo: PropTypes.string.isRequired,
+  srcAvifHi: PropTypes.string.isRequired,
+  srcAvifMid: PropTypes.string.isRequired,
+  srcAvifLo: PropTypes.string.isRequired,
+  srcMp4Hi: PropTypes.string.isRequired,
+  srcMp4Mid: PropTypes.string.isRequired,
+  srcMp4Lo: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string.isRequired,
   poster: PropTypes.string,
 };

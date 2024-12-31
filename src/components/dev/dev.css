@@ -50,41 +50,32 @@
 .vid-canvas {
   width: 100%;
   justify-items: center;
-
-  /* img {
-    outline-offset: -2px;
-  } */
 }
-
-/* .playback {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  max-height: 600px;
-} */
 
 .staph-vid {
   background-color: #f7f7fa;
-
-  /* img {
-    outline: #f3f3f7 solid 2px;
-  } */
 }
 
 .analyzer-vid {
   background-color: #fefefe;
-
-  /* img {
-    outline: #fefefe solid 3px;
-  } */
 }
 
-.am-vid {
-  background-color: #2a2a2a;
+/* all browsers except below */
+.am-vid-dark {
+  background-color: #252525;
+  /* background-color: red; */
+}
 
-  /* img {
-    outline: #222222 solid 2px;
-  } */
+/* Safari - desktop only */
+.am-vid-mid {
+  background-color: #2a2a2a;
+  /* background-color: red; */
+}
+
+/* Firefox */
+.am-vid-light {
+  background-color: #353535;
+  /* background-color: red; */
 }
 
 /* Scale .cover when hovering over .project-title *********************************************************************************/

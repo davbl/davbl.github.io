@@ -3,6 +3,10 @@ import Video from "./video";
 import ProjectDescription from "./project-description";
 import "./dev.css";
 
+// Detect OS and browser -> for am video container bg color
+import { useEffect, useState } from "react";
+import { detectBrowserAndOS } from "../../utils/browserDetect";
+
 // Cover images
 import bolaWelcome from "./img/bola-welcome-1800h.avif";
 import bolaTeeth from "./img/bola-teeth-1800h.avif";
@@ -10,31 +14,65 @@ import bolaIndex from "./img/bola-index-1800h.avif";
 import fmHero from "./img/fm-hero.avif";
 import fmWhatis from "./img/fm-whatis.avif";
 import fmGenetic from "./img/fm-genetic.avif";
-// Vids
-import staphHi from "./img/staph-1500h.webm";
-import staphMid from "./img/staph-1198h.webm";
-import staphLo from "./img/staph-850h.webm";
-import analyzerHi from "./img/analyzer-1500h.webm";
-import analyzerMid from "./img/analyzer-1198h.webm";
-import analyzerLo from "./img/analyzer-850h.webm";
-import amHi from "./img/am-1500h.webm";
-import amMid from "./img/am-1198h.webm";
-import amLo from "./img/am-850h.webm";
-// Posters
-import staphPoster from "./img/staph-poster.avif";
-import analyzerPoster from "./img/analyzer-poster.avif";
-import amPoster from "./img/am-poster.avif";
 
-// Import images for bola subpage - to preload on hover
+// Vids - avif
+import staphAvifHi from "./img/staph/staph-1500h-60fps-av1.avif";
+import staphAvifMid from "./img/staph/staph-1198h-60fps-av1.avif";
+import staphAvifLo from "./img/staph/staph-850h-60fps-av1.avif";
+import analyzerAvifHi from "./img/analyzer/analyzer-1506h-60fps-av1.avif";
+import analyzerAvifMid from "./img/analyzer/analyzer-1198h-60fps-av1.avif";
+import analyzerAvifLo from "./img/analyzer/analyzer-854h-60fps-hevc-notAV1.avif";
+import amAvifHi from "./img/am/am-1502h-60fps-av1.avif";
+import amAvifMid from "./img/am/am-1198h-60fps-av1.avif";
+import amAvifLo from "./img/am/am-854h-60fps-av1.avif";
+
+// Vids - MP4 hevc for Safari
+import staphMp4Hi from "./img/staph/staph-1500h-60fps-hevc.mp4";
+import staphMp4Mid from "./img/staph/staph-1198h-60fps-hevc.mp4";
+import staphMp4Lo from "./img/staph/staph-850h-60fps-hevc.mp4";
+import analyzerMp4Hi from "./img/analyzer/analyzer-1502h-60fps-hevc.mp4";
+import analyzerMp4Mid from "./img/analyzer/analyzer-1198h-60fps-hevc.mp4";
+import analyzerMp4Lo from "./img/analyzer/analyzer-854h-60fps-hevc.mp4";
+import amMp4Hi from "./img/am/am-1502h-60fps-hevc.mp4";
+import amMp4Mid from "./img/am/am-1198h-60fps-hevc.mp4";
+import amMp4Lo from "./img/am/am-854h-60fps-hevc.mp4";
+
+// Posters
+import staphPoster from "./img/staph/staph-poster.avif";
+import analyzerPoster from "./img/analyzer/analyzer-poster.avif";
+// Commented out due to grey color in poster interpreted differently than grey color in video
+import amPoster from "./img/am/am-poster.avif";
+
+// Bola subpage - preload first 3 images on link hover
 import { preloadImages } from "../../utils/preloadImages";
 import bola1 from "../../pages/bola/img/bola1-1800h.avif";
 import bola2 from "../../pages/bola/img/bola2-1800h.avif";
 import bola3 from "../../pages/bola/img/bola3-1800h.avif";
 
 function Dev() {
+  // Preload images for bola subpage on hover
   const handleBolaHover = () => {
     preloadImages([bola1, bola2, bola3]);
   };
+
+  // Detect OS and browser -> for am video container bg color
+  // TODO: we'll see if we need this after moving to hevc mp4 vids for Safari
+  const [bgClass, setBgClass] = useState("am-vid-dark"); // Default class
+
+  useEffect(() => {
+    const { isMac, isFirefox, isSafari } = detectBrowserAndOS();
+    // console.log(
+    //   `isMac: ${isMac}, isFirefox: ${isFirefox}, isIos: ${isIos}, isSafari: ${isSafari}`
+    // );
+
+    if (isMac && isSafari) {
+      setBgClass("am-vid-mid");
+    } else if (isFirefox) {
+      setBgClass("am-vid-light");
+    } else {
+      setBgClass("am-vid-dark");
+    }
+  }, []);
 
   // Render
   return (
@@ -62,11 +100,14 @@ function Dev() {
               cornerRadius={14}
               cornerSmoothing={0.8}
               className="vid-canvas staph-vid">
-              {/* Video */}
+              {/* Video component */}
               <Video
-                srcHi={staphHi}
-                srcMid={staphMid}
-                srcLo={staphLo}
+                srcAvifHi={staphAvifHi}
+                srcAvifMid={staphAvifMid}
+                srcAvifLo={staphAvifLo}
+                srcMp4Hi={staphMp4Hi}
+                srcMp4Mid={staphMp4Mid}
+                srcMp4Lo={staphMp4Lo}
                 ariaLabel="A short looping video showing how the Grapes of Staph webtool works."
                 poster={staphPoster}
               />
@@ -132,11 +173,14 @@ function Dev() {
               cornerRadius={14}
               cornerSmoothing={0.8}
               className="vid-canvas analyzer-vid">
-              {/* Video */}
+              {/* Video component */}
               <Video
-                srcHi={analyzerHi}
-                srcMid={analyzerMid}
-                srcLo={analyzerLo}
+                srcAvifHi={analyzerAvifHi}
+                srcAvifMid={analyzerAvifMid}
+                srcAvifLo={analyzerAvifLo}
+                srcMp4Hi={analyzerMp4Hi}
+                srcMp4Mid={analyzerMp4Mid}
+                srcMp4Lo={analyzerMp4Lo}
                 ariaLabel="A short looping video showing how the DNA/RNA Analyzer works."
                 poster={analyzerPoster}
               />
@@ -194,13 +238,18 @@ function Dev() {
             <Squircle
               cornerRadius={14}
               cornerSmoothing={0.8}
-              className="vid-canvas am-vid">
-              {/* Video */}
+              className={`vid-canvas ${bgClass}`}>
+              {/* Video component */}
               <Video
-                srcHi={amHi}
-                srcMid={amMid}
-                srcLo={amLo}
+                srcAvifHi={amAvifHi}
+                srcAvifMid={amAvifMid}
+                srcAvifLo={amAvifLo}
+                srcMp4Hi={amMp4Hi}
+                srcMp4Mid={amMp4Mid}
+                srcMp4Lo={amMp4Lo}
                 ariaLabel="A short looping video showing how the AlphaMissense Browser works."
+                // Commented out due to grey in poster interpreted differently than grey in video
+                // TODO: recheck
                 poster={amPoster}
               />
             </Squircle>

@@ -16,12 +16,10 @@ function Video({
   poster,
 }) {
   // Use the useInView hook to monitor visibility
+  // play/pause works only for mp4 vids, not avif
   const { ref, inView } = useInView({
-    // I had to lower the threshold from 0.75 to 0.01 due to mobile/safari. The vid visibly flashes when it starts playing (on iphone).
-    // Not sure if keep the intersection observer here. More so given avif files served by <img> or <picture> have no play and pause.
-    // But stopping the mp4 vids might help performace on older ios/mac?
-    // TODO: try removing the intersection observer and see
-    threshold: 0.01, // % visibility of video
+    // I had to lower the threshold from 0.75 to 0 due to mobile/safari. The vid visibly flashes when it starts playing (on iphone).
+    threshold: 0, // % visibility of video
     triggerOnce: false, // Set to true if you want to trigger only once
   });
 
@@ -76,14 +74,12 @@ function Video({
     );
   } else {
     return (
-      // TODO 1: use <img> or <picture>?
-      // TODO 2: aria-label (on <picture> or <img>) or alt (on <img>)? both?
-      <picture>
+      <picture className="playback" aria-label={ariaLabel}>
         {/* see Figma table for min-width calculations */}
         <source srcSet={srcAvifHi} media="(min-width: 724px)" />
         <source srcSet={srcAvifMid} media="(min-width: 542px)" />
         {/* the base is kinda min-width 360px */}
-        <img src={srcAvifLo} alt="TODO" />
+        <img src={srcAvifLo} className="playback" alt={ariaLabel} />
       </picture>
     );
   }

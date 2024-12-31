@@ -24,11 +24,19 @@ h1 {
   img {
     width: 702px;
     height: 411px;
+    opacity: 0;
+    filter: blur(50px);
+    transition: opacity 1.5s ease, filter 1.5s ease;
   }
 }
 
+.visible {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
 .reveal {
-  animation: hero-text 1.5s ease;
+  animation: hero-text 1.5s ease forwards;
 }
 
 @keyframes hero-text {
@@ -45,6 +53,8 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     animation: none;
+    opacity: 1;
+    filter: none;
   }
 }
 

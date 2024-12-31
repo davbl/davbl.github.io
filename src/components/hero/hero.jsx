@@ -42,7 +42,8 @@ function Hero() {
         <h1>
           <img
             src={HeroText}
-            className={animate ? "reveal" : ""}
+            className={animate ? "reveal" : hasAnimated ? "visible" : ""}
+            // className="reveal"
             alt="Software & Biology"
             loading="eager"
           />

@@ -12,7 +12,8 @@
   display: flex;
   gap: var(--gap);
   height: 100%;
-  /* width: 100%; */
+  width: 100%;
+  justify-content: center;
 }
 
 .marquee-column {

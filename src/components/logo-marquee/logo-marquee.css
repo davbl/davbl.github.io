@@ -2,74 +2,11 @@
   padding-top: 11rem;
 }
 
-.logos-container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  overflow: hidden;
-  user-select: none;
-  display: flex;
-  gap: 5rem;
-  position: relative;
+.logo-track {
+  padding-block: 2.25rem;
+  overflow-y: hidden;
 }
 
-.logos-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    var(--bg-color),
-    rgba(255, 255, 255, 0)
-  );
-  z-index: 1;
-}
-
-.logos-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 10%;
-  height: 100%;
-  background: linear-gradient(to left, var(--bg-color), rgba(255, 255, 255, 0));
-  z-index: 1;
-}
-
-.marquee {
-  display: flex;
-  gap: 5rem;
-  align-items: center;
-  flex-shrink: 0;
-  min-width: 100%;
-  animation: marquee 50s linear infinite;
-  /* animation-direction: reverse; */
-
-  /* &:hover {
-    animation-play-state: paused;
-  } */
-}
-
-/* Animation */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - 5rem));
-  }
-}
-
-/* Adjust for users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .logos-container {
-    /* Enable horizontal scroll */
-    overflow-x: auto;
-  }
-
-  .marquee {
-    animation: none;
-  }
+.logo-track img {
+  margin-right: 5rem;
 }

@@ -1,6 +1,10 @@
 import { Squircle } from "corner-smoothing";
 import "./biomed.css";
 
+// Disable card bg gradient in desktop Safari and Firefox on all platforms, due to banding
+import { useEffect } from "react";
+import { detectBrowserAndOS } from "../../utils/browserDetect";
+
 // Images
 import techniques from "./img/techniques-4x.avif";
 import labs from "./img/labs-4x.avif";
@@ -10,6 +14,18 @@ import redCross from "./img/red-cross-4x.avif";
 import award from "./img/award-4x.avif";
 
 function Biomed() {
+  useEffect(() => {
+    const { isMac, isSafari, isFirefox } = detectBrowserAndOS();
+
+    if ((isSafari && isMac) || isFirefox) {
+      document.documentElement.classList.add(
+        "no-gradient-orange",
+        "no-gradient-pink",
+        "no-gradient-red"
+      );
+    }
+  }, []);
+
   return (
     <section>
       {/* Section heading */}

@@ -43,15 +43,6 @@
 
 /* CARDS *******************************************************************************/
 
-.test {
-  /* background: linear-gradient(#e66465, #9198e5); */
-  background: radial-gradient(circle at 0% 0%, #423d49, #3b3643 90%);
-  border: white solid 1px;
-  width: 380px;
-  border-radius: 4%;
-  margin-top: 2rem;
-}
-
 .card {
   padding: 2rem;
   display: flex;
@@ -72,19 +63,19 @@
   /* heading text and photo outline */
   --orange-accent: #ff7c5c;
   /* card bg */
-  --orange-bg: #423b46;
+  --orange-bg: #3d3946;
   /* paragraph text */
   --orange-light: #d9a598;
   /* card border */
   /* --orange-faint: rgba(255, 159, 128, 0.15); */
 
   --red-accent: #ff4d5d;
-  --red-bg: #423847;
+  --red-bg: #3d3747;
   --red-light: #d9989e;
   /* --red-faint: rgba(255, 128, 138, 0.15); */
 
   --pink-accent: #ff59ba;
-  --pink-bg: #42384e;
+  --pink-bg: #3d374b;
   /* --pink-faint: rgba(255, 128, 202, 0.15); */
 }
 
@@ -177,26 +168,7 @@
     /* background: var(--orange-bg); */
 
     /* subtle gradient - banding in desktop Safari and Firefox, and Android Firefox */
-    /* background: radial-gradient(circle at 0% 0%, #423d49, #3b3643 90%); */
-
-    /* TESTING: */
-
-    /* rgb instead of hex - less banding */
-    /* background: radial-gradient(
-      circle at 0% 0%,
-      rgba(66, 61, 73, 1),
-      rgba(59, 55, 67, 1) 90%
-    ); */
-
-    /* gradient from same color to same color - banding - wtf? */
-    /* background: radial-gradient(
-      circle at 0% 0%,
-      hsl(260, 10, 24),
-      hsl(260, 10, 24) 90%
-    ); */
-
-    /* linear gradient - banding */
-    background: linear-gradient(hsl(260, 10, 24), hsl(260, 10, 24) 90%);
+    background: radial-gradient(circle at 0% 0%, #423d49, #3b3643 90%);
   }
 
   /* Squircle BORDER color */
@@ -357,4 +329,22 @@
   p {
     color: var(--red-light);
   }
+}
+
+.no-gradient-orange .techniques::before,
+.no-gradient-orange .labs::before,
+.no-gradient-orange .organisms::before {
+  /* Squircle BACKGROUND color  */
+  background: var(--orange-bg) !important;
+}
+
+.no-gradient-pink .neuro::before {
+  /* Squircle BACKGROUND color  */
+  background: var(--pink-bg) !important;
+}
+
+.no-gradient-red .red-cross::before,
+.no-gradient-red .award::before {
+  /* Squircle BACKGROUND color  */
+  background: var(--red-bg) !important;
 }

@@ -51,7 +51,6 @@ function VisDesign() {
   const ticking = useRef(false); // useRef to maintain ticking state across renders
 
   // Get scroll position for scroll animation
-  // TODO: might be better to use intersection observer instead. Tracking scroll this way might be worse for performance.
   useEffect(() => {
     function handleScroll() {
       if (!bentoRef.current) return;

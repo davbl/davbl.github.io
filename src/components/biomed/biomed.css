@@ -43,6 +43,15 @@
 
 /* CARDS *******************************************************************************/
 
+.test {
+  /* background: linear-gradient(#e66465, #9198e5); */
+  background: radial-gradient(circle at 0% 0%, #423d49, #3b3643 90%);
+  border: white solid 1px;
+  width: 380px;
+  border-radius: 4%;
+  margin-top: 2rem;
+}
+
 .card {
   padding: 2rem;
   display: flex;
@@ -162,12 +171,35 @@
   grid-area: techniques;
 
   &::before {
-    /* Squircle background color  */
+    /* Squircle BACKGROUND color  */
+
+    /* solid color */
     /* background: var(--orange-bg); */
-    background: radial-gradient(circle at 0% 0%, #423d49, #3b3643 90%);
+
+    /* subtle gradient - banding in desktop Safari and Firefox, and Android Firefox */
+    /* background: radial-gradient(circle at 0% 0%, #423d49, #3b3643 90%); */
+
+    /* TESTING: */
+
+    /* rgb instead of hex - less banding */
+    /* background: radial-gradient(
+      circle at 0% 0%,
+      rgba(66, 61, 73, 1),
+      rgba(59, 55, 67, 1) 90%
+    ); */
+
+    /* gradient from same color to same color - banding - wtf? */
+    /* background: radial-gradient(
+      circle at 0% 0%,
+      hsl(260, 10, 24),
+      hsl(260, 10, 24) 90%
+    ); */
+
+    /* linear gradient - banding */
+    background: linear-gradient(hsl(260, 10, 24), hsl(260, 10, 24) 90%);
   }
 
-  /* Squircle border color */
+  /* Squircle BORDER color */
   /* background: var(--orange-faint); */
   background: radial-gradient(
     circle at 0% 0%,

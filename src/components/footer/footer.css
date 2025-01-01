@@ -7,25 +7,42 @@ footer {
   align-items: center;
 }
 
-footer:has(.email:hover) .photo-dave {
-  scale: 1.03;
-  rotate: -3deg;
-}
-
 footer:has(.copied) .photo-dave {
   background: #80ffaa;
   animation: photo 0.25s ease-out;
 }
 
-@keyframes photo {
-  0% {
+/* Hover on mobile interferes with click effect, hence only show on desktop */
+@media (hover: hover) and (pointer: fine) {
+  footer:has(.email:hover) .photo-dave {
     scale: 1.03;
+    rotate: -3deg;
   }
-  50% {
-    scale: 0.95;
+
+  @keyframes photo {
+    0% {
+      scale: 1.03;
+    }
+    50% {
+      scale: 0.95;
+    }
+    100% {
+      scale: 1.03;
+    }
   }
-  100% {
-    scale: 1.03;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  @keyframes photo {
+    0% {
+      scale: 1;
+    }
+    50% {
+      scale: 0.92;
+    }
+    100% {
+      scale: 1;
+    }
   }
 }
 

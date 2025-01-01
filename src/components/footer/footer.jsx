@@ -16,19 +16,16 @@ function Footer() {
 
   // Copy email to clipboard
   const [copied, setCopied] = useState(false);
-  const handleCopy = () => {
-    navigator.clipboard
-      .writeText("dave@dnarna.co")
-      .then(() => {
-        setCopied(true);
-        setTimeout(() => {
-          setCopied(false);
-        }, 1750);
-      })
-      .catch((err) => {
-        console.error("Failed to copy: ", err);
-      });
-  };
+
+  async function handleCopy() {
+    try {
+      await navigator.clipboard.writeText("dave@dnarna.co");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1750); // Reset after X ms
+    } catch (err) {
+      console.error("Failed to copy! ", err);
+    }
+  }
 
   return (
     <footer>
@@ -55,9 +52,11 @@ function Footer() {
         {/* Contact */}
         <div className="contact">
           <h3>Contact</h3>
+
           <button
             className="icon-and-text email"
             onClick={handleCopy}
+            onTouchStart={handleCopy}
             aria-label="Copy email address"
             title="Click to copy email">
             {copied ? (

@@ -35,7 +35,7 @@ function useMediaQuery(query) {
 
 function VisDesign() {
   const isTablet = useMediaQuery("(max-width: 1000px)");
-  // Change mobile pixel value if changed in css file
+  // Do change mobile pixel value if changed in css file
   const isMobile = useMediaQuery("(max-width: 700px)");
   const images = {
     compNeuro,
@@ -46,6 +46,7 @@ function VisDesign() {
     elspac,
     abyky,
   };
+
   const bentoRef = useRef(null);
   const ticking = useRef(false); // useRef to maintain ticking state across renders
 
@@ -82,7 +83,7 @@ function VisDesign() {
     }
 
     // Add the scroll event listener
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll(); // Initial calculation on component mount
 
     // Clean up the scroll listener on unmount

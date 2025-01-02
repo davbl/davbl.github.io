@@ -13,11 +13,16 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
+      manifest: {
+        background_color: "#2d3040",
+      },
       workbox: {
+        globDirectory: "dist/",
+        globPatterns: ["**/*.{js,css,html}"],
         // Define runtime caching rules.
         runtimeCaching: [
+          // Cache images
           {
-            // Cache images.
             urlPattern: ({ request }) => request.destination === "image",
             handler: "CacheFirst",
             options: {
@@ -28,8 +33,26 @@ export default defineConfig({
               },
             },
           },
+
+          // Video caching
           {
-            // Cache fonts.
+            // Match video files based on their MIME type
+            urlPattern: ({ request }) => request.destination === "video",
+            handler: "CacheFirst",
+            options: {
+              cacheName: "videos-cache",
+              expiration: {
+                maxEntries: 9, // Since we have 3 mp4 videos * 3 versions
+                maxAgeSeconds: 60 * 60 * 24 * 30, // 30 Days
+              },
+              cacheableResponse: {
+                statuses: [200],
+              },
+            },
+          },
+
+          // Cache fonts
+          {
             urlPattern: ({ request }) => request.destination === "font",
             handler: "StaleWhileRevalidate",
             options: {
@@ -39,8 +62,8 @@ export default defineConfig({
               },
             },
           },
+          // Cache CSS, JS, and other static resources
           {
-            // Cache CSS, JS, and other static resources.
             urlPattern: ({ request }) =>
               request.destination === "style" ||
               request.destination === "script" ||
@@ -50,8 +73,8 @@ export default defineConfig({
               cacheName: "static-resources",
             },
           },
+          // Only handle navigation requests for specific routes
           {
-            // Only handle navigation requests for specific routes
             urlPattern: ({ url }) => {
               // Define the routes you want the service worker to handle
               const allowedRoutes = [

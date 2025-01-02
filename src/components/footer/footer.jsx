@@ -23,7 +23,7 @@ function Footer() {
       setCopied(true);
       setTimeout(() => setCopied(false), 1750); // Reset after X ms
     } catch (err) {
-      console.error("Failed to copy! ", err);
+      console.error("Failed to copy!", err);
     }
   }
 

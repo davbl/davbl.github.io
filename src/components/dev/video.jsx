@@ -20,7 +20,6 @@ function Video({
   const { ref, inView } = useInView({
     // I had to lower the threshold from 0.75 to 0 due to mobile/safari. The vid visibly flashes when it starts playing (on iphone).
     threshold: 0, // % visibility of video
-    triggerOnce: false, // Set to true if you want to trigger only once
   });
 
   // Ref to access the video element
@@ -28,24 +27,21 @@ function Video({
 
   // Effect to play/pause the video based on visibility
   useEffect(() => {
-    if (videoRef.current) {
-      if (inView) {
-        // Attempt to play the video
-        const playPromise = videoRef.current.play();
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => {
-              // Automatic playback started
-            })
-            .catch((error) => {
-              console.error("Error attempting to play:", error);
-            });
+    async function handleVideoPlayback() {
+      if (!videoRef.current) return;
+
+      try {
+        if (inView) {
+          await videoRef.current.play();
+        } else {
+          videoRef.current.pause();
         }
-      } else {
-        // Pause the video when it's not in view
-        videoRef.current.pause();
+      } catch (error) {
+        console.error("Error controlling video playback:", error);
       }
     }
+
+    handleVideoPlayback();
   }, [inView]);
 
   // if Safari, play mp4, otherwise play avif vids

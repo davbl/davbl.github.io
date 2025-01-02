@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Squircle } from "corner-smoothing";
+import { useMediaQuery } from "react-responsive";
 
 import "./visual-design.css";
 import MobileLayout from "./vis-design-mobile";
@@ -14,29 +15,11 @@ import multitasking from "./img/multi-tasking.avif";
 import elspac from "./img/elspac.avif";
 import abyky from "./img/abyky.avif";
 
-// Handle different bento order for different screen sizes
-function useMediaQuery(query) {
-  const [matches, setMatches] = useState(
-    () => window.matchMedia(query).matches
-  );
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(query);
-    const handler = (event) => setMatches(event.matches);
-
-    // Modern browsers
-    mediaQuery.addEventListener("change", handler);
-
-    return () => mediaQuery.removeEventListener("change", handler);
-  }, [query]);
-
-  return matches;
-}
-
 function VisDesign() {
-  const isTablet = useMediaQuery("(max-width: 1000px)");
+  // Handle different bento order for different screen sizes
+  const isTablet = useMediaQuery({ maxWidth: 1000 });
   // Do change mobile pixel value if changed in css file
-  const isMobile = useMediaQuery("(max-width: 700px)");
+  const isMobile = useMediaQuery({ maxWidth: 700 });
   const images = {
     compNeuro,
     stickers,
@@ -47,10 +30,10 @@ function VisDesign() {
     abyky,
   };
 
+  // Get scroll position for scroll animation
   const bentoRef = useRef(null);
   const ticking = useRef(false); // useRef to maintain ticking state across renders
 
-  // Get scroll position for scroll animation
   useEffect(() => {
     function handleScroll() {
       if (!bentoRef.current) return;

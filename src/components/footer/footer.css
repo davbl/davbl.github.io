@@ -207,7 +207,7 @@ footer:has(.copied) .photo-dave {
 }
 
 .react-icon {
-  margin-bottom: 1px;
+  padding-bottom: 1px;
   /* transition: all 0.15s ease; */
 }
 

@@ -96,10 +96,11 @@ function Footer() {
         <div className="built-with">
           <h3>Built With</h3>
           <div className="icon-and-text react">
+            {/* svg added inline so that i can easily control color/hover */}
             <svg
               className="react-icon"
               xmlns="http://www.w3.org/2000/svg"
-              width="15.5"
+              width="15"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 256 228">
               <path

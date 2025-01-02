@@ -18,7 +18,7 @@ function App() {
         <Route
           path="/fundraising"
           element={
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<p></p>}>
               <Fundraising />
             </Suspense>
           }
@@ -28,7 +28,7 @@ function App() {
         <Route
           path="/bola"
           element={
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<p></p>}>
               <Bola />
             </Suspense>
           }

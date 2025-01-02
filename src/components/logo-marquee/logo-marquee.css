@@ -5,8 +5,10 @@
 .logo-track {
   padding-block: 2.25rem;
   overflow-y: hidden;
+  /* transform: translate3d(0, 0, 0);
+  will-change: transform; */
 }
 
 .logo-track img {
-  margin-right: 5rem;
+  margin-right: 6rem;
 }

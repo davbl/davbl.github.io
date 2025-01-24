@@ -103,39 +103,50 @@ function Fundraising() {
             Second photo:{" "}
             <a
               className="underline"
-              href="https://www.ceitec.eu/microenvironment-of-immune-cells/rg115"
+              href="https://www.ceitec.eu/prof-marek-mraz-ph-d/u26692?page=texts"
               target="_blank"
               rel="noopener">
               Marek Mraz
             </a>{" "}
-            (right) leads one of the 7 research groups at the Center for
-            Molecular Medicine at CEITEC. Photography by: Jiri Kratochvil and
-            CEITEC.
+            (right) leads one of the 7 research groups at the{" "}
+            <a
+              className="underline"
+              href="https://www.ceitec.eu/molecular-medicine/rp7"
+              target="_blank"
+              rel="noopener">
+              Center for Molecular Medicine
+            </a>{" "}
+            at CEITEC. Photography by: Jiri Kratochvil and CEITEC.
           </p>
 
           {/* Institution description */}
           <a
             className="institution-link"
-            href="https://www.ceitec.eu/molecular-medicine/rp7"
+            href="https://www.ceitec.eu/microenvironment-of-immune-cells/rg115"
             target="_blank"
             rel="noopener">
-            <h4>Center for Molecular Medicine</h4>
+            <h4>Mraz Lab</h4>
             <SquareArrowUpRight
               className="arrow-icon ceitec-icon"
               strokeWidth={1.5}
               size={23}
             />
           </a>
-          <h5>@ Central European Institute of Technology (CEITEC)</h5>
+          <h5>
+            @{" "}
+            <a href="https://www.ceitec.eu/" target="_blank" rel="noopener">
+              Central European Institute of Technology (CEITEC)
+            </a>
+          </h5>
           <p className="location brno">Brno, Czech Republic</p>
           <p className="institution-description long-description">
-            CMM is deepening our understanding of basic molecular mechanisms in
-            many diseases, especially cancer. Researchers focus on various types
-            of leukemia and several solid tumors. They investigate immune cell
-            microenvironment, B and T cell receptor repertoires, and more.{" "}
+            Mraz lab studies molecular pathways that regulate microenvironmental
+            interactions in normal and malignant immune cells. The
+            microenvironment of immune niches plays an important role in the
+            onset, progression, and resistance of hematological malignancies.{" "}
             <a
               className="bracket-link"
-              href="https://www.ceitec.eu/molecular-medicine/rp7"
+              href="https://www.ceitec.eu/microenvironment-of-immune-cells/rg115"
               target="_blank"
               rel="noopener">
               [2]
